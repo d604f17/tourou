@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "run-p build:watch nodemon",
+    "build": "babel src --out-dir dist",
+    "build:watch": "babel src --watch --out-dir dist",
+    "nodemon": "nodemon -q --watch dist dist/main.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-watch": "^2.0.6",
+    "npm-run-all": "^4.0.2",
+    "underscore": "^1.8.3",
+    "webpack": "^2.5.1"
+  }
+}
