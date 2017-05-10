@@ -15,7 +15,7 @@ export default class RouteCollection {
     }
   }
 
-  push(route) {
+  add(route) {
     let result = this.routes.push(route);
 
     if (result) {

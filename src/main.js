@@ -1,59 +1,65 @@
+console.log('--------------------------------------------------------');
 import Waypoint from './Waypoint.js';
 import Route from './Route.js';
+import Edge from './Edge.js';
+import Cache from './Cache.js';
 import RouteCollection from './RouteCollection.js';
+import {highestValueFirst} from './strategies';
 
-console.log('--------------------------------------------------------');
-
-const maxDistance = 30;
+const maxDistance = 30000;
 
 const waypoints = [
-  new Waypoint(56, 10, 0),
+  new Waypoint(56, 10, 10),
   new Waypoint(56.1, 10, 2),
-  new Waypoint(56, 10.1, 3),
-  new Waypoint(56.1, 10.1, 4),
+  new Waypoint(56, 10.1, 4),
+  new Waypoint(56, 10.5, 7),
+  new Waypoint(56.1, 10.1, 9),
 ];
 
-let route1 = new Route(waypoints[0], waypoints[1]);
-route1.addWaypoint(waypoints[2]);
-route1.addWaypoint(waypoints[3]);
+let workingRoutes = new RouteCollection();
+let possibleRoutes = new RouteCollection();
 
-console.log(route1.getHashCode());
+highestValueFirst(waypoints, 2).then(data => {
+  //console.log(data);
 
-let route2 = new Route(waypoints[0], waypoints[2]);
-route2.addWaypoint(waypoints[1]);
-route2.addWaypoint(waypoints[3]);
+  waypoints.forEach(waypoint => {
+    const route = new Route(waypoints[0], waypoint);
+    if (route.distance > 0 && route.distance <= maxDistance) workingRoutes.add(route);
+  });
 
-console.log(route2.getHashCode());
+  while (workingRoutes.length) {
+    const workingRoute = workingRoutes.shift();
+    waypoints.forEach(waypoint => {
+      if (waypoint === waypoints[0]) {
+        workingRoute.add(waypoint);
+        console.log('possible', workingRoute);
+        if (workingRoute.distance <= maxDistance)
+          possibleRoutes.add(workingRoute);
+      } else if (!workingRoute.containsWaypoint(waypoint)) {
+        workingRoute.add(waypoint);
+        // console.log('working', workingRoute);
+        if (workingRoute.distance <= maxDistance)
+          workingRoutes.add(workingRoute);
+      }
+    });
 
-let routes = new RouteCollection([
-  route1
-]);
+    // console.log(workingRoute.distance, maxDistance);
+    // waypoints.forEach(waypoint => {
+    //
+    //   if (workingRoute.distance <= maxDistance) {
+    //     if (waypoint === waypoints[0]) {
+    //       workingRoute.add(waypoint);
+    //       possibleRoutes.add(workingRoute);
+    //     } else if (!workingRoute.containsWaypoint(waypoint)) {
+    //       workingRoute.add(waypoint);
+    //       workingRoutes.add(workingRoute);
+    //     }
+    //   }
+    // });
+  }
 
-console.log(routes.containsRoute(route2));
+  // console.log(possibleRoutes);
+})
+;
 
-
-// let workingRoutes = new RouteCollection();
-// let possibleRoutes = new RouteCollection();
-//
-// waypoints.forEach(waypoint => {
-//   const route = new Route(waypoints[0], waypoint);
-//
-//   if (route.distance) workingRoutes.push(route);
-// });
-//
-// while (workingRoutes.length) {
-//   const workingRoute = workingRoutes.shift();
-//
-//   waypoints.forEach(waypoint => {
-//     if (workingRoute.distance <= maxDistance) {
-//       if (waypoint === waypoints[0]) {
-//         workingRoute.addWaypoint(waypoint);
-//         possibleRoutes.push(workingRoute);
-//       } else if (!workingRoute.containsWaypoint(waypoint)) {
-//         workingRoute.addWaypoint(waypoint);
-//         workingRoutes.push(workingRoute);
-//       }
-//     }
-//   });
-// }
 

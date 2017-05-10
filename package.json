@@ -6,14 +6,18 @@
     "build:watch": "babel src --watch --out-dir dist",
     "nodemon": "nodemon -q --watch dist dist/main.js"
   },
+  "dependencies": {
+    "directions-api": "git://github.com/d604f17/directions-api.git",
+    "haversine": "^1.0.2",
+    "underscore": "^1.8.3"
+  },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-watch": "^2.0.6",
-    "npm-run-all": "^4.0.2",
-    "underscore": "^1.8.3",
-    "webpack": "^2.5.1"
+    "npm-run-all": "^4.0.2"
   }
 }

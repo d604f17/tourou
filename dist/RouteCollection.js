@@ -31,8 +31,8 @@ var RouteCollection = function () {
       }
     }
   }, {
-    key: "push",
-    value: function push(route) {
+    key: "add",
+    value: function add(route) {
       var result = this.routes.push(route);
 
       if (result) {
