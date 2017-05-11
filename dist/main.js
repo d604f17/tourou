@@ -1,5 +1,9 @@
 'use strict';
 
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
 var _Waypoint = require('./Waypoint.js');
 
 var _Waypoint2 = _interopRequireDefault(_Waypoint);
@@ -12,10 +16,6 @@ var _Edge = require('./Edge.js');
 
 var _Edge2 = _interopRequireDefault(_Edge);
 
-var _Cache = require('./Cache.js');
-
-var _Cache2 = _interopRequireDefault(_Cache);
-
 var _RouteCollection = require('./RouteCollection.js');
 
 var _RouteCollection2 = _interopRequireDefault(_RouteCollection);
@@ -23,6 +23,8 @@ var _RouteCollection2 = _interopRequireDefault(_RouteCollection);
 var _strategies = require('./strategies');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var util = require('util');
 
 console.log('--------------------------------------------------------');
 
@@ -34,46 +36,73 @@ var waypoints = [new _Waypoint2.default(56, 10, 10), new _Waypoint2.default(56.1
 var workingRoutes = new _RouteCollection2.default();
 var possibleRoutes = new _RouteCollection2.default();
 
-(0, _strategies.highestValueFirst)(waypoints, 2).then(function (data) {
-  //console.log(data);
+for (var i = 0; i < waypoints.length; i++) {
+  var route = new _Route2.default(waypoints[0], waypoints[i]);
 
-  waypoints.forEach(function (waypoint) {
-    var route = new _Route2.default(waypoints[0], waypoint);
-    if (route.distance > 0 && route.distance <= maxDistance) workingRoutes.add(route);
-  });
+  if (route.distance > 0 && route.distance <= maxDistance) workingRoutes.add(route);
+}
 
-  var _loop = function _loop() {
-    var workingRoute = workingRoutes.shift();
-    waypoints.forEach(function (waypoint) {
-      if (waypoint === waypoints[0]) {
-        workingRoute.add(waypoint);
-        console.log('possible', workingRoute);
-        if (workingRoute.distance <= maxDistance) possibleRoutes.add(workingRoute);
-      } else if (!workingRoute.containsWaypoint(waypoint)) {
-        workingRoute.add(waypoint);
-        // console.log('working', workingRoute);
-        if (workingRoute.distance <= maxDistance) workingRoutes.add(workingRoute);
-      }
-    });
+//console.log(util.inspect(workingRoutes, false, null));
 
-    // console.log(workingRoute.distance, maxDistance);
-    // waypoints.forEach(waypoint => {
-    //
-    //   if (workingRoute.distance <= maxDistance) {
-    //     if (waypoint === waypoints[0]) {
-    //       workingRoute.add(waypoint);
-    //       possibleRoutes.add(workingRoute);
-    //     } else if (!workingRoute.containsWaypoint(waypoint)) {
-    //       workingRoute.add(waypoint);
-    //       workingRoutes.add(workingRoute);
-    //     }
-    //   }
-    // });
-  };
+var workingRoute = workingRoutes.shift();
+// console.log(workingRoute);
+// console.log('llllllllllllllllllllllllllllllllllllllllll');
+for (var _i = 0; _i < waypoints.length - 2; _i++) {
+  var localWorkingRoute = workingRoute.clone();
+  var waypoint = waypoints[_i];
 
-  while (workingRoutes.length) {
-    _loop();
+  if (_underscore2.default.isEqual(waypoint, waypoints[0])) {
+    console.log('if');
+    //   //console.log('overview', waypoint, workingRoute);
+    localWorkingRoute.add(waypoint);
+    //   //console.log('working route', workingRoute);
+    //   //console.log('possibleRoutes', util.inspect(possibleRoutes, false, null));
+    //   //possibleRoutes.add(localWorkingRoute);
+    //   //console.log('possibleRoutes', util.inspect(possibleRoutes, false, null));
+    //   //console.log('::::::::::::::::::::::::::::::::::::::::::::::::::::::');
+  } else if (!localWorkingRoute.containsWaypoint(waypoint)) {
+    console.log('else');
+    localWorkingRoute.add(waypoint);
+    //   //workingRoutes.add(localWorkingRoute);
   }
+  //
+  console.log(_i);
+  console.log('working', workingRoute);
+  console.log('local', localWorkingRoute);
+}
 
-  // console.log(possibleRoutes);
-});
+// Route {
+//   edges: [ Edge { a: [Object], b: [Object], haversineDistance: 11119 } ],
+//       value: 12,
+//       distance: 11119,
+//       waypoints:
+//   [ Waypoint { id: 1, latitude: 56, longitude: 10, value: 10 },
+//     Waypoint { id: 2, latitude: 56.1, longitude: 10, value: 2 } ] }
+
+// highestValueFirst(waypoints, 2).then(data => {
+//   //console.log(data);
+//
+//   waypoints.forEach(waypoint => {
+//     const route = new Route(waypoints[0], waypoint);
+//     if (route.distance > 0 && route.distance <= maxDistance) workingRoutes.add(route);
+//   });
+//
+//   while (workingRoutes.length) {
+//     console.log(workingRoutes.length);
+//     const workingRoute = workingRoutes.shift();
+//     console.log(workingRoutes.length);
+//     waypoints.forEach(waypoint => {
+//       if (waypoint === waypoints[0]) {
+//         workingRoute.add(waypoint);
+//         console.log('possible', workingRoute);
+//         if (workingRoute.distance <= maxDistance)
+//           possibleRoutes.add(workingRoute);
+//       } else if (!workingRoute.containsWaypoint(waypoint)) {
+//         workingRoute.add(waypoint);
+//         // console.log('working', workingRoute);
+//         if (workingRoute.distance <= maxDistance)
+//           workingRoutes.add(workingRoute);
+//       }
+//     });
+//   }
+// });

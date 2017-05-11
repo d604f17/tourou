@@ -24,7 +24,7 @@ export default class RouteCollection {
     }
   }
 
-  containsRoute(route) {
-    return this.routes.filter(r => r.getHashCode() === route.getHashCode()).length > 0;
-  }
+  // containsRoute(route) {
+  //   return this.routes.filter(r => r.getHashCode() === route.getHashCode()).length > 0;
+  // }
 }

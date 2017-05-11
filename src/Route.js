@@ -3,10 +3,12 @@ import Edge from './Edge';
 
 export default class Route {
   constructor(a, b) {
-    this.edges = [new Edge(a, b)];
-    this.setValueAndDistanceAndWaypoints();
-    this.hash = this.getHashCode();
+    if (a && b) {
+      this.edges = [new Edge(a, b)];
+      this.setValueAndDistanceAndWaypoints();
+    }
 
+    // this.hash = this.getHashCode();
     //this.distance = start.getDistanceToWaypoint(end);
     //this.waypoints = [start, end];
   }
@@ -14,6 +16,11 @@ export default class Route {
   add(waypoint) {
     this.edges.push(new Edge(_.last(this.edges).b, waypoint));
     this.setValueAndDistanceAndWaypoints();
+    // this.hash = this.getHashCode();
+  }
+
+  clone() {
+    return Object.assign(new Route(), this);
   }
 
   containsWaypoint(waypoint) {
@@ -49,18 +56,18 @@ export default class Route {
   //   this.hash = this.getHashCode();
   // }
   //
-  getHashCode() {
-    const waypoints = [...this.waypoints];
-    const start = waypoints.shift();
-    const end = waypoints.pop();
-
-    let hash = `${start.id}:`;
-
-    if (waypoints.length) {
-      waypoints.sort((a, b) => a.id - b.id);
-      hash += waypoints.map(waypoint => waypoint.id).join(':') + ':';
-    }
-
-    return hash + `${end.id}`;
-  }
+  // getHashCode() {
+  //   const waypoints = [...this.waypoints];
+  //   const start = waypoints.shift();
+  //   const end = waypoints.pop();
+  //
+  //   let hash = `${start.id}:`;
+  //
+  //   if (waypoints.length) {
+  //     waypoints.sort((a, b) => a.id - b.id);
+  //     hash += waypoints.map(waypoint => waypoint.id).join(':') + ':';
+  //   }
+  //
+  //   return hash + `${end.id}`;
+  // }
 }
