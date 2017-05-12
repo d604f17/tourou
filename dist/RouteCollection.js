@@ -40,11 +40,13 @@ var RouteCollection = function () {
         return result;
       }
     }
-
-    // containsRoute(route) {
-    //   return this.routes.filter(r => r.getHashCode() === route.getHashCode()).length > 0;
-    // }
-
+  }, {
+    key: "contains",
+    value: function contains(route) {
+      return this.routes.filter(function (r) {
+        return r.hash === route.hash;
+      }).length > 0;
+    }
   }]);
 
   return RouteCollection;

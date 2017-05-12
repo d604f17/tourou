@@ -9,7 +9,8 @@
   "dependencies": {
     "directions-api": "git://github.com/d604f17/directions-api.git",
     "haversine": "^1.0.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "extend": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
