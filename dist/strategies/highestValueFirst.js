@@ -33,8 +33,8 @@ var calculateBoundedBox = function calculateBoundedBox(waypoints) {
       minLon = void 0,
       maxLat = void 0,
       maxLon = void 0;
-  minLat = minLon = Number.MAX_SAFE_INTEGER;
-  maxLat = maxLon = 0;
+  minLat = minLon = Number.MAX_VALUE;
+  maxLat = maxLon = Number.MIN_VALUE;
 
   waypoints.forEach(function (waypoint) {
     if (waypoint.latitude < minLat) minLat = waypoint.latitude;
@@ -44,8 +44,8 @@ var calculateBoundedBox = function calculateBoundedBox(waypoints) {
   });
 
   return {
-    nw: [minLat, minLon],
-    se: [maxLat, maxLon]
+    nw: [minLon, minLat],
+    se: [maxLon, maxLat]
   };
 };
 

@@ -7,14 +7,14 @@ import Waypoint from './Waypoint.js';
 import RouteCollection from './RouteCollection.js';
 import {highestValueFirst} from './strategies';
 
-const maxDistance = 99999999999;
+const maxDistance = 900000;
 
 const waypoints = [
-  new Waypoint(56, 10, 10),
-  new Waypoint(56.1, 10, 2),
-  new Waypoint(56, 10.1, 4),
-  new Waypoint(56, 10.5, 7),
-  new Waypoint(56.1, 10.1, 9),
+  new Waypoint(10, 56, 10),
+  new Waypoint(10.1, 56.4, 2),
+  new Waypoint(10.2, 56.3, 4),
+  new Waypoint(10.3, 56.2, 7),
+  new Waypoint(10.4, 56.1, 9),
 ];
 
 function mangelPaaBedreNavn(iterations, waypoints, strategy) {
@@ -22,8 +22,8 @@ function mangelPaaBedreNavn(iterations, waypoints, strategy) {
     let workingRoutes = new RouteCollection();
     let possibleRoutes = new RouteCollection();
 
-    for (let i = 0; i < waypoints.length; i++) {
-      const route = new Route(waypoints[0], waypoints[i]);
+    for (let i = 1; i < waypoints.length; i++) {
+      const route = new Route(waypoints[0], waypoints[i], data);
 
       if (route.distance > 0 && route.distance <= maxDistance)
         workingRoutes.add(route);
@@ -39,9 +39,6 @@ function mangelPaaBedreNavn(iterations, waypoints, strategy) {
           localWorkingRoute.add(waypoint);
           if (localWorkingRoute.distance <= maxDistance &&
               !possibleRoutes.contains(localWorkingRoute))
-
-
-
             possibleRoutes.add(localWorkingRoute);
         } else if (!localWorkingRoute.containsWaypoint(waypoint)) {
           localWorkingRoute.add(waypoint);
@@ -52,9 +49,11 @@ function mangelPaaBedreNavn(iterations, waypoints, strategy) {
       });
     }
 
-    console.log(util.inspect(possibleRoutes, false, null));
-    console.log(data);
-  });
+    // console.log(util.inspect(possibleRoutes, false, null));
+    console.log(possibleRoutes);
+
+    // console.log(data);
+  }).catch(console.error);
 }
 
 mangelPaaBedreNavn(1, waypoints, highestValueFirst);

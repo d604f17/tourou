@@ -28,17 +28,17 @@ var util = require('util');
 console.log('--------------------------------------------------------');
 
 
-var maxDistance = 99999999999;
+var maxDistance = 900000;
 
-var waypoints = [new _Waypoint2.default(56, 10, 10), new _Waypoint2.default(56.1, 10, 2), new _Waypoint2.default(56, 10.1, 4), new _Waypoint2.default(56, 10.5, 7), new _Waypoint2.default(56.1, 10.1, 9)];
+var waypoints = [new _Waypoint2.default(10, 56, 10), new _Waypoint2.default(10.1, 56.4, 2), new _Waypoint2.default(10.2, 56.3, 4), new _Waypoint2.default(10.3, 56.2, 7), new _Waypoint2.default(10.4, 56.1, 9)];
 
 function mangelPaaBedreNavn(iterations, waypoints, strategy) {
   strategy(waypoints, iterations).then(function (data) {
     var workingRoutes = new _RouteCollection2.default();
     var possibleRoutes = new _RouteCollection2.default();
 
-    for (var i = 0; i < waypoints.length; i++) {
-      var route = new _Route2.default(waypoints[0], waypoints[i]);
+    for (var i = 1; i < waypoints.length; i++) {
+      var route = new _Route2.default(waypoints[0], waypoints[i], data);
 
       if (route.distance > 0 && route.distance <= maxDistance) workingRoutes.add(route);
     }
@@ -63,9 +63,11 @@ function mangelPaaBedreNavn(iterations, waypoints, strategy) {
       _loop();
     }
 
-    console.log(util.inspect(possibleRoutes, false, null));
-    console.log(data);
-  });
+    // console.log(util.inspect(possibleRoutes, false, null));
+    console.log(possibleRoutes);
+
+    // console.log(data);
+  }).catch(console.error);
 }
 
 mangelPaaBedreNavn(1, waypoints, _strategies.highestValueFirst);

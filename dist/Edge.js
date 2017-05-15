@@ -21,8 +21,9 @@ var Edge = function () {
     this.a = a;
     this.b = b;
     this.haversineDistance = Math.round((0, _haversine2.default)(a, b, { unit: 'meter' }));
-    this.EquSolveForX = this.calculateLinearEquationSolveForX();
-    this.EquSolveForY = this.calculateLinearEquationSolveForY();
+    this.equSolveForY = this.calculateLinearEquationSolveForY();
+    this.multiplier = 1;
+    // this.equSolveForX = this.calculateLinearEquationSolveForX();
   }
 
   _createClass(Edge, [{
@@ -34,15 +35,16 @@ var Edge = function () {
         return m * x - m * this.a.longitude + this.a.latitude;
       };
     }
-  }, {
-    key: 'calculateLinearEquationSolveForX',
-    value: function calculateLinearEquationSolveForX() {
-      var m = (this.b.latitude - this.a.latitude) / (this.b.longitude - this.a.longitude);
 
-      return function (y) {
-        return (y - this.a.latitude + m * this.a.longitude) / m;
-      };
-    }
+    // calculateLinearEquationSolveForX() {
+    //   const m = (this.b.latitude - this.a.latitude) / (this.b.longitude - this.a.longitude);
+    //
+    //   return function(y) {
+    //     return (y - this.a.latitude + m * this.a.longitude) / m;
+    //   };
+    // }
+
+
   }]);
 
   return Edge;

@@ -25,20 +25,62 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Route = function () {
-  function Route(a, b) {
+  function Route(a, b, boundedBoxes) {
     _classCallCheck(this, Route);
 
     if (a && b) {
       this.edges = [new _Edge2.default(a, b)];
+      this.boundedBoxes = boundedBoxes;
       this.setValueAndDistanceAndWaypoints();
       this.hash = this.getHashCode();
     }
-
-    //this.distance = start.getDistanceToWaypoint(end);
-    //this.waypoints = [start, end];
   }
 
   _createClass(Route, [{
+    key: 'calcMultiplier',
+    value: function calcMultiplier(edge) {
+      var sum = [];
+
+      this.boundedBoxes.forEach(function (bound) {
+        var edgeLatRange = [];
+        var boundLatRange = [];
+
+        if (edge.a.latitude > edge.b.latitude) {
+          edgeLatRange[0] = edge.b.latitude;
+          edgeLatRange[1] = edge.a.latitude;
+        } else {
+          edgeLatRange[0] = edge.a.latitude;
+          edgeLatRange[1] = edge.b.latitude;
+        }
+
+        if (bound.nw[1] > bound.se[1]) {
+          boundLatRange[0] = bound.se[1];
+          boundLatRange[1] = bound.nw[1];
+        } else {
+          boundLatRange[0] = bound.nw[1];
+          boundLatRange[1] = bound.se[1];
+        }
+
+        var check = function check(y) {
+          return edgeLatRange[0] <= y && edgeLatRange[1] >= y && boundLatRange[0] <= y && boundLatRange[1] >= y;
+        };
+
+        var edgeAWithinBox = bound.nw[0] <= edge.a.latitude && bound.nw[1] <= edge.a.longitude && bound.se[0] >= edge.a.latitude && bound.se[1] >= edge.a.longitude;
+
+        var edgeBWithinBox = bound.nw[0] <= edge.b.latitude && bound.nw[1] <= edge.b.longitude && bound.se[0] >= edge.b.latitude && bound.se[1] >= edge.b.longitude;
+
+        if (edgeAWithinBox || edgeBWithinBox || check(edge.equSolveForY(bound.nw[0])) || check(edge.equSolveForY(bound.se[0]))) {
+          sum.push(bound.multiplier);
+        }
+      });
+
+      if (sum.length) return edge.multiplier = sum.reduce(function (a, b) {
+        return a + b;
+      }) / sum.length;else {
+        return 1;
+      }
+    }
+  }, {
     key: 'add',
     value: function add(waypoint) {
       this.edges.push(new _Edge2.default(_underscore2.default.last(this.edges).b, waypoint));
@@ -66,7 +108,8 @@ var Route = function () {
 
       this.edges.forEach(function (edge, index) {
         value += edge.a.value;
-        distance += edge.haversineDistance;
+
+        distance += edge.haversineDistance; //* this.calcMultiplier(edge);
         waypoints.push(edge.a);
 
         if (index === _this.edges.length - 1) {
