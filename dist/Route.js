@@ -109,7 +109,7 @@ var Route = function () {
       this.edges.forEach(function (edge, index) {
         value += edge.a.value;
 
-        distance += edge.haversineDistance; //* this.calcMultiplier(edge);
+        distance += edge.haversineDistance * _this.calcMultiplier(edge);
         waypoints.push(edge.a);
 
         if (index === _this.edges.length - 1) {

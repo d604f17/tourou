@@ -44,13 +44,13 @@ const calculateDistance = (a, b) => {
   return result;
 };
 
-const highestValueFirst = (waypoints, iteration) => {
+const highestValueFirst = (waypoints, iterations) => {
   return new Promise((resolve) => {
     const highestValueWaypoints = orderByHighestValue(waypoints);
 
     let queries = [];
 
-    for (let i = 0; i < iteration; i++) {
+    for (let i = 0; i < iterations; i++) {
       const edge = new Edge(highestValueWaypoints[i], highestValueWaypoints[i + 1]);
       queries.push(queryDistance(edge));
     }

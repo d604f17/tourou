@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<canvas id="canvas" height="800" width="800"></canvas>
+<!--<img id="canvas-img">-->
+<body>
+
+    <script>
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+
+      function line(fromX, fromY, toX, toY) {
+        ctx.beginPath();
+        ctx.setLineDash([]);
+        ctx.moveTo(fromX + 400, 400 - fromY);
+        ctx.lineTo(toX + 400, 400 - toY);
+        ctx.stroke();
+      }
+
+      function dashedLine(fromX, fromY, toX, toY) {
+        ctx.beginPath();
+        ctx.setLineDash([5, 10]);
+        ctx.moveTo(fromX, canvas.height - fromY);
+        ctx.lineTo(toX, canvas.height - toY);
+        ctx.stroke();
+      }
+
+      var boundedBox = {nw: [-200, 200], se: [200, -200]};
+
+      function renderBox(box) {
+        line(box.nw[0], box.nw[1], box.se[0], box.se[1]);
+      }
+
+      function splitBoundedBox(box) {
+        var width = Math.abs(box.nw[0] - box.se[0]);
+        var height = Math.abs(box.nw[1] - box.se[1]);
+
+        if (width >= height) {
+          return [
+            {nw: [box.nw[0], box.nw[1]], se: [box.nw[0] + width / 2, box.se[1]]},
+            {nw: [box.nw[0] + width / 2, box.nw[1]], se: [box.se[0], box.se[1]]},
+          ];
+        } else {
+          return [
+            {nw: [box.nw[0], box.nw[1]], se: [box.se[0], box.se[1] + height / 2]},
+            {nw: [box.nw[0], box.se[1] + height / 2], se: [box.se[0], box.se[1]]},
+          ];
+        }
+      }
+
+      function split(box, iterations) {
+        var count = 0;
+        var boxes = [box];
+
+        while (count < iterations) {
+          let box = splitBoundedBox(boxes.shift());
+          boxes = boxes.concat(box);
+          count++;
+        }
+
+        return boxes;
+      }
+
+      var count = 0;
+      setInterval(function() {
+        var boxes = split(boundedBox, count++);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        dashedLine(400, 800, 400, 0);
+        dashedLine(0, 400, 800, 400);
+        boxes.forEach(box => renderBox(box));
+      }, 3000);
+    </script>
+</body>
+</html>

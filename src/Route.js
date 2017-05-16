@@ -89,7 +89,7 @@ export default class Route {
     this.edges.forEach((edge, index) => {
       value += edge.a.value;
 
-      distance += edge.haversineDistance //* this.calcMultiplier(edge);
+      distance += edge.haversineDistance * this.calcMultiplier(edge);
       waypoints.push(edge.a);
 
       if (index === this.edges.length - 1) {

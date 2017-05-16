@@ -31,6 +31,11 @@ var RouteCollection = function () {
       }
     }
   }, {
+    key: "sort",
+    value: function sort(func) {
+      this.routes.sort(func);
+    }
+  }, {
     key: "add",
     value: function add(route) {
       var result = this.routes.push(route);
@@ -39,6 +44,11 @@ var RouteCollection = function () {
         this.length += 1;
         return result;
       }
+    }
+  }, {
+    key: "get",
+    value: function get(index) {
+      return this.routes[index];
     }
   }, {
     key: "contains",

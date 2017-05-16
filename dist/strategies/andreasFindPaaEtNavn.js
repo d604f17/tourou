@@ -10,23 +10,19 @@ var _directionsApi = require('directions-api');
 
 var _directionsApi2 = _interopRequireDefault(_directionsApi);
 
-var _edge = require('./../edge.js');
+var _Waypoint = require('./../Waypoint.js');
 
-var _edge2 = _interopRequireDefault(_edge);
+var _Waypoint2 = _interopRequireDefault(_Waypoint);
+
+var _Edge = require('./../Edge.js');
+
+var _Edge2 = _interopRequireDefault(_Edge);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var directions = new _directionsApi2.default('AIzaSyBw9WbNkrlLt4IXxpGzAAmQrRCn_PchFog');
-
-var orderByHighestValue = function orderByHighestValue(waypoints) {
-  var clone = [].concat(_toConsumableArray(waypoints));
-  clone.sort(function (a, b) {
-    return b.value - a.value;
-  });
-  return clone;
-};
 
 var calculateBoundedBox = function calculateBoundedBox(waypoints) {
   var minLat = void 0,
@@ -49,7 +45,22 @@ var calculateBoundedBox = function calculateBoundedBox(waypoints) {
   };
 };
 
-var queryDistance = function queryDistance(edge) {
+var splitBoundedBox = function splitBoundedBox(box) {
+  var width = Math.abs(box.nw[0] - box.se[0]);
+  var height = Math.abs(box.nw[1] - box.se[1]);
+
+  if (width >= height) {
+    return [{ nw: [box.nw[0], box.nw[1]], se: [box.nw[0] + width / 2, box.se[1]] }, { nw: [box.nw[0] + width / 2, box.nw[1]], se: [box.se[0], box.se[1]] }];
+  } else {
+    return [{ nw: [box.nw[0], box.nw[1]], se: [box.se[0], box.se[1] + height / 2] }, { nw: [box.nw[0], box.se[1] + height / 2], se: [box.se[0], box.se[1]] }];
+  }
+};
+
+var boxToEdge = function boxToEdge(box) {
+  return new _Edge2.default({ latitude: box.nw[1], longitude: box.nw[0] }, { latitude: box.se[1], longitude: box.se[0] });
+};
+
+var queryDistance = function queryDistance(edge, box) {
   return new Promise(function (resolve, reject) {
     directions.query({
       mode: 'walking',
@@ -57,37 +68,38 @@ var queryDistance = function queryDistance(edge) {
       destination: edge.b.latitude + ',' + edge.b.longitude
     }).then(function (result) {
       edge.walkingDistance = result.routes[0].legs[0].distance.value;
+      edge.box = box;
       resolve(edge);
     }).catch(reject);
   });
 };
 
-var calculateDistance = function calculateDistance(a, b) {
-  var result = a.walkingDistance / a.haversineDistance;
-  if (b) result += b.walkingDistance / b.haversineDistance;
-  return result;
-};
-
-var highestValueFirst = function highestValueFirst(waypoints, iterations) {
+var andreasFindPaaEtNavn = function andreasFindPaaEtNavn(waypoints, iterations) {
   return new Promise(function (resolve) {
-    var highestValueWaypoints = orderByHighestValue(waypoints);
-
+    var count = 0;
     var queries = [];
+    var boxes = [calculateBoundedBox(waypoints)];
 
-    for (var i = 0; i < iterations; i++) {
-      var edge = new _edge2.default(highestValueWaypoints[i], highestValueWaypoints[i + 1]);
-      queries.push(queryDistance(edge));
+    while (count < iterations - 1) {
+      var box = splitBoundedBox(boxes.shift());
+      boxes.push.apply(boxes, _toConsumableArray(box));
+      count++;
     }
 
-    Promise.all(queries).then(function (edges) {
-      var sum = edges.length > 1 ? edges.reduce(calculateDistance) : calculateDistance(edges[0]);
-      var average = sum / edges.length;
-
-      resolve([_extends({}, calculateBoundedBox(waypoints), {
-        multiplier: average
-      })]);
+    boxes.forEach(function (box) {
+      queries.push(queryDistance(boxToEdge(box), box));
     });
+
+    Promise.all(queries).then(function (edges) {
+      resolve(edges.map(function (edge) {
+        return _extends({}, edge.box, {
+          multiplier: edge.walkingDistance / edge.haversineDistance
+        });
+      }));
+    });
+
+    // resolve(boxes);
   });
 };
 
-exports.default = highestValueFirst;
+exports.default = andreasFindPaaEtNavn;

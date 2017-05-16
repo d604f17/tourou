@@ -15,6 +15,10 @@ export default class RouteCollection {
     }
   }
 
+  sort(func) {
+    this.routes.sort(func)
+  }
+
   add(route) {
     let result = this.routes.push(route);
 
@@ -22,6 +26,10 @@ export default class RouteCollection {
       this.length += 1;
       return result;
     }
+  }
+
+  get(index) {
+    return this.routes[index];
   }
 
   contains(route) {
