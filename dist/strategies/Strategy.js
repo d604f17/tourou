@@ -21,23 +21,31 @@ var queryEdgeDistance = exports.queryEdgeDistance = function queryEdgeDistance(e
       destination: edge.b.latitude + ',' + edge.b.longitude
     }).then(function (result) {
       resolve({
-        edge: edge,
-        distance: result.routes[0].legs[0].distance.value
+        distance: result.routes[0].legs[0].distance.value,
+        edge: edge
       });
-    }).catch(reject);
+    });
   });
 };
 
 var queryBoxDistance = exports.queryBoxDistance = function queryBoxDistance(box) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     directions.query({
       mode: 'walking',
       origin: box.n + ',' + box.w,
       destination: box.s + ',' + box.e
     }).then(function (result) {
-      console.log(result);
-      var distance = result.routes.length > 0 ? result.routes[0].legs[0].distance.value : null;
-      resolve({ box: box, distance: distance });
+      var distance = 0;
+      var route = result.routes[0];
+
+      if (route) {
+        var leg = route.legs[0];
+        distance = leg.distance.value;
+        box.nw = [leg.start_location.lng, leg.start_location.lat];
+        box.se = [leg.end_location.lng, leg.end_location.lat];
+      }
+
+      resolve({ distance: distance, box: box });
     });
   });
 };

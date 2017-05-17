@@ -9,23 +9,31 @@ export const queryEdgeDistance = (edge) => {
       destination: edge.b.latitude + ',' + edge.b.longitude,
     }).then(result => {
       resolve({
-        edge,
         distance: result.routes[0].legs[0].distance.value,
+        edge
       });
-    }).catch(reject);
+    })
   });
 };
 
 export const queryBoxDistance = (box) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     directions.query({
       mode: 'walking',
       origin: box.n + ',' + box.w,
       destination: box.s + ',' + box.e,
     }).then(result => {
-      console.log(result);
-      let distance = result.routes.length > 0 ? result.routes[0].legs[0].distance.value : null;
-      resolve({box, distance: distance});
+      let distance = 0;
+      const route = result.routes[0];
+
+      if (route) {
+        const leg = route.legs[0];
+        distance = leg.distance.value;
+        box.nw = [leg.start_location.lng, leg.start_location.lat];
+        box.se = [leg.end_location.lng, leg.end_location.lat];
+      }
+
+      resolve({distance, box});
     });
   });
 };

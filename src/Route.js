@@ -12,61 +12,6 @@ export default class Route {
     }
   }
 
-  calcMultiplier(edge) {
-    let sum = [];
-
-    this.boundedBoxes.forEach(bound => {
-      let edgeLatRange = [];
-      let boundLatRange = [];
-
-      if (edge.a.latitude > edge.b.latitude) {
-        edgeLatRange[0] = edge.b.latitude;
-        edgeLatRange[1] = edge.a.latitude;
-      } else {
-        edgeLatRange[0] = edge.a.latitude;
-        edgeLatRange[1] = edge.b.latitude;
-      }
-
-      if (bound.nw[1] > bound.se[1]) {
-        boundLatRange[0] = bound.se[1];
-        boundLatRange[1] = bound.nw[1];
-      } else {
-        boundLatRange[0] = bound.nw[1];
-        boundLatRange[1] = bound.se[1];
-      }
-
-      let check = (y) => {
-        return edgeLatRange[0] <= y &&
-            edgeLatRange[1] >= y &&
-            boundLatRange[0] <= y &&
-            boundLatRange[1] >= y;
-      };
-
-      const edgeAWithinBox = bound.nw[0] <= edge.a.latitude &&
-          bound.nw[1] <= edge.a.longitude &&
-          bound.se[0] >= edge.a.latitude &&
-          bound.se[1] >= edge.a.longitude;
-
-      const edgeBWithinBox = bound.nw[0] <= edge.b.latitude &&
-          bound.nw[1] <= edge.b.longitude &&
-          bound.se[0] >= edge.b.latitude &&
-          bound.se[1] >= edge.b.longitude;
-
-      if (edgeAWithinBox ||
-          edgeBWithinBox ||
-          check(edge.equSolveForY(bound.nw[0])) ||
-          check(edge.equSolveForY(bound.se[0]))) {
-        sum.push(bound.multiplier);
-      }
-    });
-
-    if (sum.length)
-      return edge.multiplier = sum.reduce((a, b) => a + b) / sum.length;
-    else {
-      return 1;
-    }
-  }
-
   add(waypoint) {
     this.edges.push(new Edge(_.last(this.edges).b, waypoint));
     this.setValueAndDistanceAndWaypoints();
@@ -88,8 +33,7 @@ export default class Route {
 
     this.edges.forEach((edge, index) => {
       value += edge.a.value;
-
-      distance += edge.haversineDistance * this.calcMultiplier(edge);
+      distance += edge.haversineDistance * this.calculateMultiplier(edge);
       waypoints.push(edge.a);
 
       if (index === this.edges.length - 1) {
@@ -103,13 +47,51 @@ export default class Route {
     this.waypoints = waypoints;
   }
 
-// calculateLinearEquation(a, b) {
-//   const m = (b.latitude - a.latitude) / (b.longitude - a.longitude);
-//
-//   return function(x) {
-//     return m * x - m * a.longitude + a.latitude;
-//   };
-// }
+  calculateMultiplier(edge) {
+    let sum = [];
+    let edgeLatitudeRange = [edge.a.latitude, edge.b.latitude];
+
+    edgeLatitudeRange.sort((a, b) => a - b);
+
+    this.boundedBoxes.forEach(box => {
+      let boundLatitudeRange = [box.n, box.s];
+
+      boundLatitudeRange.sort((a, b) => a - b);
+
+      const isYWithinEdgeAndBox = (y) => (
+          edgeLatitudeRange[0] <= y &&
+          edgeLatitudeRange[1] >= y &&
+          boundLatitudeRange[0] <= y &&
+          boundLatitudeRange[1] >= y
+      );
+
+      const isEdgeAWithinBox = box.w <= edge.a.latitude &&
+          box.n <= edge.a.longitude &&
+          box.e >= edge.a.latitude &&
+          box.s >= edge.a.longitude;
+
+      const isEdgeBWithinBox = box.w <= edge.b.latitude &&
+          box.n <= edge.b.longitude &&
+          box.e >= edge.b.latitude &&
+          box.s >= edge.b.longitude;
+
+      const hasEdgePassed = isEdgeAWithinBox ||
+          isEdgeBWithinBox ||
+          isYWithinEdgeAndBox(edge.linearEquation(box.w)) ||
+          isYWithinEdgeAndBox(edge.linearEquation(box.e));
+
+      if (hasEdgePassed) {
+        sum.push(box.multiplier);
+      }
+    });
+
+    if (sum.length) {
+      return edge.multiplier = sum.reduce((a, b) => a + b) / sum.length;
+    }
+    else {
+      return 1;
+    }
+  }
 
   getHashCode() {
     const waypoints = [...this.waypoints];

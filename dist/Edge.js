@@ -20,15 +20,16 @@ var Edge = function () {
 
     this.a = a;
     this.b = b;
-    this.haversineDistance = Math.round((0, _haversine2.default)(a, b, { unit: 'meter' }));
-    this.equSolveForY = this.calculateLinearEquationSolveForY();
-    this.multiplier = 1;
-    // this.equSolveForX = this.calculateLinearEquationSolveForX();
   }
 
   _createClass(Edge, [{
-    key: 'calculateLinearEquationSolveForY',
-    value: function calculateLinearEquationSolveForY() {
+    key: 'haversineDistance',
+    get: function get() {
+      return Math.round((0, _haversine2.default)(this.a, this.b, { unit: 'meter' }));
+    }
+  }, {
+    key: 'linearEquation',
+    get: function get() {
       var m = (this.b.latitude - this.a.latitude) / (this.b.longitude - this.a.longitude);
 
       return function (x) {

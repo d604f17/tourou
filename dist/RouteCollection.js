@@ -14,21 +14,13 @@ var RouteCollection = function () {
 
     _classCallCheck(this, RouteCollection);
 
-    this.length = 0;
-
     this.routes = routes;
-    this.length = routes.length;
   }
 
   _createClass(RouteCollection, [{
     key: "shift",
     value: function shift() {
-      var result = this.routes.shift();
-
-      if (result) {
-        this.length -= 1;
-        return result;
-      }
+      return this.routes.shift();
     }
   }, {
     key: "sort",
@@ -38,24 +30,49 @@ var RouteCollection = function () {
   }, {
     key: "add",
     value: function add(route) {
-      var result = this.routes.push(route);
+      return this.routes.push(route);
+    }
+  }, {
+    key: "extract",
+    value: function extract(route) {
+      var matches = this.routes.filter(function (r) {
+        return r.hash === route.hash;
+      });
 
-      if (result) {
-        this.length += 1;
-        return result;
+      if (matches.length > 0) {
+        return this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
+      } else {
+        return null;
       }
     }
   }, {
-    key: "get",
-    value: function get(index) {
-      return this.routes[index];
+    key: "replaceIfBetter",
+    value: function replaceIfBetter(route) {
+      var matches = this.routes.filter(function (r) {
+        return r.hash === route.hash;
+      });
+
+      if (matches.length > 0) {
+        var match = this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
+
+        if (route.distance < match.distance) {
+          this.add(route);
+        } else {
+          this.add(match);
+        }
+      } else {
+        this.add(route);
+      }
     }
   }, {
-    key: "contains",
-    value: function contains(route) {
-      return this.routes.filter(function (r) {
-        return r.hash === route.hash;
-      }).length > 0;
+    key: "length",
+    get: function get() {
+      return this.routes.length;
+    }
+  }, {
+    key: "first",
+    get: function get() {
+      return this.routes[0];
     }
   }]);
 

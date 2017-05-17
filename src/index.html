@@ -67,14 +67,20 @@
         return boxes;
       }
 
-      var count = 0;
-      setInterval(function() {
-        var boxes = split(boundedBox, count++);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        dashedLine(400, 800, 400, 0);
-        dashedLine(0, 400, 800, 400);
-        boxes.forEach(box => renderBox(box));
-      }, 3000);
+//      var count = 0;
+//      setInterval(function() {
+//        var boxes = split(boundedBox, count++);
+//        ctx.clearRect(0, 0, canvas.width, canvas.height);
+//        dashedLine(400, 800, 400, 0);
+//        dashedLine(0, 400, 800, 400);
+//        boxes.forEach(box => renderBox(box));
+//      }, 3000);
+
+      var boxes = split(boundedBox, 3);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      dashedLine(400, 800, 400, 0);
+      dashedLine(0, 400, 800, 400);
+      boxes.forEach(box => renderBox(box));
     </script>
 </body>
 </html>

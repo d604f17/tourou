@@ -4,13 +4,13 @@ export default class Edge {
   constructor(a, b) {
     this.a = a;
     this.b = b;
-    this.haversineDistance = Math.round(haversine(a, b, {unit: 'meter'}));
-    this.equSolveForY = this.calculateLinearEquationSolveForY();
-    this.multiplier = 1;
-    // this.equSolveForX = this.calculateLinearEquationSolveForX();
   }
 
-  calculateLinearEquationSolveForY() {
+  get haversineDistance() {
+    return Math.round(haversine(this.a, this.b, {unit: 'meter'}));
+  }
+
+  get linearEquation() {
     const m = (this.b.latitude - this.a.latitude) / (this.b.longitude - this.a.longitude);
 
     return function(x) {

@@ -40,9 +40,17 @@ var diagonalization = function diagonalization(waypoints, iterations) {
 
     Promise.all(queries).then(function (data) {
       resolve(data.map(function (node) {
+        var difference = void 0;
         var box = node.box;
 
-        box.multiplier = parseFloat((node.distance / box.edge.haversineDistance).toFixed(3));
+
+        if (node.distance > 0) {
+          difference = node.distance / box.edge.haversineDistance;
+          box.multiplier = parseFloat(difference.toFixed(3));
+        } else {
+          box.multiplier = 1;
+        }
+
         return box;
       }));
     });
