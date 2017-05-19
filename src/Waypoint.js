@@ -1,4 +1,4 @@
-export default class Waypoint {
+class Waypoint {
   static increment = 0;
 
   constructor(longitude, latitude, value) {
@@ -8,3 +8,5 @@ export default class Waypoint {
     this.value = value;
   }
 }
+
+export default Waypoint;

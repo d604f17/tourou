@@ -8,75 +8,77 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var RouteCollection = function () {
-  function RouteCollection() {
-    var routes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _extendableBuiltin(cls) {
+  function ExtendableBuiltin() {
+    var instance = Reflect.construct(cls, Array.from(arguments));
+    Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+    return instance;
+  }
+
+  ExtendableBuiltin.prototype = Object.create(cls.prototype, {
+    constructor: {
+      value: cls,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+
+  if (Object.setPrototypeOf) {
+    Object.setPrototypeOf(ExtendableBuiltin, cls);
+  } else {
+    ExtendableBuiltin.__proto__ = cls;
+  }
+
+  return ExtendableBuiltin;
+}
+
+var RouteCollection = function (_extendableBuiltin2) {
+  _inherits(RouteCollection, _extendableBuiltin2);
+
+  function RouteCollection() {
     _classCallCheck(this, RouteCollection);
 
-    this.routes = routes;
+    return _possibleConstructorReturn(this, (RouteCollection.__proto__ || Object.getPrototypeOf(RouteCollection)).apply(this, arguments));
   }
 
   _createClass(RouteCollection, [{
-    key: "shift",
-    value: function shift() {
-      return this.routes.shift();
-    }
-  }, {
-    key: "sort",
-    value: function sort(func) {
-      this.routes.sort(func);
-    }
-  }, {
-    key: "add",
-    value: function add(route) {
-      return this.routes.push(route);
-    }
-  }, {
-    key: "extract",
-    value: function extract(route) {
-      var matches = this.routes.filter(function (r) {
+    key: "pushOrReplaceIfLowerDistance",
+    value: function pushOrReplaceIfLowerDistance(route) {
+      var matches = this.filter(function (r) {
         return r.hash === route.hash;
       });
 
       if (matches.length > 0) {
-        return this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
-      } else {
-        return null;
-      }
-    }
-  }, {
-    key: "replaceIfBetter",
-    value: function replaceIfBetter(route) {
-      var matches = this.routes.filter(function (r) {
-        return r.hash === route.hash;
-      });
-
-      if (matches.length > 0) {
-        var match = this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
+        var index = this.indexOf(matches[0]);
+        var match = this.splice(index, 1)[0];
 
         if (route.distance < match.distance) {
-          this.add(route);
+          this.splice(index, 0, route);
         } else {
-          this.add(match);
+          this.splice(index, 0, match);
         }
       } else {
-        this.add(route);
+        this.push(route);
       }
-    }
-  }, {
-    key: "length",
-    get: function get() {
-      return this.routes.length;
     }
   }, {
     key: "first",
     get: function get() {
-      return this.routes[0];
+      return this[0];
+    }
+  }, {
+    key: "last",
+    get: function get() {
+      return this.length < 1 ? this : this[this.length - 1];
     }
   }]);
 
   return RouteCollection;
-}();
+}(_extendableBuiltin(Array));
 
 exports.default = RouteCollection;

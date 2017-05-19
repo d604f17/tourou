@@ -7,6 +7,7 @@
     "nodemon": "nodemon -q --watch dist dist/main.js"
   },
   "dependencies": {
+    "attractions-api": "git://github.com/d604f17/attractions-api.git",
     "directions-api": "git://github.com/d604f17/directions-api.git",
     "haversine": "^1.0.2",
     "underscore": "^1.8.3",
@@ -16,6 +17,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-watch": "^2.0.6",

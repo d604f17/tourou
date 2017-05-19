@@ -53,6 +53,8 @@ export default class Route {
 
     edgeLatitudeRange.sort((a, b) => a - b);
 
+    let errors = [];
+
     this.boundedBoxes.forEach(box => {
       let boundLatitudeRange = [box.n, box.s];
 
@@ -65,15 +67,15 @@ export default class Route {
           boundLatitudeRange[1] >= y
       );
 
-      const isEdgeAWithinBox = box.w <= edge.a.latitude &&
-          box.n <= edge.a.longitude &&
-          box.e >= edge.a.latitude &&
-          box.s >= edge.a.longitude;
+      const isEdgeAWithinBox = edge.a.longitude >= box.w &&
+          edge.a.longitude <= box.e &&
+          edge.a.latitude >= box.s &&
+          edge.a.latitude <= box.n;
 
-      const isEdgeBWithinBox = box.w <= edge.b.latitude &&
-          box.n <= edge.b.longitude &&
-          box.e >= edge.b.latitude &&
-          box.s >= edge.b.longitude;
+      const isEdgeBWithinBox = edge.b.longitude >= box.w &&
+          edge.b.longitude <= box.e &&
+          edge.b.latitude >= box.s &&
+          edge.b.latitude <= box.n;
 
       const hasEdgePassed = isEdgeAWithinBox ||
           isEdgeBWithinBox ||
@@ -89,7 +91,7 @@ export default class Route {
       return edge.multiplier = sum.reduce((a, b) => a + b) / sum.length;
     }
     else {
-      return 1;
+      return edge.multiplier = 1;
     }
   }
 

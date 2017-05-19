@@ -29,8 +29,8 @@ export const queryBoxDistance = (box) => {
       if (route) {
         const leg = route.legs[0];
         distance = leg.distance.value;
-        box.nw = [leg.start_location.lng, leg.start_location.lat];
-        box.se = [leg.end_location.lng, leg.end_location.lat];
+        // box.nw = [leg.start_location.lng, leg.start_location.lat];
+        // box.se = [leg.end_location.lng, leg.end_location.lat];
       }
 
       resolve({distance, box});

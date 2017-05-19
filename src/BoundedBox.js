@@ -40,7 +40,7 @@ class BoundedBox {
       if (waypoint.longitude > maxLon) maxLon = waypoint.longitude;
     });
 
-    return new BoundedBox([minLon, minLat], [maxLon, maxLat]);
+    return new BoundedBox([minLon, maxLat], [maxLon, minLat]);
   }
 }
 

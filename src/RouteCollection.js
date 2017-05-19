@@ -1,51 +1,28 @@
-export default class RouteCollection {
-  constructor(routes = []) {
-    this.routes = routes;
-  }
-
-  get length() {
-    return this.routes.length;
-  }
-
+class RouteCollection extends Array {
   get first() {
-    return this.routes[0];
+    return this[0];
   }
 
-  shift() {
-    return this.routes.shift();
+  get last() {
+    return this.length < 1 ? this : this[this.length - 1];
   }
 
-  sort(func) {
-    this.routes.sort(func);
-  }
-
-  add(route) {
-    return this.routes.push(route);
-  }
-
-  extract(route) {
-    const matches = this.routes.filter(r => r.hash === route.hash);
+  pushOrReplaceIfLowerDistance(route) {
+    const matches = this.filter(r => r.hash === route.hash);
 
     if (matches.length > 0) {
-      return this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
-    } else {
-      return null;
-    }
-  }
-
-  replaceIfBetter(route) {
-    const matches = this.routes.filter(r => r.hash === route.hash);
-
-    if (matches.length > 0) {
-      const match = this.routes.splice(this.routes.indexOf(matches[0]), 1)[0];
+      const index = this.indexOf(matches[0]);
+      const match = this.splice(index, 1)[0];
 
       if (route.distance < match.distance) {
-        this.add(route);
+        this.splice(index, 0, route);
       } else {
-        this.add(match);
+        this.splice(index, 0, match);
       }
     } else {
-      this.add(route);
+      this.push(route);
     }
   }
 }
+
+export default RouteCollection;

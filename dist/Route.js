@@ -87,6 +87,8 @@ var Route = function () {
         return a - b;
       });
 
+      var errors = [];
+
       this.boundedBoxes.forEach(function (box) {
         var boundLatitudeRange = [box.n, box.s];
 
@@ -98,9 +100,9 @@ var Route = function () {
           return edgeLatitudeRange[0] <= y && edgeLatitudeRange[1] >= y && boundLatitudeRange[0] <= y && boundLatitudeRange[1] >= y;
         };
 
-        var isEdgeAWithinBox = box.w <= edge.a.latitude && box.n <= edge.a.longitude && box.e >= edge.a.latitude && box.s >= edge.a.longitude;
+        var isEdgeAWithinBox = edge.a.longitude >= box.w && edge.a.longitude <= box.e && edge.a.latitude >= box.s && edge.a.latitude <= box.n;
 
-        var isEdgeBWithinBox = box.w <= edge.b.latitude && box.n <= edge.b.longitude && box.e >= edge.b.latitude && box.s >= edge.b.longitude;
+        var isEdgeBWithinBox = edge.b.longitude >= box.w && edge.b.longitude <= box.e && edge.b.latitude >= box.s && edge.b.latitude <= box.n;
 
         var hasEdgePassed = isEdgeAWithinBox || isEdgeBWithinBox || isYWithinEdgeAndBox(edge.linearEquation(box.w)) || isYWithinEdgeAndBox(edge.linearEquation(box.e));
 
@@ -114,7 +116,7 @@ var Route = function () {
           return a + b;
         }) / sum.length;
       } else {
-        return 1;
+        return edge.multiplier = 1;
       }
     }
   }, {
