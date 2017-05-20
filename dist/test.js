@@ -24,6 +24,7 @@ var _halfnhalf2 = _interopRequireDefault(_halfnhalf);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var fs = require('fs');
 var util = require('util');
 console.log('--------------------------------------------------------');
 
@@ -48,5 +49,8 @@ var waypoints = attractions.map(function (sight) {
   var end = new Date().getTime();
 
   var area = getArea(_BoundedBox2.default.generateFromWaypoints(route.waypoints));
-  console.log(route.hash, 'one', route.value, country, waypoints.length, area, iterations, route.distance, route.realDistance, maxDistance, end - start, JSON.stringify(route));
+  var text = route.hash + ', ' + 'one' + ', ' + route.value + ', ' + country + ', ' + waypoints.length + ', ' + area + ', ' + iterations + ', ' + route.distance + ', ' + route.realDistance + ', ' + maxDistance + ', ' + (end - start) + ', ' + JSON.stringify(route);
+  fs.writeFile(__dirname + '/tests/' + country + '.txt', text, { flag: 'w' }, function (error) {
+    console.log(error);
+  });
 }).catch(console.error);

@@ -1,3 +1,4 @@
+const fs = require('fs');
 const util = require('util');
 console.log('--------------------------------------------------------');
 import Waypoint from './Waypoint';
@@ -27,6 +28,8 @@ orienteering(iterations, maxDistance, waypoints, one).then(route => {
   var end = new Date().getTime();
 
   const area = getArea(BoundedBox.generateFromWaypoints(route.waypoints));
-  console.log(route.hash, 'one', route.value, country, waypoints.length, area,
-      iterations, route.distance, route.realDistance, maxDistance, end - start, JSON.stringify(route));
+  const text = `${route.hash}, ${'one'}, ${route.value}, ${country}, ${waypoints.length}, ${area}, ${iterations}, ${route.distance}, ${route.realDistance}, ${maxDistance}, ${end - start}, ${JSON.stringify(route)}`;
+  fs.writeFile(__dirname + '/tests/' + country + '.txt', text, {flag: 'w'}, function(error) {
+    console.log(error);
+  });
 }).catch(console.error);
