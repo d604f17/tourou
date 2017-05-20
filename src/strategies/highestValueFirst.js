@@ -1,5 +1,5 @@
 import Directions from 'directions-api';
-import Edge from './../edge.js';
+import Edge from './../Edge';
 
 const directions = new Directions('AIzaSyBw9WbNkrlLt4IXxpGzAAmQrRCn_PchFog');
 

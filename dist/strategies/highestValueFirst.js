@@ -10,9 +10,9 @@ var _directionsApi = require('directions-api');
 
 var _directionsApi2 = _interopRequireDefault(_directionsApi);
 
-var _edge = require('./../edge.js');
+var _Edge = require('./../Edge');
 
-var _edge2 = _interopRequireDefault(_edge);
+var _Edge2 = _interopRequireDefault(_Edge);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -75,7 +75,7 @@ var highestValueFirst = function highestValueFirst(waypoints, iterations) {
     var queries = [];
 
     for (var i = 0; i < iterations; i++) {
-      var edge = new _edge2.default(highestValueWaypoints[i], highestValueWaypoints[i + 1]);
+      var edge = new _Edge2.default(highestValueWaypoints[i], highestValueWaypoints[i + 1]);
       queries.push(queryDistance(edge));
     }
 
