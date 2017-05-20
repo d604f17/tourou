@@ -11,8 +11,8 @@ const orderByHighestValue = (waypoints) => {
 
 const calculateBoundedBox = (waypoints) => {
   let minLat, minLon, maxLat, maxLon;
-  minLat = minLon = Number.MAX_VALUE;
-  maxLat = maxLon = Number.MIN_VALUE;
+  minLat = minLon = Number.MAX_SAFE_INTEGER;
+  maxLat = maxLon = Number.MIN_SAFE_INTEGER;
 
   waypoints.forEach(waypoint => {
     if (waypoint.latitude < minLat) minLat = waypoint.latitude;

@@ -1,27 +1,35 @@
-class RouteCollection extends Array {
-  get first() {
-    return this[0];
+class RouteCollection {
+  routes = {};
+
+  get length() {
+    return Object.keys(this.routes).length;
   }
 
-  get last() {
-    return this.length < 1 ? this : this[this.length - 1];
+  add(route) {
+    this.routes[route.hash] = route;
   }
 
-  pushOrReplaceIfLowerDistance(route) {
-    const matches = this.filter(r => r.hash === route.hash);
+  shift() {
+    const key = Object.keys(this.routes)[0];
+    const route = this.routes[key];
+    delete this.routes[key];
+    return route;
+  }
 
-    if (matches.length > 0) {
-      const index = this.indexOf(matches[0]);
-      const match = this.splice(index, 1)[0];
+  addOrReplaceIfLowerDistance(route) {
+    let match = this.routes[route.hash];
 
-      if (route.distance < match.distance) {
-        this.splice(index, 0, route);
-      } else {
-        this.splice(index, 0, match);
+    if (match) {
+      if (route.distance > match.distance) {
+        this.routes[route.hash] = route;
       }
     } else {
-      this.push(route);
+      this.add(route);
     }
+  }
+
+  toArray() {
+    return Object.keys(this.routes).map(key => this.routes[key]);
   }
 }
 

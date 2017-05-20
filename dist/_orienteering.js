@@ -28,49 +28,49 @@ var directions = new _directionsApi2.default('AIzaSyDoHGpEGGn6nwiyWXvhOvOSOoTLnW
 var orienteering = function orienteering(iterations, maxDistance, waypoints, strategy) {
   return new Promise(function (resolve) {
     strategy(waypoints, iterations).then(function (boxes) {
-      var localWaypoints = [waypoints[0]];
+      var localWaypoints = [];
       var workingRoutes = new _RouteCollection2.default();
       var possibleRoutes = new _RouteCollection2.default();
 
       for (var i = 1; i < waypoints.length; i++) {
         var _route = new _Route2.default(waypoints[0], waypoints[i], boxes);
 
-        if (_route.distance > 0 && _route.distance <= maxDistance / 2) {
+        if (_route.distance > 0 && _route.distance <= maxDistance) {
           localWaypoints.push(waypoints[i]);
-          workingRoutes.add(_route);
+          workingRoutes.push(_route);
         }
       }
 
       var _loop = function _loop() {
         var workingRoute = workingRoutes.shift();
-        //console.log(workingRoute.hash);
-
+        console.log(workingRoute.hash);
+        console.time('while');
         localWaypoints.forEach(function (waypoint) {
           var localWorkingRoute = workingRoute.clone();
 
           // check for index istedet for object match
-          if (_underscore2.default.isEqual(waypoint, localWaypoints[0])) {
+          if (_underscore2.default.isEqual(waypoint, waypoints[0])) {
             localWorkingRoute.add(waypoint);
 
-            if (localWorkingRoute.distance <= maxDistance) possibleRoutes.addOrReplaceIfLowerDistance(localWorkingRoute);
+            if (localWorkingRoute.distance <= maxDistance) possibleRoutes.pushOrReplaceIfLowerDistance(localWorkingRoute);
           } else if (!localWorkingRoute.containsWaypoint(waypoint)) {
             localWorkingRoute.add(waypoint);
 
-            if (localWorkingRoute.distance <= maxDistance) workingRoutes.addOrReplaceIfLowerDistance(localWorkingRoute);
+            if (localWorkingRoute.distance <= maxDistance) workingRoutes.pushOrReplaceIfLowerDistance(localWorkingRoute);
           }
         });
+        console.timeEnd('while');
       };
 
       while (workingRoutes.length > 0) {
         _loop();
       }
 
-      possibleRoutes = possibleRoutes.toArray();
       possibleRoutes.sort(function (a, b) {
         return b.value - a.value;
       });
 
-      var route = possibleRoutes[0];
+      var route = possibleRoutes.first;
 
       var coordinates = route.waypoints.map(function (waypoint) {
         return waypoint.latitude + ',' + waypoint.longitude;

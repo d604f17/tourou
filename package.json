@@ -8,10 +8,11 @@
   },
   "dependencies": {
     "attractions-api": "git://github.com/d604f17/attractions-api.git",
+    "csv": "^1.1.1",
     "directions-api": "git://github.com/d604f17/directions-api.git",
+    "extend": "latest",
     "haversine": "^1.0.2",
-    "underscore": "^1.8.3",
-    "extend": "latest"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

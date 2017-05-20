@@ -9,45 +9,45 @@ const directions = new Directions('AIzaSyDoHGpEGGn6nwiyWXvhOvOSOoTLnWwE4TE');
 const orienteering = (iterations, maxDistance, waypoints, strategy) => {
   return new Promise(resolve => {
     strategy(waypoints, iterations).then(boxes => {
-      let localWaypoints = [waypoints[0]];
+      let localWaypoints = [];
       let workingRoutes = new RouteCollection();
       let possibleRoutes = new RouteCollection();
 
       for (let i = 1; i < waypoints.length; i++) {
         const route = new Route(waypoints[0], waypoints[i], boxes);
 
-        if (route.distance > 0 && route.distance <= maxDistance / 2) {
+        if (route.distance > 0 && route.distance <= maxDistance) {
           localWaypoints.push(waypoints[i]);
-          workingRoutes.add(route);
+          workingRoutes.push(route);
         }
       }
 
       while (workingRoutes.length > 0) {
         const workingRoute = workingRoutes.shift();
-        //console.log(workingRoute.hash);
-
+        console.log(workingRoute.hash);
+        console.time('while');
         localWaypoints.forEach(waypoint => {
           const localWorkingRoute = workingRoute.clone();
 
           // check for index istedet for object match
-          if (_.isEqual(waypoint, localWaypoints[0])) {
+          if (_.isEqual(waypoint, waypoints[0])) {
             localWorkingRoute.add(waypoint);
 
             if (localWorkingRoute.distance <= maxDistance)
-              possibleRoutes.addOrReplaceIfLowerDistance(localWorkingRoute);
+              possibleRoutes.pushOrReplaceIfLowerDistance(localWorkingRoute);
           } else if (!localWorkingRoute.containsWaypoint(waypoint)) {
             localWorkingRoute.add(waypoint);
 
             if (localWorkingRoute.distance <= maxDistance)
-              workingRoutes.addOrReplaceIfLowerDistance(localWorkingRoute);
+              workingRoutes.pushOrReplaceIfLowerDistance(localWorkingRoute);
           }
         });
+        console.timeEnd('while');
       }
 
-      possibleRoutes = possibleRoutes.toArray();
       possibleRoutes.sort((a, b) => b.value - a.value);
 
-      const route = possibleRoutes[0];
+      const route = possibleRoutes.first;
 
       const coordinates = route.waypoints.map(waypoint => {
         return `${waypoint.latitude},${waypoint.longitude}`;

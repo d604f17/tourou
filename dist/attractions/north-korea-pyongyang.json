@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Pyongyang Metro",
+    "address": "",
+    "lat": 39.0431902,
+    "lng": 125.7540249,
+    "popularity": 465
+  },
+  {
+    "name": "May Day Stadium",
+    "address": "",
+    "lat": 39.0495476,
+    "lng": 125.7753237,
+    "popularity": 356
+  },
+  {
+    "name": "Kim Il-sung Square",
+    "address": "",
+    "lat": 39.0195947,
+    "lng": 125.7526304,
+    "popularity": 339
+  },
+  {
+    "name": "Mangyongdae",
+    "address": "",
+    "lat": 38.9950797,
+    "lng": 125.6526016,
+    "popularity": 285
+  },
+  {
+    "name": "Ryugyong Hotel",
+    "address": "",
+    "lat": 38.9993213,
+    "lng": 125.7515234,
+    "popularity": 285
+  },
+  {
+    "name": "Kim Il-sung Stadium",
+    "address": "",
+    "lat": 39.0437545,
+    "lng": 125.757748,
+    "popularity": 280
+  },
+  {
+    "name": "Grand People's Study House",
+    "address": "",
+    "lat": 39.0202923,
+    "lng": 125.749265,
+    "popularity": 263
+  },
+  {
+    "name": "Mansudae Grand Monument",
+    "address": "",
+    "lat": 39.0321674,
+    "lng": 125.7532077,
+    "popularity": 238
+  },
+  {
+    "name": "Victorious Fatherland Liberation War Museum",
+    "address": "",
+    "lat": 39.0383333,
+    "lng": 125.7405556,
+    "popularity": 225
+  },
+  {
+    "name": "Children's Palace",
+    "address": "",
+    "lat": 39.0138938,
+    "lng": 125.6584087,
+    "popularity": 204
+  },
+  {
+    "name": "Pyongyang Film Studios",
+    "address": "",
+    "lat": 39.0715022,
+    "lng": 125.7113368,
+    "popularity": 197
+  },
+  {
+    "name": "Mangyongdae Children’s Palace",
+    "address": "",
+    "lat": 39.0138938,
+    "lng": 125.6584087,
+    "popularity": 193
+  },
+  {
+    "name": "Tower of the Juche Idea",
+    "address": "",
+    "lat": 39.01769609999999,
+    "lng": 125.7635901,
+    "popularity": 162
+  },
+  {
+    "name": "Fountain",
+    "address": "",
+    "lat": 39.0234947,
+    "lng": 125.7502413,
+    "popularity": 157
+  },
+  {
+    "name": "Fountain",
+    "address": "",
+    "lat": 39.0234947,
+    "lng": 125.7502413,
+    "popularity": 157
+  },
+  {
+    "name": "Moran Hill",
+    "address": "",
+    "lat": 39.0305274,
+    "lng": 125.7539952,
+    "popularity": 146
+  },
+  {
+    "name": "Kim Il-sung Mural",
+    "address": "",
+    "lat": 39.0195947,
+    "lng": 125.7526304,
+    "popularity": 138
+  },
+  {
+    "name": "Chollima Statue",
+    "address": "",
+    "lat": 39.03427020000001,
+    "lng": 125.7528863,
+    "popularity": 118
+  },
+  {
+    "name": "Metro Museum",
+    "address": "",
+    "lat": 39.0783131,
+    "lng": 125.7550237,
+    "popularity": 115
+  },
+  {
+    "name": "Korean Revolution Museum",
+    "address": "",
+    "lat": 39.0319357,
+    "lng": 125.7517125,
+    "popularity": 114
+  },
+  {
+    "name": "Korean Central History Museum",
+    "address": "Kim Il-sung Sq",
+    "lat": 39.0204891,
+    "lng": 125.7546049,
+    "popularity": 113
+  },
+  {
+    "name": "Triumphal Arch",
+    "address": "",
+    "lat": 39.0445363,
+    "lng": 125.7531827,
+    "popularity": 110
+  },
+  {
+    "name": "Mangyongdae Funfair",
+    "address": "Mangyongdae",
+    "lat": 38.9950797,
+    "lng": 125.6526016,
+    "popularity": 108
+  },
+  {
+    "name": "Liberation Tower",
+    "address": "",
+    "lat": 39.0351362,
+    "lng": 125.7588485,
+    "popularity": 108
+  },
+  {
+    "name": "Three Revolutions Exhibition",
+    "address": "",
+    "lat": 39.0783131,
+    "lng": 125.7550237,
+    "popularity": 108
+  },
+  {
+    "name": "Kumsusan Memorial Palace of the Sun",
+    "address": "",
+    "lat": 39.0632284,
+    "lng": 125.7888782,
+    "popularity": 108
+  },
+  {
+    "name": "People's Palace of Culture",
+    "address": "",
+    "lat": 39.0255791,
+    "lng": 125.7384701,
+    "popularity": 104
+  },
+  {
+    "name": "Taedong Gate",
+    "address": "",
+    "lat": 39.022617,
+    "lng": 125.7568098,
+    "popularity": 104
+  },
+  {
+    "name": "Potong Gate",
+    "address": "",
+    "lat": 39.0271187,
+    "lng": 125.7418138,
+    "popularity": 101
+  },
+  {
+    "name": "Party Founding Museum",
+    "address": "",
+    "lat": 39.0278725,
+    "lng": 125.7764659,
+    "popularity": 101
+  },
+  {
+    "name": "Sino-Korean Friendship Tower",
+    "address": "",
+    "lat": 39.0509664,
+    "lng": 125.7559995,
+    "popularity": 100
+  },
+  {
+    "name": "Tomb of Tan'gun",
+    "address": "",
+    "lat": 39.1522528,
+    "lng": 126.0541363,
+    "popularity": 100
+  },
+  {
+    "name": "Chilsong Gate",
+    "address": "",
+    "lat": 39.0360233,
+    "lng": 125.7542836,
+    "popularity": 100
+  },
+  {
+    "name": "Monument to the Victorious Fatherland Liberation War 1950–1953",
+    "address": "",
+    "lat": 39.0383333,
+    "lng": 125.7405556,
+    "popularity": 100
+  }
+]

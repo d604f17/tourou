@@ -23,7 +23,10 @@ export default class Route {
   }
 
   containsWaypoint(waypoint) {
-    return _.contains(this.waypoints, waypoint);
+    // console.time('contains');
+    var result = _.contains(this.waypoints, waypoint);
+    // console.timeEnd('contains');
+    return result;
   }
 
   setValueAndDistanceAndWaypoints() {

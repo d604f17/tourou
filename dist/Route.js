@@ -51,7 +51,10 @@ var Route = function () {
   }, {
     key: 'containsWaypoint',
     value: function containsWaypoint(waypoint) {
-      return _underscore2.default.contains(this.waypoints, waypoint);
+      // console.time('contains');
+      var result = _underscore2.default.contains(this.waypoints, waypoint);
+      // console.timeEnd('contains');
+      return result;
     }
   }, {
     key: 'setValueAndDistanceAndWaypoints',
