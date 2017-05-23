@@ -14,13 +14,13 @@ var mmas = function mmas(vertices) {
   var colony = new _Colony2.default();
 
   vertices.forEach(function (vertex) {
-    colony.getGraph().addVertex(vertex.x, vertex.y, vertex.value);
+    colony.getGraph().addVertex(vertex[0], vertex[1], vertex[2]);
   });
 
   colony.getGraph().createEdges();
   colony.reset();
   colony.run();
-  console.log(colony.getGlobalBest().getTour());
+  console.log('result', colony.getGlobalBest().getTour());
 };
 
 exports.default = mmas;

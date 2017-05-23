@@ -7,16 +7,17 @@ class Colony {
     this._colony = [];
 
     // Set default params
-    this._colonySize = 20;
+    this._colonySize = 5; // 20
     this._alpha = 1;
     this._beta = 3;
     this._rho = 0.1;
     this._q = 1;
     this._initPheromone = this._q;
-    this._type = 'acs';
+    this._type = 'maxmin'; //acs
     this._elitistWeight = 0;
-    this._maxIterations = 250;
+    this._maxIterations = 5; //250
     this._minScalingFactor = 0.001;
+    this._maxDistance = 100;
 
     this._iteration = 0;
     this._minPheromone = null;
@@ -55,6 +56,7 @@ class Colony {
         'alpha': this._alpha,
         'beta': this._beta,
         'q': this._q,
+        'maxDistance': this._maxDistance,
       }));
     }
   }
@@ -123,8 +125,8 @@ class Colony {
       edges[edgeIndex].setPheromone(pheromone * (1 - this._rho));
     }
 
-    if (this._type === 'maxmin') {
-      if ((this._iteration / this._maxIterations) > 0.75) {
+    if (this._type == 'maxmin') {
+      if ((this._iteration / this._maxIterations) > 0.75) { //0.75
         best = this.getGlobalBest();
       } else {
         best = this.getIterationBest();
@@ -141,11 +143,11 @@ class Colony {
       }
     }
 
-    if (this._type === 'elitist') {
+    if (this._type == 'elitist') {
       this.getGlobalBest().addPheromone(this._elitistWeight);
     }
 
-    if (this._type === 'maxmin') {
+    if (this._type == 'maxmin') {
       for (var edgeIndex in edges) {
         const pheromone = edges[edgeIndex].getPheromone();
         if (pheromone > this._maxPheromone) {
@@ -158,18 +160,24 @@ class Colony {
   }
 
   getIterationBest() {
-    if (this._colony[0].getTour() === null) {
+    if (this._colony[0].getTour() == null) {
       return null;
     }
 
-    if (this._iterationBest === null) {
-      const best = this._colony[0];
+    if (this._iterationBest == null) {
+      let bestIndex = 0;
+      let bestValue = this._colony[bestIndex].getTour().value;
 
       for (var antIndex in this._colony) {
-        if (best.getTour().distance() >= this._colony[antIndex].getTour().distance()) {
-          this._iterationBest = this._colony[antIndex];
+        const value = this._colony[antIndex].getTour().value;
+        console.log(antIndex, value);
+        if (value > bestValue) {
+          bestIndex = antIndex;
+          bestValue = value;
         }
       }
+
+      this._iterationBest = this._colony[bestIndex];
     }
 
     return this._iterationBest;
@@ -177,13 +185,13 @@ class Colony {
 
   getGlobalBest() {
     const bestAnt = this.getIterationBest();
-    if (bestAnt === null && this._globalBest === null) {
+    if (bestAnt == null && this._globalBest == null) {
       return null;
     }
 
-    if (bestAnt !== null) {
-      if (this._globalBest === null ||
-          this._globalBest.getTour().distance() >= bestAnt.getTour().distance()) {
+    if (bestAnt != null) {
+      if (this._globalBest == null ||
+          this._globalBest.getTour().value >= bestAnt.getTour().value) {
         this._globalBest = bestAnt;
       }
     }

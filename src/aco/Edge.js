@@ -29,11 +29,11 @@ class Edge {
   }
 
   contains(vertex) {
-    if (this._vertexA.x === vertex.x) {
+    if (this._vertexA.x == vertex.x) {
       return true;
     }
 
-    if (this._vertexB.x === vertex.x) {
+    if (this._vertexB.x == vertex.x) {
       return true;
     }
 

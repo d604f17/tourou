@@ -53,8 +53,8 @@ var Graph = function () {
     }
   }, {
     key: 'addVertex',
-    value: function addVertex(x, y) {
-      this._vertices.push(new _Vertex2.default(x, y));
+    value: function addVertex(x, y, value) {
+      this._vertices.push(new _Vertex2.default(x, y, value));
     }
   }, {
     key: '_addEdge',
@@ -64,10 +64,10 @@ var Graph = function () {
   }, {
     key: 'getEdge',
     value: function getEdge(vertexA, vertexB) {
-      if (this._edges[vertexA.toString() + '-' + vertexB.toString()] !== undefined) {
+      if (this._edges[vertexA.toString() + '-' + vertexB.toString()] != undefined) {
         return this._edges[vertexA.toString() + '-' + vertexB.toString()];
       }
-      if (this._edges[vertexB.toString() + '-' + vertexA.toString()] !== undefined) {
+      if (this._edges[vertexB.toString() + '-' + vertexA.toString()] != undefined) {
         return this._edges[vertexB.toString() + '-' + vertexA.toString()];
       }
     }

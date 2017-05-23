@@ -22,7 +22,7 @@ class Vertex {
   }
 
   isEqual(vertex) {
-    return this.x === vertex.x && this.y === vertex.y;
+    return this.x == vertex.x && this.y == vertex.y;
   }
 }
 

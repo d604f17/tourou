@@ -3,10 +3,15 @@ class Tour {
     this._graph = graph;
     this._tour = [];
     this._distance = null;
+    this._value = 0;
   }
 
   size() {
     return this._tour.length;
+  }
+
+  get value() {
+    return this._value;
   }
 
   contains(vertex) {
@@ -22,6 +27,7 @@ class Tour {
   addVertex(vertex) {
     this._distance = null;
     this._tour.push(vertex);
+    this._value += vertex.value;
   }
 
   get(tourIndex) {
@@ -33,7 +39,7 @@ class Tour {
   }
 
   distance() {
-    if (this._distance === null) {
+    if (this._distance == null) {
       let distance = 0.0, edge;
 
       for (var tourIndex = 0; tourIndex < this._tour.length; tourIndex++) {

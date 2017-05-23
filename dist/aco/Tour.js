@@ -15,6 +15,7 @@ var Tour = function () {
     this._graph = graph;
     this._tour = [];
     this._distance = null;
+    this._value = 0;
   }
 
   _createClass(Tour, [{
@@ -38,6 +39,7 @@ var Tour = function () {
     value: function addVertex(vertex) {
       this._distance = null;
       this._tour.push(vertex);
+      this._value += vertex.value;
     }
   }, {
     key: "get",
@@ -52,7 +54,7 @@ var Tour = function () {
   }, {
     key: "distance",
     value: function distance() {
-      if (this._distance === null) {
+      if (this._distance == null) {
         var distance = 0.0,
             edge = void 0;
 
@@ -70,6 +72,11 @@ var Tour = function () {
       }
 
       return this._distance;
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this._value;
     }
   }]);
 

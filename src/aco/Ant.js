@@ -7,6 +7,7 @@ class Ant {
     this._alpha = params.alpha;
     this._beta = params.beta;
     this._q = params.q;
+    this._maxDistance = params.maxDistance;
     this._tour = null;
   }
 
@@ -16,8 +17,7 @@ class Ant {
 
   init() {
     this._tour = new Tour(this._graph);
-    const randVertexIndex = Math.floor(Math.random() * this._graph.size());
-    this._currentVertex = this._graph.getVertex(randVertexIndex);
+    this._currentVertex = this._graph.getVertex(0);
     this._tour.addVertex(this._currentVertex);
   }
 
@@ -26,7 +26,7 @@ class Ant {
   }
 
   makeNextMove() {
-    if (this._tour === null) {
+    if (this._tour == null) {
       this.init();
     }
 
@@ -36,9 +36,13 @@ class Ant {
     let vertexProbabilities = [];
     let finalPheromoneWeight;
     for (var vertexIndex in vertices) {
-      if (!this._tour.contains(vertices[vertexIndex])) {
+      let edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertices[vertexIndex]).getDistance();
+      let edgeHomeDistance = this._graph.getEdge(vertices[vertexIndex], vertices[0]).getDistance();
+      if ((vertexIndex == 0 && this._tour.size() > 1) ||
+          (!this._tour.contains(vertices[vertexIndex]) &&
+          (this._maxDistance >= this._tour.distance() + edgeForwardDistance + edgeHomeDistance))) {
         let edge = this._graph.getEdge(this._currentVertex, vertices[vertexIndex]);
-        if (this._alpha === 1) {
+        if (this._alpha == 1) {
           finalPheromoneWeight = edge.getPheromone();
         } else {
           finalPheromoneWeight = Math.pow(edge.getPheromone(), this._alpha);
@@ -53,7 +57,8 @@ class Ant {
 
     let wheelPosition = 0.0;
     for (var vertexIndex in vertices) {
-      if (!this._tour.contains(vertices[vertexIndex])) {
+      if ((vertexIndex == 0 && this._tour.size() > 1) ||
+          !this._tour.contains(vertices[vertexIndex])) {
         wheelPosition += vertexProbabilities[vertexIndex];
         if (wheelPosition >= wheelTarget) {
           this._currentVertex = vertices[vertexIndex];
@@ -65,13 +70,13 @@ class Ant {
   }
 
   tourFound() {
-    if (this._tour === null) {
+    if (this._tour == null) {
       return false;
     }
 
     //console.log(this._graph.getVertices()[0].isEqual(this.getTour().getLast()));
-    // return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
-    return (this._tour.size() >= this._graph.size());
+    return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
+    // return (this._tour.size() >= this._graph.size());
   }
 
   run() {
@@ -84,11 +89,11 @@ class Ant {
   addPheromone(weight) {
     let fromVertex, toVertex, edge, pheromone;
 
-    if (weight === undefined) {
+    if (weight == undefined) {
       weight = 1;
     }
 
-    const extraPheromone = (this._q * weight) / this._tour.distance();
+    const extraPheromone = (this._q * weight) / this._tour.distance(); // TODO distance/value
     for (var tourIndex = 0; tourIndex < this._tour.size(); tourIndex++) {
       if (tourIndex >= this._tour.size() - 1) {
         fromVertex = this._tour.get(tourIndex);

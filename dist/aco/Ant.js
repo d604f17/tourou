@@ -23,6 +23,7 @@ var Ant = function () {
     this._alpha = params.alpha;
     this._beta = params.beta;
     this._q = params.q;
+    this._maxDistance = params.maxDistance;
     this._tour = null;
   }
 
@@ -35,8 +36,7 @@ var Ant = function () {
     key: 'init',
     value: function init() {
       this._tour = new _Tour2.default(this._graph);
-      var randVertexIndex = Math.floor(Math.random() * this._graph.size());
-      this._currentVertex = this._graph.getVertex(randVertexIndex);
+      this._currentVertex = this._graph.getVertex(0);
       this._tour.addVertex(this._currentVertex);
     }
   }, {
@@ -47,7 +47,7 @@ var Ant = function () {
   }, {
     key: 'makeNextMove',
     value: function makeNextMove() {
-      if (this._tour === null) {
+      if (this._tour == null) {
         this.init();
       }
 
@@ -57,9 +57,11 @@ var Ant = function () {
       var vertexProbabilities = [];
       var finalPheromoneWeight = void 0;
       for (var vertexIndex in vertices) {
-        if (!this._tour.contains(vertices[vertexIndex])) {
+        var edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertices[vertexIndex]).getDistance();
+        var edgeHomeDistance = this._graph.getEdge(vertices[vertexIndex], vertices[0]).getDistance();
+        if (vertexIndex == 0 && this._tour.size() > 1 || !this._tour.contains(vertices[vertexIndex]) && this._maxDistance >= this._tour.distance() + edgeForwardDistance + edgeHomeDistance) {
           var edge = this._graph.getEdge(this._currentVertex, vertices[vertexIndex]);
-          if (this._alpha === 1) {
+          if (this._alpha == 1) {
             finalPheromoneWeight = edge.getPheromone();
           } else {
             finalPheromoneWeight = Math.pow(edge.getPheromone(), this._alpha);
@@ -73,7 +75,7 @@ var Ant = function () {
 
       var wheelPosition = 0.0;
       for (var vertexIndex in vertices) {
-        if (!this._tour.contains(vertices[vertexIndex])) {
+        if (vertexIndex == 0 && this._tour.size() > 1 || !this._tour.contains(vertices[vertexIndex])) {
           wheelPosition += vertexProbabilities[vertexIndex];
           if (wheelPosition >= wheelTarget) {
             this._currentVertex = vertices[vertexIndex];
@@ -86,13 +88,13 @@ var Ant = function () {
   }, {
     key: 'tourFound',
     value: function tourFound() {
-      if (this._tour === null) {
+      if (this._tour == null) {
         return false;
       }
 
       //console.log(this._graph.getVertices()[0].isEqual(this.getTour().getLast()));
-      // return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
-      return this._tour.size() >= this._graph.size();
+      return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
+      // return (this._tour.size() >= this._graph.size());
     }
   }, {
     key: 'run',
@@ -110,11 +112,11 @@ var Ant = function () {
           edge = void 0,
           pheromone = void 0;
 
-      if (weight === undefined) {
+      if (weight == undefined) {
         weight = 1;
       }
 
-      var extraPheromone = this._q * weight / this._tour.distance();
+      var extraPheromone = this._q * weight / this._tour.distance(); // TODO distance/value
       for (var tourIndex = 0; tourIndex < this._tour.size(); tourIndex++) {
         if (tourIndex >= this._tour.size() - 1) {
           fromVertex = this._tour.get(tourIndex);

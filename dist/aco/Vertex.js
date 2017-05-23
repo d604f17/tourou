@@ -25,7 +25,7 @@ var Vertex = function () {
   }, {
     key: 'isEqual',
     value: function isEqual(vertex) {
-      return this.x === vertex.x && this.y === vertex.y;
+      return this.x == vertex.x && this.y == vertex.y;
     }
   }, {
     key: 'x',

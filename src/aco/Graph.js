@@ -27,8 +27,8 @@ class Graph {
     return this._vertices.length;
   }
 
-  addVertex(x, y) {
-    this._vertices.push(new Vertex(x, y));
+  addVertex(x, y, value) {
+    this._vertices.push(new Vertex(x, y, value));
   }
 
   _addEdge(vertexA, vertexB) {
@@ -36,10 +36,10 @@ class Graph {
   }
 
   getEdge(vertexA, vertexB) {
-    if (this._edges[vertexA.toString() + '-' + vertexB.toString()] !== undefined) {
+    if (this._edges[vertexA.toString() + '-' + vertexB.toString()] != undefined) {
       return this._edges[vertexA.toString() + '-' + vertexB.toString()];
     }
-    if (this._edges[vertexB.toString() + '-' + vertexA.toString()] !== undefined) {
+    if (this._edges[vertexB.toString() + '-' + vertexA.toString()] != undefined) {
       return this._edges[vertexB.toString() + '-' + vertexA.toString()];
     }
   }
