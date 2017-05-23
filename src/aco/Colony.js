@@ -7,7 +7,7 @@ class Colony {
     this._colony = [];
 
     // Set default params
-    this._colonySize = 5; // 20
+    this._colonySize = 1; // 20
     this._alpha = 1;
     this._beta = 3;
     this._rho = 0.1;
@@ -15,9 +15,9 @@ class Colony {
     this._initPheromone = this._q;
     this._type = 'maxmin'; //acs
     this._elitistWeight = 0;
-    this._maxIterations = 5; //250
+    this._maxIterations = 1; //250
     this._minScalingFactor = 0.001;
-    this._maxDistance = 100;
+    this._maxDistance = 34;
 
     this._iteration = 0;
     this._minPheromone = null;
@@ -82,10 +82,7 @@ class Colony {
   }
 
   ready() {
-    if (this._graph.size() <= 1) {
-      return false;
-    }
-    return true;
+    return this._graph.size() > 1;
   }
 
   run() {
@@ -170,7 +167,6 @@ class Colony {
 
       for (var antIndex in this._colony) {
         const value = this._colony[antIndex].getTour().value;
-        console.log(antIndex, value);
         if (value > bestValue) {
           bestIndex = antIndex;
           bestValue = value;

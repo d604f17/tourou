@@ -10,6 +10,9 @@ var _Colony2 = _interopRequireDefault(_Colony);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var util = require('util');
+
+
 var mmas = function mmas(vertices) {
   var colony = new _Colony2.default();
 
@@ -21,6 +24,7 @@ var mmas = function mmas(vertices) {
   colony.reset();
   colony.run();
   console.log('result', colony.getGlobalBest().getTour());
+  // console.log(util.inspect(colony.getGlobalBest().getTour(), false, null));
 };
 
 exports.default = mmas;

@@ -40,16 +40,10 @@ class Tour {
 
   distance() {
     if (this._distance == null) {
-      let distance = 0.0, edge;
+      let distance = 0.0;
 
-      for (var tourIndex = 0; tourIndex < this._tour.length; tourIndex++) {
-        if (tourIndex >= this._tour.length - 1) {
-          edge = this._graph.getEdge(this._tour[tourIndex], this._tour[0]);
-          distance += edge.getDistance();
-        } else {
-          edge = this._graph.getEdge(this._tour[tourIndex], this._tour[tourIndex + 1]);
-          distance += edge.getDistance();
-        }
+      for (var i = 1; i < this._tour.length; i++) {
+        distance += this._graph.getEdge(this._tour[i - 1], this._tour[i]).getDistance();
       }
 
       this._distance = distance;

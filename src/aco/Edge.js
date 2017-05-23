@@ -9,7 +9,7 @@ class Edge {
 
     const coordA = {latitude: vertexA.y, longitude: vertexA.x};
     const coordB = {latitude: vertexB.y, longitude: vertexB.x};
-    this._distance = haversine(coordA, coordB, {unit: 'meter'});
+    this._distance = Math.round(haversine(coordA, coordB, {unit: 'meter'}));
   }
 
   pointA() {

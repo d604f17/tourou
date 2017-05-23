@@ -35,12 +35,18 @@ class Ant {
 
     let vertexProbabilities = [];
     let finalPheromoneWeight;
+    let forwardMovePossible = false;
+
     for (var vertexIndex in vertices) {
-      let edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertices[vertexIndex]).getDistance();
-      let edgeHomeDistance = this._graph.getEdge(vertices[vertexIndex], vertices[0]).getDistance();
-      if ((vertexIndex == 0 && this._tour.size() > 1) ||
-          (!this._tour.contains(vertices[vertexIndex]) &&
+      const vertex = vertices[vertexIndex];
+      const edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertex).getDistance();
+      const edgeHomeDistance = this._graph.getEdge(vertex, vertices[0]).getDistance();
+
+      // console.log(vertex, this._tour._tour, this._tour.distance(), edgeForwardDistance,edgeHomeDistance);
+
+      if ((!this._tour.contains(vertices[vertexIndex]) &&
           (this._maxDistance >= this._tour.distance() + edgeForwardDistance + edgeHomeDistance))) {
+
         let edge = this._graph.getEdge(this._currentVertex, vertices[vertexIndex]);
         if (this._alpha == 1) {
           finalPheromoneWeight = edge.getPheromone();
@@ -50,22 +56,28 @@ class Ant {
         vertexProbabilities[vertexIndex] = finalPheromoneWeight *
             Math.pow(1.0 / edge.getDistance(), this._beta);
         rouletteWheel += vertexProbabilities[vertexIndex];
+        forwardMovePossible = true;
       }
     }
 
-    const wheelTarget = rouletteWheel * Math.random();
+    if (forwardMovePossible) {
+      const wheelTarget = rouletteWheel * Math.random();
 
-    let wheelPosition = 0.0;
-    for (var vertexIndex in vertices) {
-      if ((vertexIndex == 0 && this._tour.size() > 1) ||
-          !this._tour.contains(vertices[vertexIndex])) {
-        wheelPosition += vertexProbabilities[vertexIndex];
-        if (wheelPosition >= wheelTarget) {
-          this._currentVertex = vertices[vertexIndex];
-          this._tour.addVertex(vertices[vertexIndex]);
-          return;
+      let wheelPosition = 0.0;
+      for (var vertexIndex in vertices) {
+        if (!this._tour.contains(vertices[vertexIndex])) {
+          wheelPosition += vertexProbabilities[vertexIndex];
+          if (wheelPosition >= wheelTarget) {
+            this._currentVertex = vertices[vertexIndex];
+            this._tour.addVertex(vertices[vertexIndex]);
+            forwardMovePossible = false;
+            return;
+          }
         }
       }
+    } else {
+      this._currentVertex = vertices[0];
+      this._tour.addVertex(vertices[0]);
     }
   }
 
@@ -93,7 +105,7 @@ class Ant {
       weight = 1;
     }
 
-    const extraPheromone = (this._q * weight) / this._tour.distance(); // TODO distance/value
+    const extraPheromone = (this._q * weight) / this._tour.distance();
     for (var tourIndex = 0; tourIndex < this._tour.size(); tourIndex++) {
       if (tourIndex >= this._tour.size() - 1) {
         fromVertex = this._tour.get(tourIndex);

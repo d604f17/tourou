@@ -1,3 +1,4 @@
+const util = require('util');
 import Colony from './Colony';
 
 const mmas = (vertices) => {
@@ -11,6 +12,7 @@ const mmas = (vertices) => {
   colony.reset();
   colony.run();
   console.log('result', colony.getGlobalBest().getTour());
+  // console.log(util.inspect(colony.getGlobalBest().getTour(), false, null));
 };
 
 export default mmas;

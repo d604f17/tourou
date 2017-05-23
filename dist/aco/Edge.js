@@ -25,7 +25,7 @@ var Edge = function () {
 
     var coordA = { latitude: vertexA.y, longitude: vertexA.x };
     var coordB = { latitude: vertexB.y, longitude: vertexB.x };
-    this._distance = (0, _haversine2.default)(coordA, coordB, { unit: 'meter' });
+    this._distance = Math.round((0, _haversine2.default)(coordA, coordB, { unit: 'meter' }));
   }
 
   _createClass(Edge, [{
