@@ -1,23 +1,24 @@
+import readline from 'readline';
 import Graph from './Graph';
 import Ant from './Ant';
 
 class Colony {
-  constructor() {
+  constructor(params) {
     this._graph = new Graph();
     this._colony = [];
 
     // Set default params
-    this._colonySize = 1; // 20
-    this._alpha = 1;
-    this._beta = 3;
-    this._rho = 0.1;
-    this._q = 1;
-    this._initPheromone = this._q;
+    this._colonySize = params && params['colonySize'] ? params['colonySize'] : 30;
+    this._alpha = params && params['alpha'] ? params['alpha'] : 1;
+    this._beta = params && params['beta'] ? params['beta'] : 3;
+    this._rho = params && params['rho'] ? params['rho'] : 0.1;
+    this._q = params && params['q'] ? params['q'] : 1;
+    this._initPheromone = params && params['initPheromone'] ? params['initPheromone'] : this._q;
     this._type = 'maxmin'; //acs
-    this._elitistWeight = 0;
-    this._maxIterations = 1; //250
-    this._minScalingFactor = 0.001;
-    this._maxDistance = 34;
+    this._elitistWeight = params && params['elitistWeight'] ? params['elitistWeight'] : 0;
+    this._maxIterations = params && params['maxIterations'] ? params['maxIterations'] : 200;
+    this._minScalingFactor = params && params['minScalingFactor'] ?params['minScalingFactor'] :0.001;
+    this._maxDistance = params && params['maxDistance'] ?params['maxDistance'] : 30000;
 
     this._iteration = 0;
     this._minPheromone = null;
@@ -91,9 +92,29 @@ class Colony {
     }
 
     this._iteration = 0;
-    while (this._iteration < this._maxIterations) {
-      this.step();
+
+    function writeWaitingPercent(p, m) {
+      readline.clearLine(process.stdout);
+      readline.cursorTo(process.stdout, 0);
+      process.stdout.write(`running ${p}% - ${m} minutes left. `);
     }
+
+    let times = [];
+
+    while (this._iteration < this._maxIterations) {
+      var start = new Date().getTime();
+      this.step();
+      var end = new Date().getTime();
+      times.push(end - start);
+
+      let averageTimePerIteration = times.reduce((a, b) => a + b) / times.length;
+      let timeLeft = (this._maxIterations - this._iteration) * averageTimePerIteration;
+      let percentage = Math.round((this._iteration / this._maxIterations) * 100);
+      let minutes = ((timeLeft / 1000) / 60).toFixed(2);
+
+      writeWaitingPercent(percentage, minutes);
+    }
+    console.log('');
   }
 
   step() {

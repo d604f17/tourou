@@ -13,18 +13,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var util = require('util');
 
 
-var mmas = function mmas(vertices) {
-  var colony = new _Colony2.default();
+var mmas = function mmas(vertices, boxes, params) {
+  var colony = new _Colony2.default(params);
 
   vertices.forEach(function (vertex) {
     colony.getGraph().addVertex(vertex[0], vertex[1], vertex[2]);
   });
 
-  colony.getGraph().createEdges();
+  colony.getGraph().createEdges(boxes);
   colony.reset();
   colony.run();
-  console.log('result', colony.getGlobalBest().getTour());
-  // console.log(util.inspect(colony.getGlobalBest().getTour(), false, null));
+  return colony.getGlobalBest().getTour();
 };
 
 exports.default = mmas;

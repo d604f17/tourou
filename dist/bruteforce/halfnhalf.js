@@ -4,35 +4,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _underscore = require('underscore');
-
-var _underscore2 = _interopRequireDefault(_underscore);
-
-var _Route = require('./Route.js');
-
-var _Route2 = _interopRequireDefault(_Route);
-
-var _RouteCollection = require('./RouteCollection.js');
-
-var _RouteCollection2 = _interopRequireDefault(_RouteCollection);
-
-var _strategies = require('./strategies');
+var _index = require('../strategies/index');
 
 var _orienteering = require('./orienteering');
 
 var _orienteering2 = _interopRequireDefault(_orienteering);
 
-var _directionsApi = require('directions-api');
+var _directions = require('src/directions');
 
-var _directionsApi2 = _interopRequireDefault(_directionsApi);
+var _directions2 = _interopRequireDefault(_directions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var util = require('util');
-
-
-// const directions = new Directions('AIzaSyBw9WbNkrlLt4IXxpGzAAmQrRCn_PchFog');
-var directions = new _directionsApi2.default('AIzaSyDoHGpEGGn6nwiyWXvhOvOSOoTLnWwE4TE');
 
 var halfnhalf = function halfnhalf(iterations, maxDistance, waypoints) {
   return new Promise(function (resolve) {
@@ -43,7 +27,7 @@ var halfnhalf = function halfnhalf(iterations, maxDistance, waypoints) {
     (function loop(min, max) {
       if (count < iterations) {
         ++count;
-        (0, _orienteering2.default)(0, max, waypoints, _strategies.one).then(function (route) {
+        (0, _orienteering2.default)(0, max, waypoints, _index.one).then(function (route) {
           var localMin = min,
               localMax = max;
 

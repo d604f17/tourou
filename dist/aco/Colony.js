@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _readline = require('readline');
+
+var _readline2 = _interopRequireDefault(_readline);
+
 var _Graph = require('./Graph');
 
 var _Graph2 = _interopRequireDefault(_Graph);
@@ -19,24 +23,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Colony = function () {
-  function Colony() {
+  function Colony(params) {
     _classCallCheck(this, Colony);
 
     this._graph = new _Graph2.default();
     this._colony = [];
 
     // Set default params
-    this._colonySize = 1; // 20
-    this._alpha = 1;
-    this._beta = 3;
-    this._rho = 0.1;
-    this._q = 1;
-    this._initPheromone = this._q;
+    this._colonySize = params && params['colonySize'] ? params['colonySize'] : 30;
+    this._alpha = params && params['alpha'] ? params['alpha'] : 1;
+    this._beta = params && params['beta'] ? params['beta'] : 3;
+    this._rho = params && params['rho'] ? params['rho'] : 0.1;
+    this._q = params && params['q'] ? params['q'] : 1;
+    this._initPheromone = params && params['initPheromone'] ? params['initPheromone'] : this._q;
     this._type = 'maxmin'; //acs
-    this._elitistWeight = 0;
-    this._maxIterations = 1; //250
-    this._minScalingFactor = 0.001;
-    this._maxDistance = 34;
+    this._elitistWeight = params && params['elitistWeight'] ? params['elitistWeight'] : 0;
+    this._maxIterations = params && params['maxIterations'] ? params['maxIterations'] : 200;
+    this._minScalingFactor = params && params['minScalingFactor'] ? params['minScalingFactor'] : 0.001;
+    this._maxDistance = params && params['maxDistance'] ? params['maxDistance'] : 30000;
 
     this._iteration = 0;
     this._minPheromone = null;
@@ -122,9 +126,31 @@ var Colony = function () {
       }
 
       this._iteration = 0;
-      while (this._iteration < this._maxIterations) {
-        this.step();
+
+      function writeWaitingPercent(p, m) {
+        _readline2.default.clearLine(process.stdout);
+        _readline2.default.cursorTo(process.stdout, 0);
+        process.stdout.write('running ' + p + '% - ' + m + ' minutes left. ');
       }
+
+      var times = [];
+
+      while (this._iteration < this._maxIterations) {
+        var start = new Date().getTime();
+        this.step();
+        var end = new Date().getTime();
+        times.push(end - start);
+
+        var averageTimePerIteration = times.reduce(function (a, b) {
+          return a + b;
+        }) / times.length;
+        var timeLeft = (this._maxIterations - this._iteration) * averageTimePerIteration;
+        var percentage = Math.round(this._iteration / this._maxIterations * 100);
+        var minutes = (timeLeft / 1000 / 60).toFixed(2);
+
+        writeWaitingPercent(percentage, minutes);
+      }
+      console.log('');
     }
   }, {
     key: 'step',

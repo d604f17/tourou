@@ -1,13 +1,8 @@
 const util = require('util');
-import _ from 'underscore';
-import Route from './Route.js';
-import RouteCollection from './RouteCollection.js';
-import {one} from './strategies';
-import orienteering from './orienteering';
-import Directions from 'directions-api';
 
-// const directions = new Directions('AIzaSyBw9WbNkrlLt4IXxpGzAAmQrRCn_PchFog');
-const directions = new Directions('AIzaSyDoHGpEGGn6nwiyWXvhOvOSOoTLnWwE4TE');
+import {one} from '../strategies/index';
+import orienteering from './orienteering';
+import directions from 'src/directions';
 
 const halfnhalf = (iterations, maxDistance, waypoints) => {
   return new Promise(resolve => {

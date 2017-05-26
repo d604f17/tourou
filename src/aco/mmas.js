@@ -1,18 +1,19 @@
 const util = require('util');
 import Colony from './Colony';
 
-const mmas = (vertices) => {
-  const colony = new Colony();
+const mmas = (vertices, boxes, params) => {
+  const colony = new Colony(params);
 
   vertices.forEach(vertex => {
     colony.getGraph().addVertex(vertex[0], vertex[1], vertex[2]);
   });
 
-  colony.getGraph().createEdges();
+
+
+  colony.getGraph().createEdges(boxes);
   colony.reset();
   colony.run();
-  console.log('result', colony.getGlobalBest().getTour());
-  // console.log(util.inspect(colony.getGlobalBest().getTour(), false, null));
+  return colony.getGlobalBest().getTour();
 };
 
 export default mmas;

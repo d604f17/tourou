@@ -31,8 +31,8 @@ class Graph {
     this._vertices.push(new Vertex(x, y, value));
   }
 
-  _addEdge(vertexA, vertexB) {
-    this._edges[vertexA.toString() + '-' + vertexB.toString()] = new Edge(vertexA, vertexB);
+  _addEdge(vertexA, vertexB, boxes) {
+    this._edges[vertexA.toString() + '-' + vertexB.toString()] = new Edge(vertexA, vertexB, boxes);
   }
 
   getEdge(vertexA, vertexB) {
@@ -44,13 +44,13 @@ class Graph {
     }
   }
 
-  createEdges() {
+  createEdges(boxes) {
     this._edges = {};
 
     for (var vertexIndex = 0; vertexIndex < this._vertices.length; vertexIndex++) {
       for (var connectionIndex = vertexIndex; connectionIndex <
       this._vertices.length; connectionIndex++) {
-        this._addEdge(this._vertices[vertexIndex], this._vertices[connectionIndex]);
+        this._addEdge(this._vertices[vertexIndex], this._vertices[connectionIndex], boxes);
       }
     }
   }

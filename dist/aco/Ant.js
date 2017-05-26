@@ -58,14 +58,14 @@ var Ant = function () {
       var finalPheromoneWeight = void 0;
       var forwardMovePossible = false;
 
+      var timeSpendAtAttraction = 2500; // 30 mins
+
       for (var vertexIndex in vertices) {
         var vertex = vertices[vertexIndex];
         var edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertex).getDistance();
         var edgeHomeDistance = this._graph.getEdge(vertex, vertices[0]).getDistance();
 
-        // console.log(vertex, this._tour._tour, this._tour.distance(), edgeForwardDistance,edgeHomeDistance);
-
-        if (!this._tour.contains(vertices[vertexIndex]) && this._maxDistance >= this._tour.distance() + edgeForwardDistance + edgeHomeDistance) {
+        if (!this._tour.contains(vertices[vertexIndex]) && this._maxDistance >= timeSpendAtAttraction + this._tour.distance() + edgeForwardDistance + edgeHomeDistance) {
 
           var edge = this._graph.getEdge(this._currentVertex, vertices[vertexIndex]);
           if (this._alpha == 1) {
@@ -84,12 +84,17 @@ var Ant = function () {
 
         var wheelPosition = 0.0;
         for (var vertexIndex in vertices) {
-          if (!this._tour.contains(vertices[vertexIndex])) {
+          var _vertex = vertices[vertexIndex];
+          var _edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), _vertex).getDistance();
+          var _edgeHomeDistance = this._graph.getEdge(_vertex, vertices[0]).getDistance();
+
+          if (!this._tour.contains(vertices[vertexIndex]) && this._maxDistance >= timeSpendAtAttraction + this._tour.distance() + _edgeForwardDistance + _edgeHomeDistance) {
+
             wheelPosition += vertexProbabilities[vertexIndex];
             if (wheelPosition >= wheelTarget) {
               this._currentVertex = vertices[vertexIndex];
               this._tour.addVertex(vertices[vertexIndex]);
-              forwardMovePossible = false;
+              // forwardMovePossible = false;
               return;
             }
           }
@@ -106,9 +111,7 @@ var Ant = function () {
         return false;
       }
 
-      //console.log(this._graph.getVertices()[0].isEqual(this.getTour().getLast()));
       return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
-      // return (this._tour.size() >= this._graph.size());
     }
   }, {
     key: 'run',

@@ -15,20 +15,64 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Edge = function () {
-  function Edge(vertexA, vertexB) {
+  function Edge(vertexA, vertexB, boxes) {
     _classCallCheck(this, Edge);
 
     this._vertexA = vertexA;
     this._vertexB = vertexB;
     this._initPheromone = 1;
     this._pheromone = this._initPheromone;
+    this._boxes = boxes;
+    this._multiplier = this.calculateMultiplier();
 
     var coordA = { latitude: vertexA.y, longitude: vertexA.x };
     var coordB = { latitude: vertexB.y, longitude: vertexB.x };
-    this._distance = Math.round((0, _haversine2.default)(coordA, coordB, { unit: 'meter' }));
+    this._distance = Math.round((0, _haversine2.default)(coordA, coordB, { unit: 'meter' })) * this._multiplier;
   }
 
   _createClass(Edge, [{
+    key: 'calculateMultiplier',
+    value: function calculateMultiplier() {
+      var _this = this;
+
+      var sum = [],
+          edgeLatitudeRange = [this._vertexA.y, this._vertexB.y];
+
+      edgeLatitudeRange.sort(function (a, b) {
+        return a - b;
+      });
+
+      this._boxes.forEach(function (box) {
+        var boundLatitudeRange = [box.n, box.s];
+
+        boundLatitudeRange.sort(function (a, b) {
+          return a - b;
+        });
+
+        var isYWithinEdgeAndBox = function isYWithinEdgeAndBox(y) {
+          return edgeLatitudeRange[0] <= y && edgeLatitudeRange[1] >= y && boundLatitudeRange[0] <= y && boundLatitudeRange[1] >= y;
+        };
+
+        var isEdgeAWithinBox = _this._vertexA.x >= box.w && _this._vertexA.x <= box.e && _this._vertexA.y >= box.s && _this._vertexA.y <= box.n;
+
+        var isEdgeBWithinBox = _this._vertexB.x >= box.w && _this._vertexB.x <= box.e && _this._vertexB.y >= box.s && _this._vertexB.y <= box.n;
+
+        var hasEdgePassed = isEdgeAWithinBox || isEdgeBWithinBox || isYWithinEdgeAndBox(_this.linearEquation(box.w)) || isYWithinEdgeAndBox(_this.linearEquation(box.e));
+
+        if (hasEdgePassed) {
+          sum.push(box.multiplier);
+        }
+      });
+
+      if (sum.length) {
+        return sum.reduce(function (a, b) {
+          return a + b;
+        }) / sum.length;
+      } else {
+        return 1;
+      }
+    }
+  }, {
     key: 'pointA',
     value: function pointA() {
       return { 'x': this._vertexA.x, 'y': this._vertexA.y };
@@ -75,6 +119,17 @@ var Edge = function () {
     key: 'resetPheromone',
     value: function resetPheromone() {
       this._pheromone = this._initPheromone;
+    }
+  }, {
+    key: 'linearEquation',
+    get: function get() {
+      var _this2 = this;
+
+      var m = (this._vertexB.y - this._vertexA.y) / (this._vertexB.x - this._vertexA.x);
+
+      return function (x) {
+        return m * x - m * _this2._vertexA.x + _this2._vertexA.y;
+      };
     }
   }]);
 

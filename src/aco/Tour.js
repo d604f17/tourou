@@ -1,3 +1,5 @@
+import _ from 'underscore';
+
 class Tour {
   constructor(graph) {
     this._graph = graph;
@@ -41,9 +43,16 @@ class Tour {
   distance() {
     if (this._distance == null) {
       let distance = 0.0;
+      let timeSpendAtAttraction = 2500; // 30 mins
 
       for (var i = 1; i < this._tour.length; i++) {
         distance += this._graph.getEdge(this._tour[i - 1], this._tour[i]).getDistance();
+      }
+
+      if (_.isEqual(this._tour[0], this.getLast())) {
+        distance += timeSpendAtAttraction * (this._tour.length - 2);
+      } else {
+        distance += timeSpendAtAttraction * (this._tour.length - 1);
       }
 
       this._distance = distance;

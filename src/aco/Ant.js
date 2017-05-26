@@ -37,15 +37,15 @@ class Ant {
     let finalPheromoneWeight;
     let forwardMovePossible = false;
 
+    let timeSpendAtAttraction = 2500; // 30 mins
+
     for (var vertexIndex in vertices) {
       const vertex = vertices[vertexIndex];
       const edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertex).getDistance();
       const edgeHomeDistance = this._graph.getEdge(vertex, vertices[0]).getDistance();
 
-      // console.log(vertex, this._tour._tour, this._tour.distance(), edgeForwardDistance,edgeHomeDistance);
-
       if ((!this._tour.contains(vertices[vertexIndex]) &&
-          (this._maxDistance >= this._tour.distance() + edgeForwardDistance + edgeHomeDistance))) {
+          (this._maxDistance >= timeSpendAtAttraction + this._tour.distance() + edgeForwardDistance + edgeHomeDistance))) {
 
         let edge = this._graph.getEdge(this._currentVertex, vertices[vertexIndex]);
         if (this._alpha == 1) {
@@ -65,12 +65,18 @@ class Ant {
 
       let wheelPosition = 0.0;
       for (var vertexIndex in vertices) {
-        if (!this._tour.contains(vertices[vertexIndex])) {
+        const vertex = vertices[vertexIndex];
+        const edgeForwardDistance = this._graph.getEdge(this._tour.getLast(), vertex).getDistance();
+        const edgeHomeDistance = this._graph.getEdge(vertex, vertices[0]).getDistance();
+
+        if ((!this._tour.contains(vertices[vertexIndex]) &&
+            (this._maxDistance >= timeSpendAtAttraction + this._tour.distance() + edgeForwardDistance + edgeHomeDistance))) {
+
           wheelPosition += vertexProbabilities[vertexIndex];
           if (wheelPosition >= wheelTarget) {
             this._currentVertex = vertices[vertexIndex];
             this._tour.addVertex(vertices[vertexIndex]);
-            forwardMovePossible = false;
+            // forwardMovePossible = false;
             return;
           }
         }
@@ -86,9 +92,7 @@ class Ant {
       return false;
     }
 
-    //console.log(this._graph.getVertices()[0].isEqual(this.getTour().getLast()));
     return this._graph.getVertices()[0].isEqual(this.getTour().getLast());
-    // return (this._tour.size() >= this._graph.size());
   }
 
   run() {
