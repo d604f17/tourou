@@ -1,11 +1,11 @@
-#Diagon Alley
+# Diagon Alley
 
-##Usage
+## Usage
 Execute the exe diagonalley.exe with the followed parameters `road and number`, `city`, `country` and `maximum distance`
 
 e.g. >> `diagonalley.exe "Selma Lagerløfs Vej 300" "Aalborg" "Denmark" 30000`
 
-###Available cities
+### Available cities
 * Aalborg
 * Copenhagen
 * Aarhus
