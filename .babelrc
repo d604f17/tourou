@@ -2,15 +2,5 @@
   "presets": [
     "latest",
     "stage-0"
-  ],
-  "plugins": [
-    [
-      "babel-plugin-transform-builtin-extend",
-      {
-        "globals": [
-          "Array"
-        ]
-      }
-    ]
   ]
 }

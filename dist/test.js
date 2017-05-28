@@ -12,15 +12,15 @@ var _haversine = require('haversine');
 
 var _haversine2 = _interopRequireDefault(_haversine);
 
-var _BoundedBox = require('./strategies/BoundedBox');
+var _BoundedBox = require('./BoundedBox');
 
 var _BoundedBox2 = _interopRequireDefault(_BoundedBox);
 
-var _mmas = require('./aco/mmas');
+var _mmas = require('./mmas/mmas');
 
 var _mmas2 = _interopRequireDefault(_mmas);
 
-var _halfnhalf = require('./aco/halfnhalf');
+var _halfnhalf = require('./mmas/halfnhalf');
 
 var _halfnhalf2 = _interopRequireDefault(_halfnhalf);
 

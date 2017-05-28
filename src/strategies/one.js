@@ -1,4 +1,4 @@
-import BoundedBox from './BoundedBox';
+import BoundedBox from '../BoundedBox';
 
 const one = waypoints => (
     new Promise((resolve) => {

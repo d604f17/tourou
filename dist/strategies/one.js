@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BoundedBox = require('./BoundedBox');
+var _BoundedBox = require('../BoundedBox');
 
 var _BoundedBox2 = _interopRequireDefault(_BoundedBox);
 

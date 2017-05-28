@@ -1,5 +1,5 @@
 import {queryBoxDistance} from './strategy';
-import BoundedBox from './BoundedBox';
+import BoundedBox from '../BoundedBox';
 
 const splitBoundedBox = (box) => {
   const width = Math.abs(box.w - box.e);

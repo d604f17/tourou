@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/apis/index.js"],"names":["LonelyPlanetAPI","GeocodeAPI"],"mappings":";;;;;;;AAAA;;;;AACA;;;;;;QAGEA,e;QACAC,U","file":"index.js","sourcesContent":["import LonelyPlanetAPI from './lonelyplanet';\r\nimport GeocodeAPI from './geocode';\r\n\r\nexport {\r\n  LonelyPlanetAPI,\r\n  GeocodeAPI,\r\n};\r\n"]}

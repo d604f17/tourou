@@ -4,7 +4,7 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
-var _mmas = require('./aco/mmas');
+var _mmas = require('./mmas/mmas');
 
 var _mmas2 = _interopRequireDefault(_mmas);
 

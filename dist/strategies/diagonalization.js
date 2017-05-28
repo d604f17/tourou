@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _strategy = require('./strategy');
 
-var _BoundedBox = require('./BoundedBox');
+var _BoundedBox = require('../BoundedBox');
 
 var _BoundedBox2 = _interopRequireDefault(_BoundedBox);
 
