@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Odense Zoo",
+    "address": "Sønder Blvd 306",
+    "lat": 55.3786691,
+    "lng": 10.3715601,
+    "popularity": 525
+  },
+  {
+    "name": "Brandts",
+    "address": "Brandts Torv 1",
+    "lat": 55.396175,
+    "lng": 10.380868,
+    "popularity": 217
+  },
+  {
+    "name": "Sankt Knuds Kirke",
+    "address": "Klosterbakken",
+    "lat": 55.3953875,
+    "lng": 10.3891359,
+    "popularity": 134
+  },
+  {
+    "name": "Jernbanemuseet",
+    "address": "Dannebrogsgade 24",
+    "lat": 55.402702,
+    "lng": 10.386525,
+    "popularity": 123
+  },
+  {
+    "name": "Den Fynske Landsby",
+    "address": "Sejerskovvej 20",
+    "lat": 55.3664847,
+    "lng": 10.3851164,
+    "popularity": 112
+  },
+  {
+    "name": "Brandts 13",
+    "address": "Jernbanegade 13",
+    "lat": 55.39766909999999,
+    "lng": 10.385673,
+    "popularity": 107
+  },
+  {
+    "name": "Møntergården",
+    "address": "Mønterstræde",
+    "lat": 55.398713,
+    "lng": 10.39362,
+    "popularity": 105
+  },
+  {
+    "name": "Vor Frue Kirke",
+    "address": "Frue Kirkestræde 12B",
+    "lat": 55.39770919999999,
+    "lng": 10.3955881,
+    "popularity": 103
+  },
+  {
+    "name": "HC Andersens Hus",
+    "address": "Bangs Boder 29",
+    "lat": 55.3981331,
+    "lng": 10.3903866,
+    "popularity": 102
+  },
+  {
+    "name": "Børnekulturhuset Fyrtøjet",
+    "address": "Hans Jensens Stræde 21",
+    "lat": 55.3984197,
+    "lng": 10.3899438,
+    "popularity": 100
+  },
+  {
+    "name": "Carl Nielsen Museet",
+    "address": "Claus Bergs Gade 11",
+    "lat": 55.3996691,
+    "lng": 10.3924337,
+    "popularity": 100
+  },
+  {
+    "name": "HC Andersens Barndomshjem",
+    "address": "Munkemøllestræde 3-5",
+    "lat": 55.3945211,
+    "lng": 10.3872453,
+    "popularity": 100
+  }
+]

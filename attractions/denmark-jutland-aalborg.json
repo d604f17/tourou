@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Aalborg Zoo",
+    "address": "Mølleparkvej 63",
+    "lat": 57.0370298,
+    "lng": 9.8980439,
+    "popularity": 1061
+  },
+  {
+    "name": "Kunsten",
+    "address": "Kong Christians Allé 50",
+    "lat": 57.04258900000001,
+    "lng": 9.905769,
+    "popularity": 297
+  },
+  {
+    "name": "Budolfi Domkirke",
+    "address": "Algade 40",
+    "lat": 57.0478854,
+    "lng": 9.9190994,
+    "popularity": 291
+  },
+  {
+    "name": "Utzon Center",
+    "address": "Slotspladsen 4",
+    "lat": 57.049465,
+    "lng": 9.926183799999999,
+    "popularity": 273
+  },
+  {
+    "name": "Nordkraft",
+    "address": "Kjellerups Torv",
+    "lat": 57.046555,
+    "lng": 9.932258,
+    "popularity": 269
+  },
+  {
+    "name": "Waterfront",
+    "address": "",
+    "lat": 57.047794,
+    "lng": 10.049877,
+    "popularity": 247
+  },
+  {
+    "name": "Lindholm Høje",
+    "address": "Vendilavej",
+    "lat": 57.078249,
+    "lng": 9.910072999999999,
+    "popularity": 179
+  },
+  {
+    "name": "Vor Frue Kirke",
+    "address": "Peder Barkes Gade",
+    "lat": 57.04635769999999,
+    "lng": 9.9238167,
+    "popularity": 139
+  },
+  {
+    "name": "Jens Bangs Stenhus",
+    "address": "",
+    "lat": 57.048448,
+    "lng": 9.921090999999999,
+    "popularity": 123
+  },
+  {
+    "name": "Aalborghus Slot",
+    "address": "Slotspladsen",
+    "lat": 57.0495495,
+    "lng": 9.9245681,
+    "popularity": 118
+  },
+  {
+    "name": "Aalborg Historiske Museum",
+    "address": "Algade 48",
+    "lat": 57.048163,
+    "lng": 9.91788,
+    "popularity": 110
+  },
+  {
+    "name": "Lindholm Høje Museet",
+    "address": "Vendilavej 11",
+    "lat": 57.078249,
+    "lng": 9.910072999999999,
+    "popularity": 103
+  },
+  {
+    "name": "Helligåndsklostret",
+    "address": "CW Obels Plads",
+    "lat": 57.0287321,
+    "lng": 9.917745,
+    "popularity": 102
+  },
+  {
+    "name": "Old Town Hall",
+    "address": "",
+    "lat": 57.0482678,
+    "lng": 9.920733799999999,
+    "popularity": 102
+  },
+  {
+    "name": "Gråbrødrekloster Museet",
+    "address": "Algade 19",
+    "lat": 57.047168,
+    "lng": 9.921541,
+    "popularity": 101
+  },
+  {
+    "name": "Historic Buildings",
+    "address": "",
+    "lat": 57.048163,
+    "lng": 9.91788,
+    "popularity": 101
+  },
+  {
+    "name": "Langes Gård",
+    "address": "Hjelmerstald 15",
+    "lat": 57.0463884,
+    "lng": 9.9228125,
+    "popularity": 100
+  },
+  {
+    "name": "Jørgen Olufsens House",
+    "address": "",
+    "lat": 57.04967250000001,
+    "lng": 9.9215616,
+    "popularity": 100
+  }
+]

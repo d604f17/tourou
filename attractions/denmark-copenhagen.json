@@ -1,0 +1,506 @@
+[
+  {
+    "name": "Nyhavn",
+    "address": "Nyhavn",
+    "lat": 55.679931,
+    "lng": 12.5909058,
+    "popularity": 6250
+  },
+  {
+    "name": "Christiania",
+    "address": "Prinsessegade, Christianshavn",
+    "lat": 55.67604249999999,
+    "lng": 12.6081154,
+    "popularity": 3297
+  },
+  {
+    "name": "Copenhagen Zoo",
+    "address": "Roskildevej 32",
+    "lat": 55.6724093,
+    "lng": 12.521358,
+    "popularity": 3270
+  },
+  {
+    "name": "Ny Carlsberg Glyptotek",
+    "address": "Dantes Plads 7, Vesterbro",
+    "lat": 55.67298,
+    "lng": 12.572543,
+    "popularity": 2704
+  },
+  {
+    "name": "Tivoli Gardens",
+    "address": "Vesterbrogade 3, Vesterbro",
+    "lat": 55.6736841,
+    "lng": 12.5681471,
+    "popularity": 2583
+  },
+  {
+    "name": "Kastellet",
+    "address": "",
+    "lat": 55.691376,
+    "lng": 12.594301,
+    "popularity": 1937
+  },
+  {
+    "name": "Little Mermaid",
+    "address": "Langelinie, Østerport",
+    "lat": 55.69286,
+    "lng": 12.5992828,
+    "popularity": 1937
+  },
+  {
+    "name": "Rundetårn",
+    "address": "Købmagergade 52",
+    "lat": 55.681347,
+    "lng": 12.57573,
+    "popularity": 1799
+  },
+  {
+    "name": "Nationalmuseet",
+    "address": "Ny Vestergade 10, Slotsholmen",
+    "lat": 55.6746479,
+    "lng": 12.574741,
+    "popularity": 1436
+  },
+  {
+    "name": "Copenhagen Opera House",
+    "address": "Ekvipagemestervej 10",
+    "lat": 55.6819277,
+    "lng": 12.6007498,
+    "popularity": 1412
+  },
+  {
+    "name": "Rosenborg Slot",
+    "address": "Øster Voldgade 4A, Nørreport",
+    "lat": 55.6858274,
+    "lng": 12.5772687,
+    "popularity": 1396
+  },
+  {
+    "name": "Frilandsmuseet",
+    "address": "Kongevejen 100",
+    "lat": 55.7883226,
+    "lng": 12.4947208,
+    "popularity": 1386
+  },
+  {
+    "name": "Rådhuspladsen",
+    "address": "",
+    "lat": 55.67591419999999,
+    "lng": 12.5691284,
+    "popularity": 1341
+  },
+  {
+    "name": "Thorvaldsens Museum",
+    "address": "Bertel Thorvaldsens Plads",
+    "lat": 55.67674719999999,
+    "lng": 12.5783916,
+    "popularity": 1325
+  },
+  {
+    "name": "Kongens Have",
+    "address": "Øster Voldgade, Nørreport",
+    "lat": 55.6852905,
+    "lng": 12.5798452,
+    "popularity": 1116
+  },
+  {
+    "name": "Vor Frelsers Kirke",
+    "address": "Sankt Annæ Gade 29",
+    "lat": 55.6729387,
+    "lng": 12.5942102,
+    "popularity": 1066
+  },
+  {
+    "name": "Slotsholmen",
+    "address": "",
+    "lat": 55.67472189999999,
+    "lng": 12.5801293,
+    "popularity": 967
+  },
+  {
+    "name": "Frederiksberg Have",
+    "address": "",
+    "lat": 55.6747467,
+    "lng": 12.5254733,
+    "popularity": 934
+  },
+  {
+    "name": "Statens Museum for Kunst",
+    "address": "Sølvgade 48-50, Østerport",
+    "lat": 55.6888127,
+    "lng": 12.5783303,
+    "popularity": 841
+  },
+  {
+    "name": "Botanisk Have",
+    "address": "",
+    "lat": 55.6874877,
+    "lng": 12.5730104,
+    "popularity": 801
+  },
+  {
+    "name": "Christiansborg Slot",
+    "address": "Slotsholmen, Christianshavn",
+    "lat": 55.6762316,
+    "lng": 12.5805143,
+    "popularity": 781
+  },
+  {
+    "name": "Marmorkirken",
+    "address": "Frederiksgade 4",
+    "lat": 55.6849739,
+    "lng": 12.5895665,
+    "popularity": 767
+  },
+  {
+    "name": "Rådhus",
+    "address": "",
+    "lat": 55.67591419999999,
+    "lng": 12.5691284,
+    "popularity": 753
+  },
+  {
+    "name": "Gefion Fountain",
+    "address": "",
+    "lat": 55.6893283,
+    "lng": 12.5976366,
+    "popularity": 677
+  },
+  {
+    "name": "Børsen",
+    "address": "Børsgade",
+    "lat": 55.6755013,
+    "lng": 12.5840127,
+    "popularity": 617
+  },
+  {
+    "name": "Det Kongelige Bibliotek",
+    "address": "Søren Kierkegaards Plads",
+    "lat": 55.6733994,
+    "lng": 12.5826588,
+    "popularity": 568
+  },
+  {
+    "name": "Den Blå Planet",
+    "address": "Jacob Fortlingsvej 1, Kastrup",
+    "lat": 55.6381446,
+    "lng": 12.6561446,
+    "popularity": 532
+  },
+  {
+    "name": "Amagertorv",
+    "address": "",
+    "lat": 55.6787094,
+    "lng": 12.577975,
+    "popularity": 474
+  },
+  {
+    "name": "Amalienborg Slot",
+    "address": "",
+    "lat": 55.6840588,
+    "lng": 12.5930201,
+    "popularity": 467
+  },
+  {
+    "name": "Vor Frue Kirke",
+    "address": "Nørregade 8",
+    "lat": 55.67933859999999,
+    "lng": 12.5723587,
+    "popularity": 427
+  },
+  {
+    "name": "Christians Kirke",
+    "address": "Strandgade 1",
+    "lat": 55.6725191,
+    "lng": 12.5872964,
+    "popularity": 426
+  },
+  {
+    "name": "Assistens Kirkegård",
+    "address": "Kapelvej 4",
+    "lat": 55.6910102,
+    "lng": 12.5501533,
+    "popularity": 371
+  },
+  {
+    "name": "Grundtvigs Kirke",
+    "address": "På Bjerget 14B",
+    "lat": 55.7165482,
+    "lng": 12.533708,
+    "popularity": 370
+  },
+  {
+    "name": "Folketinget",
+    "address": "Rigsdagsgården",
+    "lat": 55.6755714,
+    "lng": 12.5804695,
+    "popularity": 327
+  },
+  {
+    "name": "Ordrupgaard",
+    "address": "Vilvordevej 110, Charlottenlund",
+    "lat": 55.7668196,
+    "lng": 12.5625076,
+    "popularity": 301
+  },
+  {
+    "name": "Dansk Arkitektur Centre",
+    "address": "Strandgade 27B",
+    "lat": 55.67577199999999,
+    "lng": 12.591101,
+    "popularity": 268
+  },
+  {
+    "name": "Superkilen",
+    "address": "Nørrebrogade 210",
+    "lat": 55.6993533,
+    "lng": 12.5423634,
+    "popularity": 264
+  },
+  {
+    "name": "Designmuseum Danmark",
+    "address": "Bredgade 68, Østerport",
+    "lat": 55.6865563,
+    "lng": 12.5928422,
+    "popularity": 223
+  },
+  {
+    "name": "Sankt Petri Kirke",
+    "address": "Sankt Pedersstræde 2",
+    "lat": 55.67988,
+    "lng": 12.570822,
+    "popularity": 219
+  },
+  {
+    "name": "Davids Samling",
+    "address": "Kronprinsessegade 30",
+    "lat": 55.6842905,
+    "lng": 12.5824472,
+    "popularity": 219
+  },
+  {
+    "name": "Holmens Kirke",
+    "address": "Holmens Kanal 9",
+    "lat": 55.6766342,
+    "lng": 12.5836016,
+    "popularity": 206
+  },
+  {
+    "name": "Carlsberg Visitors Centre",
+    "address": "Gamle Carlsberg Vej 11, Vesterbro",
+    "lat": 55.664539,
+    "lng": 12.530275,
+    "popularity": 193
+  },
+  {
+    "name": "Rådhus Tower",
+    "address": "",
+    "lat": 55.6752833,
+    "lng": 12.5701632,
+    "popularity": 191
+  },
+  {
+    "name": "Overgaden",
+    "address": "Overgaden Neden Vandet 17",
+    "lat": 55.6724057,
+    "lng": 12.5901642,
+    "popularity": 168
+  },
+  {
+    "name": "Cisternerne",
+    "address": "Søndermarken",
+    "lat": 55.66949510000001,
+    "lng": 12.5248985,
+    "popularity": 167
+  },
+  {
+    "name": "Tivoli Main Entrance",
+    "address": "",
+    "lat": 55.6736841,
+    "lng": 12.5681471,
+    "popularity": 167
+  },
+  {
+    "name": "Arken Museum of Modern Art",
+    "address": "Skovvej 100, Ishøj",
+    "lat": 55.6068825,
+    "lng": 12.3885129,
+    "popularity": 160
+  },
+  {
+    "name": "Christiansborg Slotskirke",
+    "address": "",
+    "lat": 55.6771988,
+    "lng": 12.5798268,
+    "popularity": 158
+  },
+  {
+    "name": "Christiansborg Slot Tower",
+    "address": "",
+    "lat": 55.6762316,
+    "lng": 12.5805143,
+    "popularity": 152
+  },
+  {
+    "name": "Tøjhusmuseet",
+    "address": "Tøjhusgade 3",
+    "lat": 55.67415099999999,
+    "lng": 12.5803648,
+    "popularity": 143
+  },
+  {
+    "name": "Latin Quarter",
+    "address": "",
+    "lat": 55.6789143,
+    "lng": 12.5674272,
+    "popularity": 140
+  },
+  {
+    "name": "Nikolaj Kunsthal",
+    "address": "Nikolaj Plads 10",
+    "lat": 55.678644,
+    "lng": 12.5815874,
+    "popularity": 136
+  },
+  {
+    "name": "Cykelslangen",
+    "address": "",
+    "lat": 55.6631712,
+    "lng": 12.5624692,
+    "popularity": 134
+  },
+  {
+    "name": "Jens Olsen's World Clock",
+    "address": "",
+    "lat": 55.67563699999999,
+    "lng": 12.569544,
+    "popularity": 130
+  },
+  {
+    "name": "Kunsthal Charlottenborg",
+    "address": "Nyhavn 2",
+    "lat": 55.6798255,
+    "lng": 12.5883008,
+    "popularity": 127
+  },
+  {
+    "name": "Caritas Well",
+    "address": "Gammeltorv 2",
+    "lat": 55.6780774,
+    "lng": 12.5723344,
+    "popularity": 126
+  },
+  {
+    "name": "V1 Gallery",
+    "address": "Flæsketorvet 69-71, Vesterbro",
+    "lat": 55.6675817,
+    "lng": 12.5612425,
+    "popularity": 125
+  },
+  {
+    "name": "Teatermuseet",
+    "address": "Christiansborg Ridebane 18",
+    "lat": 55.6750768,
+    "lng": 12.5793993,
+    "popularity": 120
+  },
+  {
+    "name": "Dansk Jødisk Museum",
+    "address": "",
+    "lat": 55.67427199999999,
+    "lng": 12.582269,
+    "popularity": 117
+  },
+  {
+    "name": "Domhuset",
+    "address": "Nytorv",
+    "lat": 55.6767735,
+    "lng": 12.5721201,
+    "popularity": 117
+  },
+  {
+    "name": "Aleksander Nevskij Kirke",
+    "address": "Bredgade 53",
+    "lat": 55.6852416,
+    "lng": 12.5908269,
+    "popularity": 115
+  },
+  {
+    "name": "De Kongelige Stalde",
+    "address": "",
+    "lat": 55.67482949999999,
+    "lng": 12.578669,
+    "popularity": 115
+  },
+  {
+    "name": "Children's Museum",
+    "address": "Ny Vestergade 10",
+    "lat": 55.6744995,
+    "lng": 12.5746442,
+    "popularity": 115
+  },
+  {
+    "name": "Hirschsprung",
+    "address": "Stockholmsgade 20",
+    "lat": 55.689967,
+    "lng": 12.577377,
+    "popularity": 113
+  },
+  {
+    "name": "Kunstforeningen GL Strand",
+    "address": "Gammel Strand 48",
+    "lat": 55.677525,
+    "lng": 12.57768,
+    "popularity": 109
+  },
+  {
+    "name": "Imax Tycho Brahe Planetarium",
+    "address": "Gammel Kongevej 10, Vesterbro",
+    "lat": 55.67465079999999,
+    "lng": 12.5580804,
+    "popularity": 108
+  },
+  {
+    "name": "Geologisk Museum",
+    "address": "Øster Voldgade 5-7",
+    "lat": 55.687188,
+    "lng": 12.577108,
+    "popularity": 105
+  },
+  {
+    "name": "Kongernes Lapidarium",
+    "address": "Frederiksholms Kanal 29",
+    "lat": 55.6732196,
+    "lng": 12.5797381,
+    "popularity": 104
+  },
+  {
+    "name": "De Kongelige Repræsentationslokaler",
+    "address": "Slotsholmen, Christianshavn",
+    "lat": 55.6765233,
+    "lng": 12.5794805,
+    "popularity": 101
+  },
+  {
+    "name": "Ruinerne under Christiansborg",
+    "address": "Slotsholmen, Christianshavn",
+    "lat": 55.67637449999999,
+    "lng": 12.5804722,
+    "popularity": 101
+  },
+  {
+    "name": "Strædet",
+    "address": "",
+    "lat": 55.4658568,
+    "lng": 12.1098683,
+    "popularity": 100
+  },
+  {
+    "name": "Parkmuseerne",
+    "address": "",
+    "lat": 55.68750379999999,
+    "lng": 12.5781992,
+    "popularity": 100
+  }
+]

@@ -1,0 +1,331 @@
+[
+  {
+    "name": "Sheikh Zayed Grand Mosque",
+    "address": "",
+    "lat": 24.4125412,
+    "lng": 54.4751401,
+    "popularity": 3476
+  },
+  {
+    "name": "Emirates Palace",
+    "address": "Corniche Rd (West)",
+    "lat": 24.4615867,
+    "lng": 54.317406,
+    "popularity": 1368
+  },
+  {
+    "name": "Ferrari World Abu Dhabi",
+    "address": "Yas Leisure Dr",
+    "lat": 24.4838545,
+    "lng": 54.60720329999999,
+    "popularity": 811
+  },
+  {
+    "name": "Abu Dhabi Corniche",
+    "address": "",
+    "lat": 24.4688316,
+    "lng": 54.3337595,
+    "popularity": 624
+  },
+  {
+    "name": "Abu Dhabi Heritage Village",
+    "address": "Abu Dhabi Theater Rd",
+    "lat": 24.476719,
+    "lng": 54.33134399999999,
+    "popularity": 323
+  },
+  {
+    "name": "Khalifa Mosque",
+    "address": "Khalid bin Al Walid St",
+    "lat": 24.4125412,
+    "lng": 54.4751401,
+    "popularity": 302
+  },
+  {
+    "name": "Masdar City",
+    "address": "btwn Hwys E10 & E20",
+    "lat": 24.4266734,
+    "lng": 54.614979,
+    "popularity": 289
+  },
+  {
+    "name": "Corniche Beach",
+    "address": "Corniche Rd (West)",
+    "lat": 24.4688316,
+    "lng": 54.3337595,
+    "popularity": 186
+  },
+  {
+    "name": "Sky Tower",
+    "address": "Marina Mall, Breakwater",
+    "lat": 24.4963054,
+    "lng": 54.4087625,
+    "popularity": 174
+  },
+  {
+    "name": "Abu Dhabi Louvre",
+    "address": "Cultural District, Saadiyat Island",
+    "lat": 24.5302924,
+    "lng": 54.4451578,
+    "popularity": 173
+  },
+  {
+    "name": "Capital Gate",
+    "address": "Al Khaleej Al Arabi St",
+    "lat": 24.4186834,
+    "lng": 54.4347268,
+    "popularity": 171
+  },
+  {
+    "name": "Sheikh Zayed Grand Mosque Centre Library",
+    "address": "",
+    "lat": 24.4125412,
+    "lng": 54.4751401,
+    "popularity": 162
+  },
+  {
+    "name": "Qasr Al Hosn",
+    "address": "Sheikh Zayed the First St",
+    "lat": 24.482237,
+    "lng": 54.354723,
+    "popularity": 156
+  },
+  {
+    "name": "Khalifa Park",
+    "address": "Al Salam St",
+    "lat": 24.426252,
+    "lng": 54.4684603,
+    "popularity": 139
+  },
+  {
+    "name": "Abu Dhabi Falcon Hospital",
+    "address": "Sweihan Rd",
+    "lat": 24.4081033,
+    "lng": 54.6998589,
+    "popularity": 137
+  },
+  {
+    "name": "Sheikh Zayed Bridge",
+    "address": "",
+    "lat": 24.4237654,
+    "lng": 54.4861653,
+    "popularity": 136
+  },
+  {
+    "name": "Aldar Headquarters",
+    "address": "Shahama Rd",
+    "lat": 24.441111,
+    "lng": 54.575278,
+    "popularity": 132
+  },
+  {
+    "name": "Manarat Al Saadiyat",
+    "address": "Cultural District, Saadiyat Island",
+    "lat": 24.533849,
+    "lng": 54.418884,
+    "popularity": 131
+  },
+  {
+    "name": "Yas Beach",
+    "address": "Yas Island",
+    "lat": 24.462072,
+    "lng": 54.59218,
+    "popularity": 126
+  },
+  {
+    "name": "Khor Al Maqta",
+    "address": "Bain al Jessrain",
+    "lat": 24.4000751,
+    "lng": 54.48210479999999,
+    "popularity": 124
+  },
+  {
+    "name": "Eastern Corniche",
+    "address": "Sheikh Zayed bin Sultan St (E10)",
+    "lat": 24.4463456,
+    "lng": 54.4370355,
+    "popularity": 119
+  },
+  {
+    "name": "Lulu Island",
+    "address": "",
+    "lat": 24.5003706,
+    "lng": 54.34398239999999,
+    "popularity": 115
+  },
+  {
+    "name": "Dhow Harbour",
+    "address": "Al Mina",
+    "lat": 24.514561,
+    "lng": 54.3726814,
+    "popularity": 114
+  },
+  {
+    "name": "Fun City",
+    "address": "Marina Mall, Breakwater",
+    "lat": 24.4759006,
+    "lng": 54.3214046,
+    "popularity": 108
+  },
+  {
+    "name": "Heritage Park",
+    "address": "",
+    "lat": 24.5072656,
+    "lng": 54.3730231,
+    "popularity": 107
+  },
+  {
+    "name": "Capital Gardens",
+    "address": "Muroor Rd, near Khalifa St",
+    "lat": 24.4923655,
+    "lng": 54.3637327,
+    "popularity": 107
+  },
+  {
+    "name": "UAE Pavilion",
+    "address": "Cultural District, Saadiyat Island",
+    "lat": 24.5332218,
+    "lng": 54.418228,
+    "popularity": 105
+  },
+  {
+    "name": "Saadiyat Public Beach",
+    "address": "Saadiyat Island",
+    "lat": 24.5469927,
+    "lng": 54.4358708,
+    "popularity": 103
+  },
+  {
+    "name": "Al Mina Fish Market",
+    "address": "Dhow Harbour, Al Mina",
+    "lat": 24.5136359,
+    "lng": 54.3748794,
+    "popularity": 102
+  },
+  {
+    "name": "Abu Dhabi Global Market Square",
+    "address": "Al Falah St",
+    "lat": 24.501547,
+    "lng": 54.388743,
+    "popularity": 102
+  },
+  {
+    "name": "Fruit & Vegetable Market",
+    "address": "Al Mina",
+    "lat": 24.5172811,
+    "lng": 54.3791743,
+    "popularity": 101
+  },
+  {
+    "name": "Lake Park & Formal Park",
+    "address": "Corniche Rd (East)",
+    "lat": 24.4964663,
+    "lng": 54.36172819999999,
+    "popularity": 101
+  },
+  {
+    "name": "Burj Mohammed bin Rashid",
+    "address": "Khalifa bin Zayed the First St",
+    "lat": 24.4871614,
+    "lng": 54.3574765,
+    "popularity": 101
+  },
+  {
+    "name": "Etisalat Head Office",
+    "address": "cnr Sheikh Zayed the First & Sheikh Rashid bin Saeed Al Maktoum Sts",
+    "lat": 24.3123307,
+    "lng": 54.6054465,
+    "popularity": 100
+  },
+  {
+    "name": "Barakat Gallery",
+    "address": "",
+    "lat": 24.4620018,
+    "lng": 54.317176,
+    "popularity": 100
+  },
+  {
+    "name": "Corniche – Al Khalidiyah",
+    "address": "Corniche Rd (West)",
+    "lat": 24.4688316,
+    "lng": 54.3337595,
+    "popularity": 100
+  },
+  {
+    "name": "Al Mushrif Children’s Garden",
+    "address": "Al Karama St, Al Mushrif",
+    "lat": 24.4530746,
+    "lng": 54.3808034,
+    "popularity": 100
+  },
+  {
+    "name": "Zayed Centre for Studies & Research",
+    "address": "Bainunah St, Al Bateen",
+    "lat": 24.451327,
+    "lng": 54.339477,
+    "popularity": 100
+  },
+  {
+    "name": "Al Markaziyah Gardens",
+    "address": "Corniche Rd (West)",
+    "lat": 24.4923655,
+    "lng": 54.3637327,
+    "popularity": 100
+  },
+  {
+    "name": "Al Khalidiyah Public Park",
+    "address": "between 16th & 30th (Al Khaleej al Arabi) Sts",
+    "lat": 24.4688453,
+    "lng": 54.34510119999999,
+    "popularity": 100
+  },
+  {
+    "name": "Al Maqta Fort & Watchtower",
+    "address": "Al Maqta Bridge",
+    "lat": 24.4212012,
+    "lng": 54.4884782,
+    "popularity": 100
+  },
+  {
+    "name": "Miraj Islamic Centre",
+    "address": "Villa 14, Marina Office Park",
+    "lat": 24.4722639,
+    "lng": 54.319063,
+    "popularity": 100
+  },
+  {
+    "name": "Fun Works",
+    "address": "Yas Mall, Yas Island West",
+    "lat": 24.4903532,
+    "lng": 54.6079612,
+    "popularity": 100
+  },
+  {
+    "name": "Arabian Saluki Centre",
+    "address": "",
+    "lat": 24.4025489,
+    "lng": 54.710634,
+    "popularity": 100
+  },
+  {
+    "name": "Al Maryah Island Promenade",
+    "address": "Al Maryah Island",
+    "lat": 24.4980109,
+    "lng": 54.3864068,
+    "popularity": 100
+  },
+  {
+    "name": "Al Khalidiyah Garden",
+    "address": "Sheikh Zayed the First (7th) St",
+    "lat": 24.4688453,
+    "lng": 54.34510119999999,
+    "popularity": 100
+  },
+  {
+    "name": "Miraj – The Museum",
+    "address": "Sheikh Rashid bin Saeed St",
+    "lat": 24.4209224,
+    "lng": 54.4568172,
+    "popularity": 100
+  }
+]

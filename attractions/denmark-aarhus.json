@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Den Gamle By",
+    "address": "Viborgvej 2",
+    "lat": 56.15878259999999,
+    "lng": 10.1921152,
+    "popularity": 1484
+  },
+  {
+    "name": "ARoS Aarhus Kunstmuseum",
+    "address": "Aros Allé 2",
+    "lat": 56.15391899999999,
+    "lng": 10.199716,
+    "popularity": 535
+  },
+  {
+    "name": "Moesgård",
+    "address": "",
+    "lat": 56.156693,
+    "lng": 10.20918,
+    "popularity": 519
+  },
+  {
+    "name": "Marselisborg",
+    "address": "",
+    "lat": 56.1278671,
+    "lng": 10.2027535,
+    "popularity": 472
+  },
+  {
+    "name": "Aarhus Domkirke",
+    "address": "Bispetorv",
+    "lat": 56.1568917,
+    "lng": 10.2108812,
+    "popularity": 387
+  },
+  {
+    "name": "Moesgård Museum",
+    "address": "Moesgård Allé",
+    "lat": 56.0887158,
+    "lng": 10.2235017,
+    "popularity": 352
+  },
+  {
+    "name": "Tivoli Friheden",
+    "address": "Skovbrynet",
+    "lat": 56.136601,
+    "lng": 10.1978533,
+    "popularity": 282
+  },
+  {
+    "name": "Aarhus Rådhus",
+    "address": "Rådhuspladsen",
+    "lat": 56.1525761,
+    "lng": 10.2030284,
+    "popularity": 245
+  },
+  {
+    "name": "Botanisk Have",
+    "address": "Vesterbrogade",
+    "lat": 56.1621317,
+    "lng": 10.1892936,
+    "popularity": 191
+  },
+  {
+    "name": "Vor Frue Kirke",
+    "address": "Frue Kirkeplads",
+    "lat": 56.1580576,
+    "lng": 10.2048494,
+    "popularity": 141
+  },
+  {
+    "name": "Møllestien",
+    "address": "",
+    "lat": 56.1565968,
+    "lng": 10.2015113,
+    "popularity": 128
+  },
+  {
+    "name": "Besættelsesmuseet",
+    "address": "Mathilde Fibigers Have 2",
+    "lat": 56.1573727,
+    "lng": 10.2113615,
+    "popularity": 103
+  },
+  {
+    "name": "Kvindemuseet",
+    "address": "Domkirkeplads 5",
+    "lat": 56.1572207,
+    "lng": 10.2114177,
+    "popularity": 103
+  },
+  {
+    "name": "Vikingemuseet",
+    "address": "Sankt Clements Torv 6",
+    "lat": 56.156693,
+    "lng": 10.20918,
+    "popularity": 103
+  },
+  {
+    "name": "Marselisborg Palace & Park",
+    "address": "Kongevejen 100",
+    "lat": 56.1278671,
+    "lng": 10.2027535,
+    "popularity": 102
+  }
+]

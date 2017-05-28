@@ -1,0 +1,590 @@
+[
+  {
+    "name": "Burj Khalifa",
+    "address": "1 Sheikh Mohammed bin Rashid Blvd",
+    "lat": 25.197197,
+    "lng": 55.27437639999999,
+    "popularity": 8507
+  },
+  {
+    "name": "Burj Al Arab",
+    "address": "",
+    "lat": 25.141291,
+    "lng": 55.185337,
+    "popularity": 3490
+  },
+  {
+    "name": "Emirates Towers",
+    "address": "Sheikh Zayed Rd",
+    "lat": 25.217603,
+    "lng": 55.2828107,
+    "popularity": 2329
+  },
+  {
+    "name": "Dubai Fountain",
+    "address": "Burj Lake",
+    "lat": 25.1958597,
+    "lng": 55.2764673,
+    "popularity": 1625
+  },
+  {
+    "name": "Madinat Jumeirah",
+    "address": "Al Sufouh Rd",
+    "lat": 25.1330986,
+    "lng": 55.183466,
+    "popularity": 1388
+  },
+  {
+    "name": "Dubai Museum",
+    "address": "Al Fahidi St",
+    "lat": 25.2632325,
+    "lng": 55.2972188,
+    "popularity": 1025
+  },
+  {
+    "name": "World Trade Centre",
+    "address": "Sheikh Zayed Rd",
+    "lat": 25.2271847,
+    "lng": 55.2888063,
+    "popularity": 494
+  },
+  {
+    "name": "Lost Chambers Aquarium",
+    "address": "Atlantis The Palm, Palm Jumeirah",
+    "lat": 25.1316868,
+    "lng": 55.1181668,
+    "popularity": 440
+  },
+  {
+    "name": "Walk at JBR",
+    "address": "Jumeirah Beach Residence",
+    "lat": 25.078041,
+    "lng": 55.13489200000001,
+    "popularity": 400
+  },
+  {
+    "name": "Dubai Miracle Garden",
+    "address": "Dubailand area, Al Barsha South",
+    "lat": 25.0600369,
+    "lng": 55.2444474,
+    "popularity": 396
+  },
+  {
+    "name": "Jumeirah Mosque",
+    "address": "Jumeirah Rd",
+    "lat": 25.2338441,
+    "lng": 55.2654812,
+    "popularity": 358
+  },
+  {
+    "name": "JBR Beach",
+    "address": "",
+    "lat": 25.075874,
+    "lng": 55.129318,
+    "popularity": 343
+  },
+  {
+    "name": "Beach at JBR",
+    "address": "Jumeirah Beach Residence",
+    "lat": 25.075874,
+    "lng": 55.129318,
+    "popularity": 343
+  },
+  {
+    "name": "Gold Souq",
+    "address": "Sikkat Al Khail St",
+    "lat": 25.2708686,
+    "lng": 55.2983184,
+    "popularity": 343
+  },
+  {
+    "name": "Fish Market",
+    "address": "",
+    "lat": 25.265081,
+    "lng": 55.310888,
+    "popularity": 270
+  },
+  {
+    "name": "Spice Souq",
+    "address": "",
+    "lat": 25.2673543,
+    "lng": 55.2968978,
+    "popularity": 268
+  },
+  {
+    "name": "Heritage Village",
+    "address": "Shindagha Historic District",
+    "lat": 25.2698431,
+    "lng": 55.2911969,
+    "popularity": 255
+  },
+  {
+    "name": "Dubai Aquarium & Underwater Zoo",
+    "address": "ground fl, Dubai Mall, Sheikh Mohammed bin Rashid Blvd",
+    "lat": 25.1973877,
+    "lng": 55.2790805,
+    "popularity": 249
+  },
+  {
+    "name": "Bur Dubai Souq",
+    "address": "btwn Bur Dubai waterfront & Ali bin Abi Talib St",
+    "lat": 25.2645457,
+    "lng": 55.2943675,
+    "popularity": 225
+  },
+  {
+    "name": "Grand Mosque",
+    "address": "Ali bin Abi Talib St",
+    "lat": 25.264313,
+    "lng": 55.2968116,
+    "popularity": 218
+  },
+  {
+    "name": "Creek Park",
+    "address": "off Riyadh St",
+    "lat": 25.2353147,
+    "lng": 55.3278203,
+    "popularity": 207
+  },
+  {
+    "name": "Club Mina",
+    "address": "Le Meridien Mina Seyahi Beach Resort, Al-Sufouh Rd",
+    "lat": 25.091943,
+    "lng": 55.147143,
+    "popularity": 191
+  },
+  {
+    "name": "Ras Al Khor Wildlife Sanctuary",
+    "address": "cnr Oud Metha Rd & Ras Al Khor St",
+    "lat": 25.1912609,
+    "lng": 55.3226439,
+    "popularity": 179
+  },
+  {
+    "name": "Sunset Beach",
+    "address": "",
+    "lat": 25.1483286,
+    "lng": 55.1945091,
+    "popularity": 178
+  },
+  {
+    "name": "Heritage House",
+    "address": "Al Ahmadiya St",
+    "lat": 25.2684405,
+    "lng": 55.294868,
+    "popularity": 170
+  },
+  {
+    "name": "Wafi City",
+    "address": "Oud Metha & Sheikh Rashid Rds",
+    "lat": 25.2296341,
+    "lng": 55.3194236,
+    "popularity": 156
+  },
+  {
+    "name": "Dhow Wharfage",
+    "address": "along Baniyas Rd",
+    "lat": 25.2559832,
+    "lng": 55.321607,
+    "popularity": 145
+  },
+  {
+    "name": "Sheikh Saeed Al Maktoum House",
+    "address": "",
+    "lat": 25.2681851,
+    "lng": 55.2900562,
+    "popularity": 141
+  },
+  {
+    "name": "Dubai International Financial Centre",
+    "address": "Sheikh Zayed Rd",
+    "lat": 25.2105814,
+    "lng": 55.2794068,
+    "popularity": 140
+  },
+  {
+    "name": "Al Safa Park",
+    "address": "Sheikh Zayed Rd, 55th St, Al Hadiqa St & Al Wasl St",
+    "lat": 25.1886042,
+    "lng": 55.255104,
+    "popularity": 137
+  },
+  {
+    "name": "Children’s City",
+    "address": "Gate 1, Creek Park",
+    "lat": 25.2355341,
+    "lng": 55.3267058,
+    "popularity": 137
+  },
+  {
+    "name": "Kite Beach",
+    "address": "",
+    "lat": 25.1668942,
+    "lng": 55.2096499,
+    "popularity": 134
+  },
+  {
+    "name": "Sega Republic",
+    "address": "2nd fl, Dubai Mall",
+    "lat": 25.1961926,
+    "lng": 55.2799507,
+    "popularity": 132
+  },
+  {
+    "name": "National Bank of Dubai",
+    "address": "",
+    "lat": 25.2607641,
+    "lng": 55.3146524,
+    "popularity": 131
+  },
+  {
+    "name": "Traditional Architecture Museum",
+    "address": "Shindagha Historic District",
+    "lat": 25.2632336,
+    "lng": 55.2966919,
+    "popularity": 128
+  },
+  {
+    "name": "Al Mamzar Beach Park",
+    "address": "Al Mamzar Creek, Deira",
+    "lat": 25.3251781,
+    "lng": 55.3516943,
+    "popularity": 128
+  },
+  {
+    "name": "Sheikh Mohammed Centre for Cultural Understanding",
+    "address": "House 26, Al Musallah Rd",
+    "lat": 25.2641101,
+    "lng": 55.3007474,
+    "popularity": 125
+  },
+  {
+    "name": "Al Fahidi Historic District",
+    "address": "Al Fahidi St",
+    "lat": 25.2636721,
+    "lng": 55.3004439,
+    "popularity": 120
+  },
+  {
+    "name": "Naif Souq",
+    "address": "btwn Naif South, 9a & Deira Sts",
+    "lat": 25.271649,
+    "lng": 55.3049364,
+    "popularity": 115
+  },
+  {
+    "name": "Shindagha Historic District",
+    "address": "Shindagha Waterfront",
+    "lat": 25.268498,
+    "lng": 55.2902091,
+    "popularity": 115
+  },
+  {
+    "name": "Black Palace Beach",
+    "address": "off Al-Sufouh Rd, btwn Madinat Jumeirah & Palm Jumeirah",
+    "lat": 25.1170477,
+    "lng": 55.1678018,
+    "popularity": 114
+  },
+  {
+    "name": "Diving Village",
+    "address": "Shindagha Historic District",
+    "lat": 25.2698431,
+    "lng": 55.2911969,
+    "popularity": 111
+  },
+  {
+    "name": "Courtyard",
+    "address": "6th St near 17th St",
+    "lat": 25.0035657,
+    "lng": 55.1649113,
+    "popularity": 110
+  },
+  {
+    "name": "Covered Souq",
+    "address": "btwn Al Sabkha Rd, 107th St & Naif Rd",
+    "lat": 25.2708686,
+    "lng": 55.2983184,
+    "popularity": 110
+  },
+  {
+    "name": "Third Line",
+    "address": "6th St near 17th St",
+    "lat": 25.143046,
+    "lng": 55.223769,
+    "popularity": 109
+  },
+  {
+    "name": "XVA Gallery",
+    "address": "XVA Guesthouse, off Al Fahidi St",
+    "lat": 25.2641069,
+    "lng": 55.2998755,
+    "popularity": 107
+  },
+  {
+    "name": "Za'abeel Park",
+    "address": "Gate 1, off Sheikh Khalifa bin Zayed Rd",
+    "lat": 25.229108,
+    "lng": 55.2969753,
+    "popularity": 106
+  },
+  {
+    "name": "Perfume Souq",
+    "address": "Sikkat Al Khail & Al Soor Sts",
+    "lat": 25.269507,
+    "lng": 55.2973813,
+    "popularity": 106
+  },
+  {
+    "name": "Dubai Dino",
+    "address": "Dubai Mall, Sheikh Mohammed bin Rashid Blvd",
+    "lat": 25.1981209,
+    "lng": 55.2786953,
+    "popularity": 104
+  },
+  {
+    "name": "Camel Museum",
+    "address": "Shindagha Historic District",
+    "lat": 25.2684094,
+    "lng": 55.2896784,
+    "popularity": 104
+  },
+  {
+    "name": "Coin Museum",
+    "address": "off Al Fahidi St",
+    "lat": 25.2645264,
+    "lng": 55.2998783,
+    "popularity": 104
+  },
+  {
+    "name": "Coffee Museum",
+    "address": "off Al Fahidi St",
+    "lat": 25.2636586,
+    "lng": 55.30014329999999,
+    "popularity": 103
+  },
+  {
+    "name": "Alserkal Avenue",
+    "address": "8th & 17th Sts, Al Quoz 1",
+    "lat": 25.14071,
+    "lng": 55.226318,
+    "popularity": 103
+  },
+  {
+    "name": "Meydan Beach Club",
+    "address": "The Walk at JBR",
+    "lat": 25.0806845,
+    "lng": 55.13661159999999,
+    "popularity": 103
+  },
+  {
+    "name": "Cuadro",
+    "address": "Bldg 10, Gate Village",
+    "lat": 25.2132783,
+    "lng": 55.28241329999999,
+    "popularity": 103
+  },
+  {
+    "name": "KidZania",
+    "address": "2nd fl, Dubai Mall",
+    "lat": 25.1970925,
+    "lng": 55.2789224,
+    "popularity": 103
+  },
+  {
+    "name": "Majlis Gallery",
+    "address": "Al Fahidi St",
+    "lat": 25.2633327,
+    "lng": 55.3000737,
+    "popularity": 102
+  },
+  {
+    "name": "Favourite Things",
+    "address": "2nd fl, Dubai Marina Mall",
+    "lat": 25.076487,
+    "lng": 55.140411,
+    "popularity": 102
+  },
+  {
+    "name": "25' Beach Club",
+    "address": "Fairmont The Palm, Palm Jumeirah",
+    "lat": 25.13562,
+    "lng": 55.18662200000001,
+    "popularity": 102
+  },
+  {
+    "name": "Etihad Museum",
+    "address": "Jumeirah St, Jumeirah 1",
+    "lat": 25.241356,
+    "lng": 55.269841,
+    "popularity": 101
+  },
+  {
+    "name": "Legoland Dubai",
+    "address": "Dubai Parks & Resorts, Sheikh Zayed Rd, Jebel Ali",
+    "lat": 24.9188232,
+    "lng": 55.0096305,
+    "popularity": 101
+  },
+  {
+    "name": "Gate Village",
+    "address": "Dubai International Finance Centre, Sheikh Zayed Rd",
+    "lat": 25.2139644,
+    "lng": 55.28290519999999,
+    "popularity": 101
+  },
+  {
+    "name": "Carbon 12",
+    "address": "Alserkal Ave",
+    "lat": 25.1419437,
+    "lng": 55.225635,
+    "popularity": 101
+  },
+  {
+    "name": "Empty Quarter",
+    "address": "Bldg 2, Gate Village",
+    "lat": 25.2048493,
+    "lng": 55.2707828,
+    "popularity": 101
+  },
+  {
+    "name": "Green Art Gallery",
+    "address": "Alserkal Ave",
+    "lat": 25.141865,
+    "lng": 55.22595399999999,
+    "popularity": 101
+  },
+  {
+    "name": "1x1 Art Gallery",
+    "address": "Warehouse No 4, off 8th St near Al Marabea Rd",
+    "lat": 25.1415691,
+    "lng": 55.2264116,
+    "popularity": 100
+  },
+  {
+    "name": "Cartoon Art Gallery",
+    "address": "4B St, off Sheikh Zayed Rd",
+    "lat": 25.1439774,
+    "lng": 55.22369399999999,
+    "popularity": 100
+  },
+  {
+    "name": "Salsali Private Museum",
+    "address": "Alserkal Ave",
+    "lat": 25.141224,
+    "lng": 55.22649,
+    "popularity": 100
+  },
+  {
+    "name": "Al Serkal Cultural Foundation",
+    "address": "Heritage House No 13, off Al Fahidi St",
+    "lat": 25.2639492,
+    "lng": 55.2995327,
+    "popularity": 100
+  },
+  {
+    "name": "Ayyam Gallery",
+    "address": "Bldg 3, Gate Village",
+    "lat": 25.1414665,
+    "lng": 55.2262893,
+    "popularity": 100
+  },
+  {
+    "name": "Art Sawa",
+    "address": "Bldg 8, Gate Village",
+    "lat": 25.213499,
+    "lng": 55.28322199999999,
+    "popularity": 100
+  },
+  {
+    "name": "Pro Art Gallery",
+    "address": "1st fl, Palm Strip Mall, Jumeirah Rd",
+    "lat": 25.2345018,
+    "lng": 55.2650134,
+    "popularity": 100
+  },
+  {
+    "name": "Grey Noise",
+    "address": "Alserkal Ave",
+    "lat": 25.141577,
+    "lng": 55.2259782,
+    "popularity": 100
+  },
+  {
+    "name": "Street Art Gallery",
+    "address": "Villa 23, 10B St",
+    "lat": 25.1433629,
+    "lng": 55.2242111,
+    "popularity": 100
+  },
+  {
+    "name": "Opera Gallery",
+    "address": "Bldg 3, Gate Village",
+    "lat": 25.213494,
+    "lng": 55.28241999999999,
+    "popularity": 100
+  },
+  {
+    "name": "Meem Gallery",
+    "address": "Umm Suqeim Rd, off Interchange No 4",
+    "lat": 25.1151054,
+    "lng": 55.2147022,
+    "popularity": 100
+  },
+  {
+    "name": "Lawrie Shabibi",
+    "address": "Alserkal Ave",
+    "lat": 25.141088,
+    "lng": 55.22599599999999,
+    "popularity": 100
+  },
+  {
+    "name": "Gallery Isabelle van den Eynde",
+    "address": "Alserkal Ave",
+    "lat": 25.141553,
+    "lng": 55.22640699999999,
+    "popularity": 100
+  },
+  {
+    "name": "Sheikh Juma Al-Maktoum House",
+    "address": "",
+    "lat": 25.2681851,
+    "lng": 55.2900562,
+    "popularity": 100
+  },
+  {
+    "name": "Majlis Ghorfat Um Al Sheef",
+    "address": "near Al Mehemal & Al Bagaara Sts",
+    "lat": 25.1864005,
+    "lng": 55.2304484,
+    "popularity": 100
+  },
+  {
+    "name": "Crossroads of Civilizations Museum",
+    "address": "Al Khaleej Rd",
+    "lat": 25.267585,
+    "lng": 55.288903,
+    "popularity": 100
+  },
+  {
+    "name": "Al Nasr Leisureland",
+    "address": "12A St",
+    "lat": 25.2377649,
+    "lng": 55.3127735,
+    "popularity": 100
+  },
+  {
+    "name": "Motiongate",
+    "address": "Dubai Park & Resorts, Sheikh Zayed Rd, Jebel Ali",
+    "lat": 24.9204056,
+    "lng": 55.0044951,
+    "popularity": 100
+  },
+  {
+    "name": "IMG Worlds of Adventure",
+    "address": "Sheikh Mohammed Bin Zayed Rd, City of Arabia",
+    "lat": 25.082106,
+    "lng": 55.31967,
+    "popularity": 100
+  }
+]

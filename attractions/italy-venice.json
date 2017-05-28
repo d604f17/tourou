@@ -1,0 +1,1031 @@
+[
+  {
+    "name": "Piazza San Marco",
+    "address": "",
+    "lat": 45.4341668,
+    "lng": 12.3384717,
+    "popularity": 16246
+  },
+  {
+    "name": "Burano",
+    "address": "",
+    "lat": 45.4853906,
+    "lng": 12.4166562,
+    "popularity": 12132
+  },
+  {
+    "name": "Murano",
+    "address": "",
+    "lat": 45.4589863,
+    "lng": 12.3523452,
+    "popularity": 8963
+  },
+  {
+    "name": "Campanile",
+    "address": "",
+    "lat": 45.4340359,
+    "lng": 12.3390331,
+    "popularity": 8679
+  },
+  {
+    "name": "Campanile",
+    "address": "Campo San Pietro",
+    "lat": 45.4340359,
+    "lng": 12.3390331,
+    "popularity": 8679
+  },
+  {
+    "name": "Arsenale",
+    "address": "",
+    "lat": 45.4348502,
+    "lng": 12.3499009,
+    "popularity": 7858
+  },
+  {
+    "name": "Palazzo Ducale",
+    "address": "Piazzetta San Marco 1",
+    "lat": 45.4337035,
+    "lng": 12.3403894,
+    "popularity": 6349
+  },
+  {
+    "name": "Basilica di San Marco",
+    "address": "Piazza San Marco",
+    "lat": 45.4345606,
+    "lng": 12.3397125,
+    "popularity": 4088
+  },
+  {
+    "name": "Ponte di Rialto",
+    "address": "",
+    "lat": 45.4379842,
+    "lng": 12.335898,
+    "popularity": 3333
+  },
+  {
+    "name": "Lido di Venezia",
+    "address": "",
+    "lat": 45.3893139,
+    "lng": 12.3530881,
+    "popularity": 2664
+  },
+  {
+    "name": "Torcello",
+    "address": "",
+    "lat": 45.4963063,
+    "lng": 12.4152546,
+    "popularity": 1620
+  },
+  {
+    "name": "Rialto Market",
+    "address": "",
+    "lat": 45.4397368,
+    "lng": 12.3344413,
+    "popularity": 1446
+  },
+  {
+    "name": "Ponte dei Sospiri",
+    "address": "",
+    "lat": 45.43404959999999,
+    "lng": 12.3408544,
+    "popularity": 1058
+  },
+  {
+    "name": "Ponte dell’Accademia",
+    "address": "",
+    "lat": 45.43157,
+    "lng": 12.3288436,
+    "popularity": 986
+  },
+  {
+    "name": "Riva degli Schiavoni",
+    "address": "",
+    "lat": 45.4339073,
+    "lng": 12.3427958,
+    "popularity": 949
+  },
+  {
+    "name": "Basilica di Santa Maria della Salute",
+    "address": "Campo della Salute 1b",
+    "lat": 45.430675,
+    "lng": 12.3347626,
+    "popularity": 924
+  },
+  {
+    "name": "La Fenice",
+    "address": "Campo San Fantin 1977",
+    "lat": 45.4336376,
+    "lng": 12.3337579,
+    "popularity": 872
+  },
+  {
+    "name": "Punta della Dogana",
+    "address": "Fondamente della Dogana alla Salute 2",
+    "lat": 45.4307735,
+    "lng": 12.3361172,
+    "popularity": 787
+  },
+  {
+    "name": "Peggy Guggenheim Collection",
+    "address": "Palazzo Venier dei Leoni 704",
+    "lat": 45.4308209,
+    "lng": 12.3315374,
+    "popularity": 741
+  },
+  {
+    "name": "Torre dell’Orologio",
+    "address": "Piazza San Marco",
+    "lat": 45.43477499999999,
+    "lng": 12.338998,
+    "popularity": 691
+  },
+  {
+    "name": "Pellestrina",
+    "address": "",
+    "lat": 45.273333,
+    "lng": 12.301111,
+    "popularity": 480
+  },
+  {
+    "name": "Palazzo Grassi",
+    "address": "Campo San Samuele 3231",
+    "lat": 45.4338015,
+    "lng": 12.3279463,
+    "popularity": 475
+  },
+  {
+    "name": "Zanipolo",
+    "address": "Campo Zanipolo",
+    "lat": 45.4393794,
+    "lng": 12.3417127,
+    "popularity": 467
+  },
+  {
+    "name": "Cimitero di San Michele",
+    "address": "",
+    "lat": 45.4464474,
+    "lng": 12.3468539,
+    "popularity": 425
+  },
+  {
+    "name": "Palazzo Franchetti",
+    "address": "Campo Santo Stefano 2842",
+    "lat": 45.43185,
+    "lng": 12.329641,
+    "popularity": 423
+  },
+  {
+    "name": "Basilica di San Giorgio Maggiore",
+    "address": "",
+    "lat": 45.4294192,
+    "lng": 12.343204,
+    "popularity": 408
+  },
+  {
+    "name": "Ca' Rezzonico",
+    "address": "Fondamenta Rezzonico 3136",
+    "lat": 45.43354050000001,
+    "lng": 12.3268258,
+    "popularity": 374
+  },
+  {
+    "name": "Fondazione Querini Stampalia",
+    "address": "Campiello Querini Stampalia 5252",
+    "lat": 45.43677779999999,
+    "lng": 12.3415947,
+    "popularity": 327
+  },
+  {
+    "name": "Ca’ Pesaro",
+    "address": "Fondamenta di Ca’ Pesaro 2070",
+    "lat": 45.441063,
+    "lng": 12.3316317,
+    "popularity": 327
+  },
+  {
+    "name": "Negozio Olivetti",
+    "address": "Piazza San Marco 101",
+    "lat": 45.4341623,
+    "lng": 12.3375657,
+    "popularity": 326
+  },
+  {
+    "name": "Museo di Storia Naturale di Venezia",
+    "address": "Salizada del Fontego dei Turchi 1730",
+    "lat": 45.4419982,
+    "lng": 12.3287185,
+    "popularity": 325
+  },
+  {
+    "name": "Museo Correr",
+    "address": "Piazza San Marco 52",
+    "lat": 45.4335569,
+    "lng": 12.3369319,
+    "popularity": 314
+  },
+  {
+    "name": "Scuola Grande di San Marco",
+    "address": "Campo Zanipolo",
+    "lat": 45.4396526,
+    "lng": 12.3414673,
+    "popularity": 305
+  },
+  {
+    "name": "Ponte della Costituzione",
+    "address": "",
+    "lat": 45.4388095,
+    "lng": 12.3194111,
+    "popularity": 300
+  },
+  {
+    "name": "Gallerie dell'Accademia",
+    "address": "Campo della Carità 1050",
+    "lat": 45.4310784,
+    "lng": 12.3281394,
+    "popularity": 295
+  },
+  {
+    "name": "Palazzo Grimani",
+    "address": "Ramo Grimani 4858",
+    "lat": 45.4370775,
+    "lng": 12.3423911,
+    "popularity": 291
+  },
+  {
+    "name": "Pescaria",
+    "address": "Rialto",
+    "lat": 45.4393975,
+    "lng": 12.3337519,
+    "popularity": 273
+  },
+  {
+    "name": "Chiesa di San Polo",
+    "address": "Campo San Polo 2118",
+    "lat": 45.4384733,
+    "lng": 12.3354801,
+    "popularity": 253
+  },
+  {
+    "name": "Malamocco",
+    "address": "",
+    "lat": 45.371796,
+    "lng": 12.3374139,
+    "popularity": 248
+  },
+  {
+    "name": "Lion of St Mark Column",
+    "address": "Piazzetta di San Marco",
+    "lat": 45.4341668,
+    "lng": 12.3384717,
+    "popularity": 234
+  },
+  {
+    "name": "I Frari",
+    "address": "Campo dei Frari 3072",
+    "lat": 45.4369864,
+    "lng": 12.3266004,
+    "popularity": 233
+  },
+  {
+    "name": "Scuola Grande di San Rocco",
+    "address": "Campo San Rocco 3052",
+    "lat": 45.4365064,
+    "lng": 12.3253215,
+    "popularity": 229
+  },
+  {
+    "name": "Chiesa di San Zaccaria",
+    "address": "Campo San Zaccaria 4693",
+    "lat": 45.4347794,
+    "lng": 12.3434712,
+    "popularity": 220
+  },
+  {
+    "name": "Squero di San Trovaso",
+    "address": "Campo San Trovaso 1097",
+    "lat": 45.4302885,
+    "lng": 12.3258824,
+    "popularity": 210
+  },
+  {
+    "name": "Blue Moon",
+    "address": "Piazzale Bucintoro 1",
+    "lat": 45.4393979,
+    "lng": 12.3329989,
+    "popularity": 205
+  },
+  {
+    "name": "Fondazione Giorgio Cini",
+    "address": "",
+    "lat": 45.428765,
+    "lng": 12.342866,
+    "popularity": 203
+  },
+  {
+    "name": "Scala Contarini del Bovolo",
+    "address": "Calle Contarini del Bovolo 4299",
+    "lat": 45.4361431,
+    "lng": 12.3357749,
+    "popularity": 203
+  },
+  {
+    "name": "Fondazione Prada",
+    "address": "Calle de Ca' Corner 2215",
+    "lat": 45.4407268,
+    "lng": 12.3322285,
+    "popularity": 199
+  },
+  {
+    "name": "Museo di San Marco",
+    "address": "Basilica di San Marco",
+    "lat": 45.4345606,
+    "lng": 12.3397125,
+    "popularity": 193
+  },
+  {
+    "name": "Chiesa di San Moisè",
+    "address": "Campo di San Moisè",
+    "lat": 45.4331019,
+    "lng": 12.3360763,
+    "popularity": 190
+  },
+  {
+    "name": "Campo dei Mori",
+    "address": "Campo dei Mori",
+    "lat": 45.4456214,
+    "lng": 12.3321994,
+    "popularity": 188
+  },
+  {
+    "name": "Chiesa di Santa Maria dei Miracoli",
+    "address": "Campo dei Miracoli 6074",
+    "lat": 45.43952729999999,
+    "lng": 12.3392746,
+    "popularity": 182
+  },
+  {
+    "name": "Chiesa del Santissimo Redentore",
+    "address": "Campo del SS Redentore 194",
+    "lat": 45.424886,
+    "lng": 12.3323713,
+    "popularity": 182
+  },
+  {
+    "name": "Chiesa di San Geremia",
+    "address": "Campo San Geremia 274",
+    "lat": 45.4426551,
+    "lng": 12.3253544,
+    "popularity": 181
+  },
+  {
+    "name": "Basilica di San Pietro di Castello",
+    "address": "Campo San Pietro 2787",
+    "lat": 45.4346531,
+    "lng": 12.3595404,
+    "popularity": 180
+  },
+  {
+    "name": "Chiesa della Madonna dell’Orto",
+    "address": "Campo de la Madonna de l’Orto 3520",
+    "lat": 45.4464968,
+    "lng": 12.3326017,
+    "popularity": 179
+  },
+  {
+    "name": "Palazzo Mocenigo",
+    "address": "Salizada di San Stae 1992",
+    "lat": 45.44068,
+    "lng": 12.3298,
+    "popularity": 178
+  },
+  {
+    "name": "Museo Storico Navale",
+    "address": "Riva San Biagio 2148",
+    "lat": 45.4326888,
+    "lng": 12.3498828,
+    "popularity": 173
+  },
+  {
+    "name": "La Pietà",
+    "address": "Riva degli Schiavoni",
+    "lat": 45.434002,
+    "lng": 12.344939,
+    "popularity": 173
+  },
+  {
+    "name": "Chiesa di San Rocco",
+    "address": "Campo San Rocco 3053",
+    "lat": 45.4369271,
+    "lng": 12.3253073,
+    "popularity": 169
+  },
+  {
+    "name": "Giardini Pubblici",
+    "address": "",
+    "lat": 45.4283198,
+    "lng": 12.3569085,
+    "popularity": 169
+  },
+  {
+    "name": "Column of St Theodore",
+    "address": "Piazzetta di San Marco",
+    "lat": 45.4341668,
+    "lng": 12.3384717,
+    "popularity": 167
+  },
+  {
+    "name": "Chiesa dei Gesuati",
+    "address": "Fondamenta delle Zattere 918",
+    "lat": 45.4295157,
+    "lng": 12.3273085,
+    "popularity": 154
+  },
+  {
+    "name": "Porta Magna",
+    "address": "Campo de l'Arsenal",
+    "lat": 45.4348502,
+    "lng": 12.3499009,
+    "popularity": 154
+  },
+  {
+    "name": "Le Zitelle",
+    "address": "Fondamenta de le Zitelle 33",
+    "lat": 45.4268969,
+    "lng": 12.3392009,
+    "popularity": 151
+  },
+  {
+    "name": "Vento di Venezia",
+    "address": "",
+    "lat": 45.43255,
+    "lng": 12.37009,
+    "popularity": 151
+  },
+  {
+    "name": "Bartolomeo Colleoni Statue",
+    "address": "Campo Zanipolo",
+    "lat": 45.4391892,
+    "lng": 12.3413777,
+    "popularity": 150
+  },
+  {
+    "name": "Chiesa di San Giacomo di Rialto",
+    "address": "Campo San Giacomo di Rialto 1",
+    "lat": 45.4384733,
+    "lng": 12.3354801,
+    "popularity": 150
+  },
+  {
+    "name": "Chiesa di San Sebastiano",
+    "address": "Campo San Sebastiano 1687",
+    "lat": 45.4319735,
+    "lng": 12.3200941,
+    "popularity": 150
+  },
+  {
+    "name": "Basilica di Santa Maria Assunta",
+    "address": "Piazza Torcello",
+    "lat": 45.4983184,
+    "lng": 12.4192342,
+    "popularity": 149
+  },
+  {
+    "name": "Museo Ebraico",
+    "address": "Campo del Ghetto Nuovo 2902b",
+    "lat": 45.4450048,
+    "lng": 12.3270196,
+    "popularity": 146
+  },
+  {
+    "name": "Chiesa di San Martino",
+    "address": "Piazza Galuppi",
+    "lat": 45.4842439,
+    "lng": 12.4187136,
+    "popularity": 146
+  },
+  {
+    "name": "Chiesa di San Martino",
+    "address": "Campo San Martino 2298",
+    "lat": 45.4842439,
+    "lng": 12.4187136,
+    "popularity": 146
+  },
+  {
+    "name": "Chiesa di Santa Maria del Giglio",
+    "address": "Campo di Santa Maria del Giglio",
+    "lat": 45.4325927,
+    "lng": 12.3328748,
+    "popularity": 145
+  },
+  {
+    "name": "I Gesuiti",
+    "address": "Salizada dei Specchieri 4882",
+    "lat": 45.4433285,
+    "lng": 12.3392002,
+    "popularity": 145
+  },
+  {
+    "name": "Museo del Vetro",
+    "address": "Fondamenta Giustinian 8",
+    "lat": 45.4565786,
+    "lng": 12.3569768,
+    "popularity": 143
+  },
+  {
+    "name": "Chiesa di Santo Stefano",
+    "address": "Campo Santo Stefano",
+    "lat": 45.4336977,
+    "lng": 12.331,
+    "popularity": 143
+  },
+  {
+    "name": "Chiesa di San Francesco della Vigna",
+    "address": "Campo San Francesco 2786",
+    "lat": 45.4383115,
+    "lng": 12.3475342,
+    "popularity": 143
+  },
+  {
+    "name": "Chiesa dei Scalzi",
+    "address": "Fondamenta dei Scalzi 55-57",
+    "lat": 45.441323,
+    "lng": 12.322135,
+    "popularity": 140
+  },
+  {
+    "name": "Chiesa di San Stae",
+    "address": "Campo San Stae 1981",
+    "lat": 45.4413171,
+    "lng": 12.3306306,
+    "popularity": 139
+  },
+  {
+    "name": "Casa dei Tre Oci",
+    "address": "Fondamente de le Zitelle 43",
+    "lat": 45.42669590000001,
+    "lng": 12.3384861,
+    "popularity": 139
+  },
+  {
+    "name": "Chiesa di Santa Maria Formosa",
+    "address": "Campo Santa Maria Formosa 5267",
+    "lat": 45.4370031,
+    "lng": 12.3410753,
+    "popularity": 137
+  },
+  {
+    "name": "Ca’ Dario",
+    "address": "Ramo Ca’ Dario 352",
+    "lat": 45.4308424,
+    "lng": 12.3322393,
+    "popularity": 133
+  },
+  {
+    "name": "Punch",
+    "address": "Fondamenta San Bagio 800o",
+    "lat": 45.42785,
+    "lng": 12.32121,
+    "popularity": 131
+  },
+  {
+    "name": "Scuola Grande di San Giovanni Evangelista",
+    "address": "Campiello della Scuola 2454",
+    "lat": 45.4383691,
+    "lng": 12.3261049,
+    "popularity": 131
+  },
+  {
+    "name": "Faro di Murano",
+    "address": "Fondamenta Piave",
+    "lat": 45.452797,
+    "lng": 12.3546248,
+    "popularity": 131
+  },
+  {
+    "name": "Chiesa di San Vidal",
+    "address": "Campo di San Vidal 2862",
+    "lat": 45.4324061,
+    "lng": 12.3295389,
+    "popularity": 130
+  },
+  {
+    "name": "Chiesa di San Bartolomeo",
+    "address": "Campo San Bartolomeo 5168",
+    "lat": 45.43756,
+    "lng": 12.33629,
+    "popularity": 130
+  },
+  {
+    "name": "Chiesa di San Giorgio dei Greci",
+    "address": "Campo dei Greci 3412",
+    "lat": 45.4354311,
+    "lng": 12.3448054,
+    "popularity": 129
+  },
+  {
+    "name": "Chiesa di San Salvador",
+    "address": "Campo San Salvador 4835",
+    "lat": 45.4367078,
+    "lng": 12.3364532,
+    "popularity": 127
+  },
+  {
+    "name": "Convento di San Francesco del Deserto",
+    "address": "",
+    "lat": 45.4732887,
+    "lng": 12.417374,
+    "popularity": 127
+  },
+  {
+    "name": "Chiesa di San Simeone Piccolo",
+    "address": "Fondamente San Siimeone Piccolo 698",
+    "lat": 45.44030679999999,
+    "lng": 12.3224317,
+    "popularity": 127
+  },
+  {
+    "name": "Chiesa di San Pietro Martire",
+    "address": "Fondamenta dei Vetrai",
+    "lat": 45.4549511,
+    "lng": 12.3526378,
+    "popularity": 126
+  },
+  {
+    "name": "Grand Hotel des Bains",
+    "address": "Lungomare Marconi 17",
+    "lat": 45.4133905,
+    "lng": 12.3747432,
+    "popularity": 125
+  },
+  {
+    "name": "Chiesa di Santa Fosca",
+    "address": "Piazza Torcello",
+    "lat": 45.442997,
+    "lng": 12.3323324,
+    "popularity": 124
+  },
+  {
+    "name": "Grande Albergo Ausonia & Hungaria",
+    "address": "Gran Viale Santa Maria Elisabetta 28",
+    "lat": 45.4155974,
+    "lng": 12.3716998,
+    "popularity": 124
+  },
+  {
+    "name": "Palazzo Cini",
+    "address": "Campo San Vio 864",
+    "lat": 45.4307996,
+    "lng": 12.3299001,
+    "popularity": 123
+  },
+  {
+    "name": "Chiesa di Sant'Alvise",
+    "address": "Campo Sant'Alvise 3025",
+    "lat": 45.4474093,
+    "lng": 12.3291835,
+    "popularity": 123
+  },
+  {
+    "name": "Scuola Grande dei Carmini",
+    "address": "Campo Santa Margherita 2617",
+    "lat": 45.4336557,
+    "lng": 12.3224079,
+    "popularity": 122
+  },
+  {
+    "name": "Chiesa di San Giovanni in Bragora",
+    "address": "Campo Bandiera e Moro 3790",
+    "lat": 45.4372604,
+    "lng": 12.3385522,
+    "popularity": 121
+  },
+  {
+    "name": "Ospedaletto",
+    "address": "Barbaria de le Tole 6691",
+    "lat": 45.438768,
+    "lng": 12.342859,
+    "popularity": 120
+  },
+  {
+    "name": "Il Gobbo",
+    "address": "",
+    "lat": 45.43877519999999,
+    "lng": 12.335116,
+    "popularity": 117
+  },
+  {
+    "name": "Museo della Musica",
+    "address": "Campo San Maurizio 2603",
+    "lat": 45.43307919999999,
+    "lng": 12.3315737,
+    "popularity": 117
+  },
+  {
+    "name": "Chiesa di San Nicolò dei Mendicoli",
+    "address": "Campo San Nicolò 1907",
+    "lat": 45.4326134,
+    "lng": 12.3156846,
+    "popularity": 115
+  },
+  {
+    "name": "Museo di Torcello",
+    "address": "Piazza Torcello",
+    "lat": 45.4985115,
+    "lng": 12.4183113,
+    "popularity": 113
+  },
+  {
+    "name": "Padiglione delle Navi",
+    "address": "Fondamenta de la Madonna 2162c",
+    "lat": 45.4345299,
+    "lng": 12.3502891,
+    "popularity": 113
+  },
+  {
+    "name": "Casa di Carlo Goldoni",
+    "address": "Calle dei Nomboli 2794",
+    "lat": 45.436158,
+    "lng": 12.3282956,
+    "popularity": 113
+  },
+  {
+    "name": "Chiesa di San Marcuola",
+    "address": "Campo San Marcuola 1758",
+    "lat": 45.44293099999999,
+    "lng": 12.328688,
+    "popularity": 112
+  },
+  {
+    "name": "Chiesa di San Lio",
+    "address": "Campo San Lio",
+    "lat": 45.43761139999999,
+    "lng": 12.3385849,
+    "popularity": 111
+  },
+  {
+    "name": "Parco delle Rimembranze",
+    "address": "Isola di Sant'Elena",
+    "lat": 45.426302,
+    "lng": 12.3602092,
+    "popularity": 108
+  },
+  {
+    "name": "Chiesa di San Zulian",
+    "address": "Campo San Zulian 604",
+    "lat": 45.4357967,
+    "lng": 12.338654,
+    "popularity": 107
+  },
+  {
+    "name": "Torre Massimiliana",
+    "address": "Via dei Forti",
+    "lat": 45.44506670000001,
+    "lng": 12.3931484,
+    "popularity": 107
+  },
+  {
+    "name": "Fondazione Vedova",
+    "address": "Fondamenta delle Zattere 266",
+    "lat": 45.429276,
+    "lng": 12.334471,
+    "popularity": 107
+  },
+  {
+    "name": "Chiesa di Sant’Eufemia",
+    "address": "Fondamenta Sant’Eufemia 680",
+    "lat": 45.426866,
+    "lng": 12.3236705,
+    "popularity": 107
+  },
+  {
+    "name": "Galleria Giorgio Franchetti alla Ca’ d’Oro",
+    "address": "Calle di Ca’ d’Oro 3932",
+    "lat": 45.4408384,
+    "lng": 12.3339262,
+    "popularity": 106
+  },
+  {
+    "name": "Museo Diocesano di Venezia",
+    "address": "Ponte de le Canonica 4312",
+    "lat": 45.4346992,
+    "lng": 12.3408166,
+    "popularity": 106
+  },
+  {
+    "name": "Museo Fortuny",
+    "address": "Campo San Beneto 3958",
+    "lat": 45.4353375,
+    "lng": 12.3320777,
+    "popularity": 106
+  },
+  {
+    "name": "Chiesa di San Giacomo dell’Orio",
+    "address": "Campo San Giacomo dell’Orio 1457",
+    "lat": 45.4401123,
+    "lng": 12.3274958,
+    "popularity": 106
+  },
+  {
+    "name": "Scuola Dalmata di San Giorgio degli Schiavoni",
+    "address": "Calle dei Furlani 3259a",
+    "lat": 45.4361462,
+    "lng": 12.3459421,
+    "popularity": 105
+  },
+  {
+    "name": "Chiesa di San Giovanni Elemosinario",
+    "address": "Ruga Vecchia di San Giovanni 477",
+    "lat": 45.4388095,
+    "lng": 12.3345593,
+    "popularity": 103
+  },
+  {
+    "name": "Serra dei Giardini",
+    "address": "Viale Garibaldi 1254",
+    "lat": 45.4307346,
+    "lng": 12.3553204,
+    "popularity": 103
+  },
+  {
+    "name": "Museo del Merletto",
+    "address": "Piazza Galuppi 187",
+    "lat": 45.4847433,
+    "lng": 12.4187619,
+    "popularity": 103
+  },
+  {
+    "name": "Basilica dei SS Maria e Donato",
+    "address": "Campo San Donato",
+    "lat": 45.4574644,
+    "lng": 12.3571905,
+    "popularity": 102
+  },
+  {
+    "name": "Museo Wagner",
+    "address": "Casinò di Venezia 2040",
+    "lat": 45.4425809,
+    "lng": 12.329742,
+    "popularity": 102
+  },
+  {
+    "name": "Sotoportego dei Preti",
+    "address": "Sotoportego dei Preti",
+    "lat": 45.4349955,
+    "lng": 12.3469664,
+    "popularity": 102
+  },
+  {
+    "name": "Parco della Certosa",
+    "address": "",
+    "lat": 45.4339322,
+    "lng": 12.3738822,
+    "popularity": 101
+  },
+  {
+    "name": "Giudecca 795",
+    "address": "Fondamenta San Biagio 795",
+    "lat": 45.42748659999999,
+    "lng": 12.3218058,
+    "popularity": 101
+  },
+  {
+    "name": "Ponte delle Tette",
+    "address": "",
+    "lat": 45.4388385,
+    "lng": 12.3309479,
+    "popularity": 101
+  },
+  {
+    "name": "Chiesa di Santa Caterina",
+    "address": "Isola di Mazzorbo 32",
+    "lat": 45.4433393,
+    "lng": 12.336359,
+    "popularity": 101
+  },
+  {
+    "name": "Monastero di San Lazzaro degli Armeni",
+    "address": "",
+    "lat": 45.41233159999999,
+    "lng": 12.3608718,
+    "popularity": 101
+  },
+  {
+    "name": "Isola del Lazzaretto Nuovo",
+    "address": "",
+    "lat": 45.456861,
+    "lng": 12.386332,
+    "popularity": 101
+  },
+  {
+    "name": "Schola Levantina",
+    "address": "Campo del Ghetto Vecchio",
+    "lat": 45.4447418,
+    "lng": 12.3257919,
+    "popularity": 101
+  },
+  {
+    "name": "Schola Italiana",
+    "address": "Campo del Ghetto Nuovo",
+    "lat": 45.437973,
+    "lng": 12.327103,
+    "popularity": 101
+  },
+  {
+    "name": "La Spezieria all’Ercole d’Oro",
+    "address": "Campo Santa Fosca 2234",
+    "lat": 45.442784,
+    "lng": 12.332153,
+    "popularity": 100
+  },
+  {
+    "name": "Museo delle Icone",
+    "address": "Campo dei Greci 3412",
+    "lat": 45.4963,
+    "lng": 12.2452,
+    "popularity": 100
+  },
+  {
+    "name": "Fabbriche Nuove",
+    "address": "",
+    "lat": 40.6203874,
+    "lng": 14.9504177,
+    "popularity": 100
+  },
+  {
+    "name": "Arsenale Construction Sheds",
+    "address": "",
+    "lat": 45.4348502,
+    "lng": 12.3499009,
+    "popularity": 100
+  },
+  {
+    "name": "Chiesa dell’Arcangelo Raffaele",
+    "address": "Campo Anzolo Raffaele 1721",
+    "lat": 45.4326003,
+    "lng": 12.3189515,
+    "popularity": 100
+  },
+  {
+    "name": "Pineta degli Alberoni",
+    "address": "",
+    "lat": 45.347743,
+    "lng": 12.3258304,
+    "popularity": 100
+  },
+  {
+    "name": "Museo del Manicomio",
+    "address": "",
+    "lat": 45.41869639999999,
+    "lng": 12.3572159,
+    "popularity": 100
+  },
+  {
+    "name": "Arzanà",
+    "address": "Calle delle Pignatte 1936d",
+    "lat": 45.4830931,
+    "lng": 12.2492483,
+    "popularity": 100
+  },
+  {
+    "name": "Schola Canton",
+    "address": "Campo del Ghetto Nuovo",
+    "lat": 45.444997,
+    "lng": 12.3266656,
+    "popularity": 100
+  },
+  {
+    "name": "Palazzo della Mostra del Cinema",
+    "address": "Lungomare Marconi 30",
+    "lat": 45.4056386,
+    "lng": 12.3673553,
+    "popularity": 100
+  },
+  {
+    "name": "Schola Tedesca",
+    "address": "Campo del Ghetto Nuovo",
+    "lat": 45.4362564,
+    "lng": 12.3293719,
+    "popularity": 100
+  },
+  {
+    "name": "The Ghetto",
+    "address": "",
+    "lat": 45.4806317,
+    "lng": 12.1841265,
+    "popularity": 100
+  },
+  {
+    "name": "Trono d'Attila",
+    "address": "Piazza Torcello",
+    "lat": 45.49670709999999,
+    "lng": 12.4156019,
+    "popularity": 100
+  },
+  {
+    "name": "Schola Spagnola",
+    "address": "Campo del Ghetto Vecchio",
+    "lat": 45.4446462,
+    "lng": 12.3255608,
+    "popularity": 100
+  }
+]

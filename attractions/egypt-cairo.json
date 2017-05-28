@@ -1,0 +1,926 @@
+[
+  {
+    "name": "Citadel",
+    "address": "Sharia Salah Salem",
+    "lat": 30.0298913,
+    "lng": 31.2608168,
+    "popularity": 2575
+  },
+  {
+    "name": "Sphinx",
+    "address": "",
+    "lat": 29.9752687,
+    "lng": 31.1375674,
+    "popularity": 2435
+  },
+  {
+    "name": "Egyptian Museum",
+    "address": "Midan Tahrir",
+    "lat": 30.0478468,
+    "lng": 31.2336493,
+    "popularity": 2083
+  },
+  {
+    "name": "Cairo Tower",
+    "address": "Sharia Hadayek al-Zuhreya",
+    "lat": 30.045915,
+    "lng": 31.2242898,
+    "popularity": 1067
+  },
+  {
+    "name": "Pyramid of Khafre",
+    "address": "",
+    "lat": 29.9792345,
+    "lng": 31.1342019,
+    "popularity": 776
+  },
+  {
+    "name": "Pyramids of Giza",
+    "address": "",
+    "lat": 30.013823,
+    "lng": 31.209572,
+    "popularity": 610
+  },
+  {
+    "name": "Al-Azhar Mosque",
+    "address": "Sharia al-Azhar",
+    "lat": 30.045688,
+    "lng": 31.2626851,
+    "popularity": 558
+  },
+  {
+    "name": "Great Pyramid of Khufu",
+    "address": "",
+    "lat": 29.9792345,
+    "lng": 31.1342019,
+    "popularity": 539
+  },
+  {
+    "name": "Mosque of Ibn Tulun",
+    "address": "Sharia al-Saliba",
+    "lat": 30.028691,
+    "lng": 31.2493941,
+    "popularity": 524
+  },
+  {
+    "name": "Darb 1718",
+    "address": "off Sharia Qasr al-Shama",
+    "lat": 30.003176,
+    "lng": 31.231759,
+    "popularity": 493
+  },
+  {
+    "name": "Hanging Church",
+    "address": "Sharia Mar Girgis",
+    "lat": 30.0052663,
+    "lng": 31.2301826,
+    "popularity": 459
+  },
+  {
+    "name": "Khan al-Khalili",
+    "address": "off Sharia al-Azhar & al-Gamaliyya",
+    "lat": 30.0477386,
+    "lng": 31.2622538,
+    "popularity": 402
+  },
+  {
+    "name": "Al-Azhar Park",
+    "address": "Sharia Salah Salem",
+    "lat": 30.0409685,
+    "lng": 31.2652541,
+    "popularity": 371
+  },
+  {
+    "name": "Mosque of Mohammed Ali",
+    "address": "",
+    "lat": 30.0287015,
+    "lng": 31.25991059999999,
+    "popularity": 329
+  },
+  {
+    "name": "Northern Cemetery",
+    "address": "",
+    "lat": 30.0430117,
+    "lng": 31.27093769999999,
+    "popularity": 308
+  },
+  {
+    "name": "Gayer-Anderson Museum",
+    "address": "Sharia ibn Tulun",
+    "lat": 30.02833,
+    "lng": 31.250744,
+    "popularity": 303
+  },
+  {
+    "name": "Eastern Cemetery",
+    "address": "",
+    "lat": 30.0430117,
+    "lng": 31.27093769999999,
+    "popularity": 275
+  },
+  {
+    "name": "Mosque-Madrassa of Sultan Hassan",
+    "address": "Midan Salah ad-Din",
+    "lat": 30.0322791,
+    "lng": 31.2561704,
+    "popularity": 221
+  },
+  {
+    "name": "Mosque of Amr ibn al-As",
+    "address": "Sharia Sidi Hassan al-Anwar",
+    "lat": 30.0101215,
+    "lng": 31.23313679999999,
+    "popularity": 207
+  },
+  {
+    "name": "Midan Tahrir",
+    "address": "",
+    "lat": 30.0443967,
+    "lng": 31.23571729999999,
+    "popularity": 204
+  },
+  {
+    "name": "Cairo Zoo",
+    "address": "Midan al-Gamaa",
+    "lat": 30.0226574,
+    "lng": 31.2136607,
+    "popularity": 195
+  },
+  {
+    "name": "Bab Zuweila",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0428454,
+    "lng": 31.2578371,
+    "popularity": 180
+  },
+  {
+    "name": "Cheops Boat Museum",
+    "address": "",
+    "lat": 29.9779602,
+    "lng": 31.1346067,
+    "popularity": 179
+  },
+  {
+    "name": "Blue Mosque",
+    "address": "Sharia at-Tabana",
+    "lat": 30.0362363,
+    "lng": 31.2602223,
+    "popularity": 173
+  },
+  {
+    "name": "Cairo Marriott",
+    "address": "Sharia Saray al-Gezira",
+    "lat": 30.05711,
+    "lng": 31.225161,
+    "popularity": 154
+  },
+  {
+    "name": "Bab al-Futuh",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0555655,
+    "lng": 31.2632926,
+    "popularity": 142
+  },
+  {
+    "name": "Ramses Station",
+    "address": "Mahattat Ramses, Midan Ramses",
+    "lat": 30.0630852,
+    "lng": 31.2469853,
+    "popularity": 141
+  },
+  {
+    "name": "Nilometer",
+    "address": "Sharia al-Malek as-Salih, Roda",
+    "lat": 30.006965,
+    "lng": 31.2252098,
+    "popularity": 138
+  },
+  {
+    "name": "Coptic Cemetery",
+    "address": "",
+    "lat": 30.0060382,
+    "lng": 31.2301827,
+    "popularity": 134
+  },
+  {
+    "name": "Museum of Islamic Art",
+    "address": "Midan Bab al-Khalq",
+    "lat": 30.0445003,
+    "lng": 31.2527176,
+    "popularity": 134
+  },
+  {
+    "name": "Coptic Museum",
+    "address": "3 Sharia Mar Girgis",
+    "lat": 30.0060382,
+    "lng": 31.2301827,
+    "popularity": 131
+  },
+  {
+    "name": "Police Museum",
+    "address": "",
+    "lat": 30.0306406,
+    "lng": 31.2600162,
+    "popularity": 125
+  },
+  {
+    "name": "Abdeen Palace",
+    "address": "Midan al-Gomhuriyya",
+    "lat": 30.0427704,
+    "lng": 31.2474275,
+    "popularity": 125
+  },
+  {
+    "name": "Agricultural Museum",
+    "address": "off Sharia Wizarat al-Ziraa, Doqqi",
+    "lat": 30.0459262,
+    "lng": 31.2107613,
+    "popularity": 124
+  },
+  {
+    "name": "Mosque of Al-Hakim",
+    "address": "Sharia al-Galal",
+    "lat": 30.0545766,
+    "lng": 31.26419899999999,
+    "popularity": 123
+  },
+  {
+    "name": "Mosque of Al-Maridani",
+    "address": "Sharia at-Tabana",
+    "lat": 30.0397209,
+    "lng": 31.2593282,
+    "popularity": 123
+  },
+  {
+    "name": "Medieval Gate",
+    "address": "",
+    "lat": 30.02696869999999,
+    "lng": 31.2446478,
+    "popularity": 121
+  },
+  {
+    "name": "Medieval Gate",
+    "address": "",
+    "lat": 30.02696869999999,
+    "lng": 31.2446478,
+    "popularity": 121
+  },
+  {
+    "name": "Townhouse Gallery",
+    "address": "10 Sharia Nabrawy",
+    "lat": 30.0494703,
+    "lng": 31.2379726,
+    "popularity": 121
+  },
+  {
+    "name": "Bein al-Qasreen",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0540677,
+    "lng": 31.2626632,
+    "popularity": 121
+  },
+  {
+    "name": "Medieval Gate",
+    "address": "",
+    "lat": 30.02696869999999,
+    "lng": 31.2446478,
+    "popularity": 121
+  },
+  {
+    "name": "Medieval Gate",
+    "address": "",
+    "lat": 30.02696869999999,
+    "lng": 31.2446478,
+    "popularity": 121
+  },
+  {
+    "name": "Medieval Gate",
+    "address": "",
+    "lat": 30.02696869999999,
+    "lng": 31.2446478,
+    "popularity": 121
+  },
+  {
+    "name": "Ben Ezra Synagogue",
+    "address": "",
+    "lat": 30.0058,
+    "lng": 31.231,
+    "popularity": 118
+  },
+  {
+    "name": "National Military Museum",
+    "address": "",
+    "lat": 30.0307093,
+    "lng": 31.2619047,
+    "popularity": 118
+  },
+  {
+    "name": "Manial Palace",
+    "address": "1 Sharia al-Saray",
+    "lat": 30.0274437,
+    "lng": 31.2289784,
+    "popularity": 118
+  },
+  {
+    "name": "Greek Orthodox Cemetery",
+    "address": "",
+    "lat": 30.0625252,
+    "lng": 31.253821,
+    "popularity": 115
+  },
+  {
+    "name": "Mosque of al-Aqmar",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0514721,
+    "lng": 31.26205539999999,
+    "popularity": 115
+  },
+  {
+    "name": "Church of St Barbara",
+    "address": "",
+    "lat": 30.0060988,
+    "lng": 31.2312921,
+    "popularity": 113
+  },
+  {
+    "name": "October War Panorama",
+    "address": "Sharia al-Uruba",
+    "lat": 30.0742728,
+    "lng": 31.3068068,
+    "popularity": 112
+  },
+  {
+    "name": "Al-Fath Mosque",
+    "address": "Midan Ramses",
+    "lat": 30.0598271,
+    "lng": 31.246056,
+    "popularity": 112
+  },
+  {
+    "name": "Mosque of ar-Rifai",
+    "address": "Midan Salah ad-Din",
+    "lat": 30.0327091,
+    "lng": 31.2570029,
+    "popularity": 111
+  },
+  {
+    "name": "Roman Towers",
+    "address": "Sharia Mar Girgis",
+    "lat": 30.005908,
+    "lng": 31.2301359,
+    "popularity": 111
+  },
+  {
+    "name": "Solar Barque Pits",
+    "address": "",
+    "lat": 29.9779602,
+    "lng": 31.1346067,
+    "popularity": 111
+  },
+  {
+    "name": "Mosque of Abu Dahab",
+    "address": "",
+    "lat": 30.048047,
+    "lng": 31.237392,
+    "popularity": 110
+  },
+  {
+    "name": "Mosque of Sayyidna al-Hussein",
+    "address": "Midan al-Hussein",
+    "lat": 30.047987,
+    "lng": 31.2640429,
+    "popularity": 110
+  },
+  {
+    "name": "Mosque of Abdin Bey",
+    "address": "",
+    "lat": 30.0011413,
+    "lng": 31.2316026,
+    "popularity": 107
+  },
+  {
+    "name": "Midan Talaat Harb",
+    "address": "",
+    "lat": 30.048963,
+    "lng": 31.239492,
+    "popularity": 107
+  },
+  {
+    "name": "Beit Zeinab al-Khatoun",
+    "address": "3 Sharia Mohammed Abduh",
+    "lat": 30.049999,
+    "lng": 31.25,
+    "popularity": 107
+  },
+  {
+    "name": "St Mark's Cathedral",
+    "address": "",
+    "lat": 30.071546,
+    "lng": 31.2745913,
+    "popularity": 107
+  },
+  {
+    "name": "Mosque of An-Nasir Mohammed",
+    "address": "",
+    "lat": 30.0298913,
+    "lng": 31.2608168,
+    "popularity": 107
+  },
+  {
+    "name": "Mosque of Suleiman Pasha",
+    "address": "",
+    "lat": 30.0103297,
+    "lng": 31.2287304,
+    "popularity": 106
+  },
+  {
+    "name": "Omar Makram Mosque",
+    "address": "Midan Simon Bolivar",
+    "lat": 30.0431994,
+    "lng": 31.2339485,
+    "popularity": 105
+  },
+  {
+    "name": "Mausoleum of Al-Ghouri",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0456559,
+    "lng": 31.2608809,
+    "popularity": 105
+  },
+  {
+    "name": "Gezira Arts Centre",
+    "address": "",
+    "lat": 30.0565167,
+    "lng": 31.223107,
+    "popularity": 105
+  },
+  {
+    "name": "Statue of Ibrahim",
+    "address": "",
+    "lat": 30.0507648,
+    "lng": 31.2470551,
+    "popularity": 105
+  },
+  {
+    "name": "Andalus Garden",
+    "address": "Sharia Saray al-Gezira",
+    "lat": 30.0454955,
+    "lng": 31.225111,
+    "popularity": 104
+  },
+  {
+    "name": "Museum of Modern Egyptian Art",
+    "address": "",
+    "lat": 30.0435962,
+    "lng": 31.2246493,
+    "popularity": 104
+  },
+  {
+    "name": "Sabil-Kuttab of Qaitbey",
+    "address": "",
+    "lat": 30.0507354,
+    "lng": 31.261588,
+    "popularity": 104
+  },
+  {
+    "name": "Midan Ataba",
+    "address": "",
+    "lat": 30.052346,
+    "lng": 31.246803,
+    "popularity": 103
+  },
+  {
+    "name": "Cairo Atelier",
+    "address": "2 Sharia Karim al-Dawla",
+    "lat": 30.0483435,
+    "lng": 31.2378261,
+    "popularity": 103
+  },
+  {
+    "name": "Bab an-Nasr",
+    "address": "",
+    "lat": 30.0541629,
+    "lng": 31.2650414,
+    "popularity": 103
+  },
+  {
+    "name": "Midan al-Hussein",
+    "address": "",
+    "lat": 30.047987,
+    "lng": 31.2640429,
+    "popularity": 102
+  },
+  {
+    "name": "Mosque of Qaitbey",
+    "address": "",
+    "lat": 30.0439408,
+    "lng": 31.2749307,
+    "popularity": 102
+  },
+  {
+    "name": "Cairo Stock Exchange",
+    "address": "",
+    "lat": 30.0475453,
+    "lng": 31.2411037,
+    "popularity": 102
+  },
+  {
+    "name": "Wikala of Al-Ghouri",
+    "address": "Sharia Mohammed Abduh",
+    "lat": 30.0456559,
+    "lng": 31.2608809,
+    "popularity": 102
+  },
+  {
+    "name": "Madrassa & Mausoleum of Qalaun",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0494171,
+    "lng": 31.2607589,
+    "popularity": 101
+  },
+  {
+    "name": "Sabil of Umm Abbas",
+    "address": "",
+    "lat": 30.0507354,
+    "lng": 31.261588,
+    "popularity": 101
+  },
+  {
+    "name": "Carriage Museum",
+    "address": "",
+    "lat": 30.0559595,
+    "lng": 31.2313145,
+    "popularity": 101
+  },
+  {
+    "name": "Mosque of Sheikhu",
+    "address": "",
+    "lat": 30.0420265,
+    "lng": 31.248534,
+    "popularity": 101
+  },
+  {
+    "name": "Kitkat Mosque",
+    "address": "",
+    "lat": 30.0620759,
+    "lng": 31.1987085,
+    "popularity": 101
+  },
+  {
+    "name": "Wissa Wassef Art Centre",
+    "address": "Saqqara Rd, Harraniyya",
+    "lat": 29.96899999999999,
+    "lng": 31.17629999999999,
+    "popularity": 101
+  },
+  {
+    "name": "Bab al-Azab",
+    "address": "",
+    "lat": 30.03101969999999,
+    "lng": 31.257185,
+    "popularity": 101
+  },
+  {
+    "name": "Sharia al-Muizz li-Din Allah",
+    "address": "",
+    "lat": 30.0521074,
+    "lng": 31.2618885,
+    "popularity": 101
+  },
+  {
+    "name": "Amir Taz Palace",
+    "address": "17 Sharia Suyufiyya",
+    "lat": 30.0317457,
+    "lng": 31.2528619,
+    "popularity": 101
+  },
+  {
+    "name": "Sabil-Kuttab of Nafisa al-Beida",
+    "address": "",
+    "lat": 30.0507354,
+    "lng": 31.261588,
+    "popularity": 101
+  },
+  {
+    "name": "Sabil of Muhammed Ali Pasha",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0440376,
+    "lng": 31.2585701,
+    "popularity": 101
+  },
+  {
+    "name": "Church of St Sergius & Bacchus",
+    "address": "",
+    "lat": 30.0062632,
+    "lng": 31.230666,
+    "popularity": 101
+  },
+  {
+    "name": "Carpet & Clothes Market",
+    "address": "",
+    "lat": 30.0477386,
+    "lng": 31.2622538,
+    "popularity": 100
+  },
+  {
+    "name": "Sharia al-Gamaliyya",
+    "address": "",
+    "lat": 30.0684529,
+    "lng": 31.2575975,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of Aslam al-Silahdar",
+    "address": "Midan Aslam, off Darb al-Ahmar",
+    "lat": 30.0595884,
+    "lng": 31.2576983,
+    "popularity": 100
+  },
+  {
+    "name": "Mr & Mrs Mahmoud Khalil Museum",
+    "address": "1 Sharia Kafour, Doqqi",
+    "lat": 30.03559499999999,
+    "lng": 31.219528,
+    "popularity": 100
+  },
+  {
+    "name": "Qasr Beshtak",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0504666,
+    "lng": 31.2618795,
+    "popularity": 100
+  },
+  {
+    "name": "Egyptian National Railways Museum",
+    "address": "",
+    "lat": 30.0634886,
+    "lng": 31.2484686,
+    "popularity": 100
+  },
+  {
+    "name": "Greek Orthodox Monastery & Church of St George",
+    "address": "Haret Al-Kidees Girgis",
+    "lat": 30.0065955,
+    "lng": 31.230174,
+    "popularity": 100
+  },
+  {
+    "name": "Sabil-Kuttab of Abdel Rahman Katkhuda",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0507354,
+    "lng": 31.261588,
+    "popularity": 100
+  },
+  {
+    "name": "St Joseph's Church",
+    "address": "Sharia Mohammed Farid",
+    "lat": 30.0621118,
+    "lng": 31.220514,
+    "popularity": 100
+  },
+  {
+    "name": "Egyptian Textile Museum",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0498081,
+    "lng": 31.2612755,
+    "popularity": 100
+  },
+  {
+    "name": "Gabalaya Park & Aquarium",
+    "address": "Sharia Umm Kolthum",
+    "lat": 30.0565699,
+    "lng": 31.218614,
+    "popularity": 100
+  },
+  {
+    "name": "Gawhara Palace & Museum",
+    "address": "",
+    "lat": 30.0279942,
+    "lng": 31.2594134,
+    "popularity": 100
+  },
+  {
+    "name": "Uruba Palace",
+    "address": "Sharia al-Ahram",
+    "lat": 30.0888643,
+    "lng": 31.3193929,
+    "popularity": 100
+  },
+  {
+    "name": "Studio Emad Eddin",
+    "address": "18 Sharia Emad al-Din",
+    "lat": 30.0558934,
+    "lng": 31.2442178,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of Gamal ad-Din",
+    "address": "",
+    "lat": 30.0827967,
+    "lng": 31.287655,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of Suleiman Silahdar",
+    "address": "",
+    "lat": 30.0595884,
+    "lng": 31.2576983,
+    "popularity": 100
+  },
+  {
+    "name": "Museum of Islamic Ceramics",
+    "address": "1 Sharia Sheikh al-Marsafy, Zamalek",
+    "lat": 30.0563832,
+    "lng": 31.2230808,
+    "popularity": 100
+  },
+  {
+    "name": "Sabil of Umm Mohammed Ali",
+    "address": "",
+    "lat": 30.0475148,
+    "lng": 31.2641019,
+    "popularity": 100
+  },
+  {
+    "name": "Postal Museum",
+    "address": "2nd fl, Midan Ataba",
+    "lat": 30.0478468,
+    "lng": 31.2336493,
+    "popularity": 100
+  },
+  {
+    "name": "Contemporary Image Collective",
+    "address": "4th fl, 22 Abdel Khalek Sarwat",
+    "lat": 30.0507707,
+    "lng": 31.2418409,
+    "popularity": 100
+  },
+  {
+    "name": "Shar Hashamaim Synagogue",
+    "address": "Sharia Adly",
+    "lat": 30.0513131,
+    "lng": 31.24360149999999,
+    "popularity": 100
+  },
+  {
+    "name": "Western Cemetery",
+    "address": "",
+    "lat": 26.2918921,
+    "lng": 31.892875,
+    "popularity": 100
+  },
+  {
+    "name": "Beit el-Suhaymi",
+    "address": "Darb al-Asfar",
+    "lat": 30.0510708,
+    "lng": 31.2617237,
+    "popularity": 100
+  },
+  {
+    "name": "Complex of Sultan Ashraf Barsbey",
+    "address": "",
+    "lat": 30.0474933,
+    "lng": 31.26004349999999,
+    "popularity": 100
+  },
+  {
+    "name": "Bab al-Qulla",
+    "address": "",
+    "lat": 30.0273224,
+    "lng": 31.2522093,
+    "popularity": 100
+  },
+  {
+    "name": "Khanqah of Sheikhu",
+    "address": "",
+    "lat": 30.1806112,
+    "lng": 31.4266203,
+    "popularity": 100
+  },
+  {
+    "name": "Midaq Alley",
+    "address": "",
+    "lat": 30.0341893,
+    "lng": 31.2456735,
+    "popularity": 100
+  },
+  {
+    "name": "Bab al-Mahruq",
+    "address": "",
+    "lat": 30.0418811,
+    "lng": 31.2631609,
+    "popularity": 100
+  },
+  {
+    "name": "Madrassa & Mausoleum of as-Salih Ayyub",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0491014,
+    "lng": 31.2612748,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of Taghribardi",
+    "address": "",
+    "lat": 30.0322791,
+    "lng": 31.2561704,
+    "popularity": 100
+  },
+  {
+    "name": "Market",
+    "address": "",
+    "lat": 29.9758189,
+    "lng": 31.4033042,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque-Madrassa of Umm Sultan Sha’aban",
+    "address": "Sharia at-Tabana",
+    "lat": 30.1407496,
+    "lng": 31.2396896,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of Al-Mu’ayyad Shaykh",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0433568,
+    "lng": 31.2574553,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque-Madrassa of Al-Ghouri",
+    "address": "Sharia al-Muizz li-Din Allah",
+    "lat": 30.0322791,
+    "lng": 31.2561704,
+    "popularity": 100
+  },
+  {
+    "name": "Mahmoud Mukhtar Museum",
+    "address": "Sharia Tahrir",
+    "lat": 30.04072,
+    "lng": 31.22288,
+    "popularity": 100
+  },
+  {
+    "name": "Dr Ragab’s Pharaonic Village",
+    "address": "3 Sharia al-Bahr al-Azam, Moneib",
+    "lat": 29.9972598,
+    "lng": 31.2151698,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of al-Ashraf Barsbey",
+    "address": "",
+    "lat": 30.0474933,
+    "lng": 31.26004349999999,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of al-Fakahani",
+    "address": "",
+    "lat": 30.0443929,
+    "lng": 31.2590152,
+    "popularity": 100
+  },
+  {
+    "name": "Mosque of as-Salih Tala'i",
+    "address": "",
+    "lat": 30.0423248,
+    "lng": 31.2580763,
+    "popularity": 100
+  },
+  {
+    "name": "Church of St Simeon the Tanner",
+    "address": "Manshiyet Nasr",
+    "lat": 30.0306792,
+    "lng": 31.2764883,
+    "popularity": 100
+  },
+  {
+    "name": "Museo Mevlevi",
+    "address": "Sharia Suyufiyya",
+    "lat": 30.0350921,
+    "lng": 31.255728,
+    "popularity": 100
+  },
+  {
+    "name": "Tomb of Ar-Rifai",
+    "address": "",
+    "lat": 30.0327091,
+    "lng": 31.2570029,
+    "popularity": 100
+  },
+  {
+    "name": "Grand Egyptian Museum",
+    "address": "",
+    "lat": 29.9942315,
+    "lng": 31.1187471,
+    "popularity": 100
+  },
+  {
+    "name": "Ezbekiyya Gardens",
+    "address": "",
+    "lat": 30.0380584,
+    "lng": 31.2325889,
+    "popularity": 100
+  }
+]
