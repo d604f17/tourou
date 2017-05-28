@@ -18,7 +18,7 @@ class Colony {
     this._elitistWeight = params && params['elitistWeight'] ? params['elitistWeight'] : 0;
     this._maxIterations = params && params['maxIterations'] ? params['maxIterations'] : 200;
     this._minScalingFactor = params && params['minScalingFactor'] ?params['minScalingFactor'] :0.001;
-    this._maxDistance = params && params['maxDistance'] ?params['maxDistance'] : 30000;
+    this._maxDistance = params && params['maxDistance'] ?params['maxDistance'] : 20000;
 
     this._iteration = 0;
     this._minPheromone = null;

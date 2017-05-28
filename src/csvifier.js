@@ -66,27 +66,42 @@ const writeValues = (type, name, values) => {
   }
 };
 
-let fileName = 'copenhagen';
+let fileName = 'compare-barcelona';
+let typeName = 'half';
 let rows = [];
 fs.readdirSync(__dirname + '/../logs/').forEach(file => {
-  const [name, cityIP] = file.split('_');
-  const [test, type] = name.split('-');
-  if (type === 'diag') {
-    const [city, iterations, passes] = cityIP.split('-');
+  const [type, name, max, iterations, passes] = file.split('_');
+  const [ant, hest] = type.split('-');
 
-    if (city === fileName) {
-      let values = readValues(type, file.split('.').shift());
+  if(typeName === hest && fileName === name) {
+        let values = readValues(typeName, file.split('.').shift());
 
-      let rowPart1 = `${values.value};${values.distance};${values.realDistance}`;
-      let rowPart2 = `${values.numberOfWaypoints};${values.iterations};${values.area}`;
-      let rowPart3 = `${values.runtime};${values.route._tour.length}`;
+        let rowPart1 = `${values.value};${values.distance};${values.realDistance}`;
+        let rowPart2 = `${values.numberOfWaypoints};${values.iterations};${values.area.replace('.',
+            ',')}`;
+        let rowPart3 = `${values.runtime};${values.route._tour.length}`;
 
-      rows.push(`${rowPart1};${rowPart2};${rowPart3}`);
-    }
+        rows.push(`${rowPart1};${rowPart2};${rowPart3}`);
   }
+
+
+  // if (type === typeName) {
+  //   const [city, iterations, passes] = cityIP.split('-');
+  //
+  //   if (city + '-' + iterations === fileName) {
+  //     let values = readValues(type, file.split('.').shift());
+  //
+  //     let rowPart1 = `${values.value};${values.distance};${values.realDistance}`;
+  //     let rowPart2 = `${values.numberOfWaypoints};${values.iterations};${values.area.replace('.',
+  //         ',')}`;
+  //     let rowPart3 = `${values.runtime};${values.route._tour.length}`;
+  //
+  //     rows.push(`${rowPart1};${rowPart2};${rowPart3}`);
+  //   }
+  // }
 });
 
-fs.writeFileSync(__dirname + '/../logs/diag-' + fileName + '.csv', rows.join('\r\n'));
+fs.writeFileSync(__dirname + '/../logs/' + typeName + '-' + fileName + '.csv', rows.join('\r\n'));
 
 // fs.readdirSync(__dirname + '/../logs/').forEach(file => {
 //   const [name, city] = file.split('_');

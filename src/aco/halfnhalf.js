@@ -15,7 +15,7 @@ const halfnhalf = (iterations, maxDistance, waypoints) => {
         ++count;
 
         one(waypoints).then(boxes => {
-          const route = mmas(waypoints, boxes, {maxDistance});
+          const route = mmas(waypoints, boxes, {maxDistance: max});
 
           const coordinates = route._tour.map(vertex => {
             return vertex.y + ',' + vertex.x;
@@ -30,7 +30,12 @@ const halfnhalf = (iterations, maxDistance, waypoints) => {
             let legs = result.routes[0].legs;
             let distances = legs.map(leg => leg.distance.value);
             route._realDistance = distances.reduce((a, b) => a + b);
-            route._realDistance += 2500 * (legs.length - 2);
+            route._realDistance += 2500 * (legs.length - 1);
+
+            if (typeof bestRoute === 'undefined') {
+              bestRoute = route;
+              bestRouteDistance = route._realDistance;
+            }
 
             let localMin = min, localMax = max;
 
@@ -41,7 +46,7 @@ const halfnhalf = (iterations, maxDistance, waypoints) => {
             } else if (route._realDistance > maxDistance) {
               localMax = min + (max - min) / 2;
             } else if (route._realDistance < maxDistance) {
-              if (route._realDistance > bestRouteDistance) {
+              if (route._realDistance > bestRouteDistance || bestRouteDistance > maxDistance) {
                 bestRoute = route;
                 bestRouteDistance = route._realDistance;
               }

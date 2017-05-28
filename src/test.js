@@ -1,3 +1,4 @@
+import util from 'util';
 import fs from 'fs';
 import haversine from 'haversine';
 import BoundedBox from './strategies/BoundedBox';
@@ -77,7 +78,7 @@ const oneTest = (city, waypoints, passes) => {
               let legs = result.routes[0].legs;
               let distances = legs.map(leg => leg.distance.value);
               route._realDistance = distances.reduce((a, b) => a + b);
-              route._realDistance += 2500 * (legs.length - 2);
+              route._realDistance += 2500 * (legs.length - 1);
 
               var end = new Date().getTime();
               const routeData = `${route.value}, ${route._distance}, ${route._realDistance}`;
@@ -144,7 +145,7 @@ const theHalfeningTest = (city, waypoints, passes, iterations) => {
     queries.push(
         test(`ant-half_${city}_i${iterations}_p${i}`, resolve => {
           var start = new Date().getTime();
-          halfnhalf(iterations, 30000, waypoints).then(route => {
+          halfnhalf(iterations, 20000, waypoints).then(route => {
             var end = new Date().getTime();
 
             const area = getArea(
@@ -152,6 +153,7 @@ const theHalfeningTest = (city, waypoints, passes, iterations) => {
 
             const routeData = `${route.value}, ${route._distance}, ${route._realDistance}`;
             const inputData = `${waypoints.length}, ${iterations}`;
+
             delete route['_graph'];
             resolve(
                 `${routeData}, ${inputData}, ${area}, ${end - start}, ${JSON.stringify(route)}`);
@@ -164,24 +166,37 @@ const theHalfeningTest = (city, waypoints, passes, iterations) => {
 };
 
 const tests = [
+    // tests to run.
+    // differenc max distance.
+    // compare unused cities.
+
+  // ...oneTest('sydney', attractions.sydney, 1),
+
   // ...oneTest('newyorkcity', attractions.newYorkCity, 5),
   // ...diagonalizationTest('newyorkcity', attractions.newYorkCity, 5, 500),
   // ...theHalfeningTest('newyorkcity', attractions.newyorkcity, 5, 1),
 
-  ...oneTest('aalborg', attractions.aalborg, 5),
-  ...oneTest('johannesburg', attractions.johannesburg, 5),
-  ...oneTest('madrid', attractions.madrid, 5),
-  ...oneTest('copenhagen', attractions.copenhagen, 5),
-  ...oneTest('lasVegas', attractions.lasVegas, 5),
-  ...oneTest('losAngeles', attractions.losAngeles, 5),
-  ...oneTest('cairo', attractions.cairo, 5),
-  ...oneTest('newYorkCity', attractions.newYorkCity, 5),
-  ...oneTest('venice', attractions.venice, 5),
+  // ...oneTest('copenhagen', attractions.copenhagen, 10),
+  // ...oneTest('madrid', attractions.madrid, 10),
+  // ...oneTest('venice', attractions.venice, 10),
+  // ...oneTest('newYorkCity', attractions.newYorkCity, 1),
+
+  ...theHalfeningTest('compare-barcelona_m20k', attractions.barcelona, 5, 3),
+  ...diagonalizationTest('compare-barcelona_m20k', attractions.barcelona, 5, 30),
+
+  ...theHalfeningTest('compare-berlin_m20k', attractions.berlin, 5, 3),
+  ...diagonalizationTest('compare-berlin_m20k', attractions.berlin, 5, 45),
+
+  ...theHalfeningTest('compare-rio_m20k', attractions.rio, 5, 5),
+  ...diagonalizationTest('compare-rio_m20k', attractions.rio, 5, 86),
+
+  ...theHalfeningTest('compare-rome_m20k', attractions.rome, 5, 5),
+  ...diagonalizationTest('compare-rome_m20k', attractions.rome, 5, 93),
 ];
 
 asyncIterate(tests, function(test, index, next) {
   console.log(`${tests.length - index} tests left`);
   test().then(() => {
     next();
-  });
+  }).catch(console.error)
 });
