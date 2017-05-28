@@ -35,14 +35,18 @@ var GeocodeAPI = function () {
     value: function _request(address) {
       var _this = this;
 
-      return new _bluebird2.default(function (resolve) {
+      return new _bluebird2.default(function (resolve, reject) {
         var parameters = _qs2.default.stringify({
           address: address,
           key: _this.key
         });
 
         (0, _requestPromise2.default)({ url: _this.url + '?' + parameters, json: true }).then(function (result) {
-          resolve(result);
+          if (result.status === 'OVER_QUERY_LIMIT') {
+            reject(result['error_message']);
+          } else {
+            resolve(result);
+          }
         });
       });
     }
@@ -54,13 +58,13 @@ var GeocodeAPI = function () {
       if (address.constructor !== Array) return this._request(address);
 
       return new _bluebird2.default(function (resolve) {
-        var addressRequests = address.map(function (address) {
+        var requests = address.map(function (a) {
           return function () {
-            return _this2._request(address);
+            return _this2._request(a);
           };
         });
 
-        _bluebird2.default.map(addressRequests, function (request) {
+        _bluebird2.default.map(requests, function (request) {
           return _bluebird2.default.delay(1000, request());
         }, { concurrency: 50 }).then(function (result) {
           resolve(result);

@@ -4,7 +4,8 @@
     "dev": "run-p build:watch nodemon",
     "build": "babel src --out-dir dist",
     "build:watch": "babel src --watch --out-dir dist",
-    "nodemon": "nodemon -q --watch dist dist/main.js"
+    "nodemon": "nodemon -q --watch dist dist/main.js",
+    "nexe": "nexe -i dist/main.js -o bin/diagonalley.exe"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
@@ -20,6 +21,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "nexe": "^1.1.2",
     "npm-run-all": "^4.0.2"
   }
 }

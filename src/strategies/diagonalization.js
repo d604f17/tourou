@@ -1,5 +1,6 @@
 import {queryBoxDistance} from './strategy';
 import BoundedBox from '../BoundedBox';
+import directions from './../directions';
 
 const splitBoundedBox = (box) => {
   const width = Math.abs(box.w - box.e);
@@ -29,7 +30,6 @@ const asyncIterate = (list, callback) => {
 
 const diagonalization = (waypoints, iterations) => (
     new Promise((resolve) => {
-      let queries;
       let count = 0;
       let boxes = [BoundedBox.generateFromWaypoints(waypoints)];
 
@@ -38,52 +38,29 @@ const diagonalization = (waypoints, iterations) => (
         count++;
       }
 
-      queries = boxes.map(function(box) {
-        return function() {
-          return queryBoxDistance(box);
-        };
+      const queries = boxes.map(box => {
+        return {origin: `${box.n},${box.w}`, destination: `${box.s},${box.e}`};
       });
 
-      let nodes = [];
-      asyncIterate(queries, function(data, index, next) {
-        data.value().then(node => {
-          nodes.push(node);
+      directions.query(queries).then(directions => {
+        const result = [];
 
-          next();
+        boxes.forEach((box, i) => {
+          const route = directions[i].routes[0];
 
-          if (data.done) {
-            resolve(nodes.map(node => {
-              let difference;
-              let {box} = node;
-
-              if (node.distance > 0) {
-                difference = node.distance / box.haversineDistance;
-                box.multiplier = parseFloat(difference.toFixed(3));
-              } else {
-                box.multiplier = 1;
-              }
-
-              return box;
-            }));
+          if (route) {
+            const distance = route['legs'][0]['distance']['value'];
+            const difference = distance / box.haversineDistance;
+            box.multiplier = parseFloat(difference.toFixed(3));
+          } else {
+            box.multiplier = 1;
           }
-        });
-      });
 
-      // Promise.all(queries).then(data => {
-      //   resolve(data.map(node => {
-      //     let difference;
-      //     let {box} = node;
-      //
-      //     if (node.distance > 0) {
-      //       difference = node.distance / box.haversineDistance;
-      //       box.multiplier = parseFloat(difference.toFixed(3));
-      //     } else {
-      //       box.multiplier = 1;
-      //     }
-      //
-      //     return box;
-      //   }));
-      // });
+          result.push(box);
+        });
+
+        resolve(result);
+      });
     })
 );
 

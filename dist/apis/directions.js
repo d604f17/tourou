@@ -16,6 +16,10 @@ var _requestPromise = require('request-promise');
 
 var _requestPromise2 = _interopRequireDefault(_requestPromise);
 
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29,38 +33,44 @@ var DirectionsAPI = function () {
   }
 
   _createClass(DirectionsAPI, [{
-    key: 'query',
-    value: function query(parameters) {
+    key: '_request',
+    value: function _request(options) {
       var _this = this;
 
-      return new Promise(function (resolve, reject) {
-        var request = function request(callback) {
-          var query = _qs2.default.stringify(_extends({}, parameters, {
-            key: _this.key
-          }));
+      return new _bluebird2.default(function (resolve, reject) {
+        var parameters = _qs2.default.stringify(_extends({}, options, {
+          mode: 'walking',
+          key: _this.key
+        }));
 
-          return (0, _requestPromise2.default)({
-            url: _this.url + '?' + query,
-            json: true
-          }).then(function (result) {
-            if (result.status === 'OK') {
-              callback(result);
-            } else if (result.status === 'OVER_QUERY_LIMIT') {
-              if (result.error_message === 'You have exceeded your daily request quota for this API.') {
-                reject(result.error_message);
-              }
+        (0, _requestPromise2.default)({ url: _this.url + '?' + parameters, json: true }).then(function (result) {
+          if (result.status === 'OVER_QUERY_LIMIT') {
+            reject(result['error_message']);
+          } else {
+            resolve(result);
+          }
+        });
+      });
+    }
+  }, {
+    key: 'query',
+    value: function query(options) {
+      var _this2 = this;
 
-              request(callback);
-            } else if (result.status === 'ZERO_RESULTS') {
-              callback(result);
-            } else {
-              console.log(result.status);
-              request(callback);
-            }
-          });
-        };
+      if (options.constructor !== Array) {
+        return this._request(options);
+      }
 
-        request(function (result) {
+      return new _bluebird2.default(function (resolve) {
+        var requests = options.map(function (o) {
+          return function () {
+            return _this2._request(o);
+          };
+        });
+
+        _bluebird2.default.map(requests, function (request) {
+          return _bluebird2.default.delay(1000, request());
+        }, { concurrency: 50 }).then(function (result) {
           resolve(result);
         });
       });

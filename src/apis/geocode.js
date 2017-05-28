@@ -9,14 +9,18 @@ class GeocodeAPI {
   }
 
   _request(address) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       const parameters = qs.stringify({
         address,
         key: this.key,
       });
 
       rp({url: this.url + '?' + parameters, json: true}).then(result => {
-        resolve(result);
+        if (result.status === 'OVER_QUERY_LIMIT') {
+          reject(result['error_message']);
+        } else {
+          resolve(result);
+        }
       });
     });
   }
@@ -26,9 +30,9 @@ class GeocodeAPI {
       return this._request(address);
 
     return new Promise(resolve => {
-      const addressRequests = address.map(address => () => this._request(address));
+      const requests = address.map(a => () => this._request(a));
 
-      Promise.map(addressRequests, (request) => {
+      Promise.map(requests, (request) => {
         return Promise.delay(1000, request());
       }, {concurrency: 50}).then(result => {
         resolve(result);

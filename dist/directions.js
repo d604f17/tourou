@@ -10,7 +10,7 @@ var _directions2 = _interopRequireDefault(_directions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var directions = new _directions2.default('AIzaSyAVqZUZYgEuP1870ZTYwn0K71X5eeFPBgw');
+var directions = new _directions2.default('AIzaSyA7FlSpLbKKZSqsKLzBhnhrlHL-P9s0J1U');
 
 exports.default = directions;
 //# sourceMappingURL=directions.js.map

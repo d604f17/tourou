@@ -1,5 +1,6 @@
 import qs from 'qs';
 import rp from 'request-promise';
+import Promise from 'bluebird';
 
 class DirectionsAPI {
   constructor(key) {
@@ -7,37 +8,35 @@ class DirectionsAPI {
     this.url = 'https://maps.googleapis.com/maps/api/directions/json';
   }
 
-  query(parameters) {
+  _request(options) {
     return new Promise((resolve, reject) => {
-      const request = (callback) => {
-        const query = qs.stringify({
-          ...parameters,
-          key: this.key,
-        });
+      const parameters = qs.stringify({
+        ...options,
+        mode: 'walking',
+        key: this.key,
+      });
 
-        return rp({
-          url: this.url + '?' + query,
-          json: true,
-        }).then(result => {
-          if (result.status === 'OK') {
-            callback(result);
-          } else if (result.status === 'OVER_QUERY_LIMIT') {
-            if (result.error_message ===
-                'You have exceeded your daily request quota for this API.') {
-              reject(result.error_message);
-            }
+      rp({url: this.url + '?' + parameters, json: true}).then(result => {
+        if (result.status === 'OVER_QUERY_LIMIT') {
+          reject(result['error_message']);
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  }
 
-            request(callback);
-          } else if (result.status === 'ZERO_RESULTS') {
-            callback(result);
-          } else {
-            console.log(result.status);
-            request(callback);
-          }
-        });
-      };
+  query(options) {
+    if (options.constructor !== Array) {
+      return this._request(options);
+    }
 
-      request(function(result) {
+    return new Promise(resolve => {
+      const requests = options.map(o => () => this._request(o));
+
+      Promise.map(requests, (request) => {
+        return Promise.delay(1000, request());
+      }, {concurrency: 50}).then(result => {
         resolve(result);
       });
     });
